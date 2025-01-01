@@ -13,6 +13,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import LinearGradient from 'react-native-linear-gradient';
 import Carousel from '../../component/Carousel/Carousel';
 import {Dropdown} from 'react-native-element-dropdown';
+import Textarea from 'react-native-textarea';
 import styles from './styles';
 
 const data = [
@@ -60,12 +61,23 @@ const Size = [
   {label: '300 x 1200 mm (12 x 48 inch)', value: '3'},
   {label: '150 x 900 mm (06 x 36 inch)', value: '4'},
   {label: '200 x 1000 mm (08 x 40 inch)', value: '5'},
+];
+
+const Unit = [
+  {label: 'Boxes', value: '1'},
+  {label: 'Sq. Ft.', value: '2'},
+  {label: 'Sq. Mtr.', value: '3'},
+  {label: 'Ton', value: '4'},
+  {label: 'Pieces', value: '5'},
+  {label: 'Container', value: '6'},
+  {label: 'Pallets', value: '7'},
 ]
 
 const HomeScreen = () => {
   const [selectedValue, setSelectedValue] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState (null);
   const [selectSize, setSelectSize] = useState(null);
+  const [selectUnit, setSelectUnit] = useState(null);
 
   const [placeholder, setPlaceholder] = useState('Hello');
 
@@ -348,8 +360,38 @@ const HomeScreen = () => {
             setSelectSize(item.selectSize);
           }}
         />
+        <View style={{flexDirection: 'row'}}>
         <TextInput placeholder='Enter quantity' style={styles.input}/>
+        <Dropdown
+          style={styles.dropdown1}
+          placeholderStyle={styles.placeholderStyle}
+          selectedTextStyle={styles.selectedTextStyle}
+          inputSearchStyle={styles.inputSearchStyle}
+          iconStyle={styles.iconStyle}
+          placeholder="Select Unit"
+          data={Unit}
+          maxHeight={300}
+          labelField="label"
+          valueField="value"
+          selectUnit={selectUnit}
+          onChange={item => {
+            setSelectUnit(item.selectUnit);
+          }}
+        />
+        </View>
+        <Textarea 
+        containerStyle={styles.textareaContainer}
+        style={styles.textarea}
+        maxLength={500}
+        placeholder={'Describe Your Inquiry...'}
+        placeholderTextColor={'#000000'}
+        underlineColorAndroid={'transparent'}
+        />
+        <TouchableOpacity>
+        <Text style={styles.btn}>Get Verified Manufacturers</Text>
+      </TouchableOpacity>
       </View>
+      
     </ScrollView>
   );
 };
