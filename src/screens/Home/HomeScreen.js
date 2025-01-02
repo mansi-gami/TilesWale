@@ -15,6 +15,7 @@ import Carousel from '../../component/Carousel/Carousel';
 import {Dropdown} from 'react-native-element-dropdown';
 import Textarea from 'react-native-textarea';
 import styles from './styles';
+import CarouselItem from '../../component/Carousel/CarouselItem';
 
 const data = [
   {label: 'Tiles', value: '1'},
@@ -71,11 +72,11 @@ const Unit = [
   {label: 'Pieces', value: '5'},
   {label: 'Container', value: '6'},
   {label: 'Pallets', value: '7'},
-]
+];
 
 const HomeScreen = () => {
   const [selectedValue, setSelectedValue] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState (null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectSize, setSelectSize] = useState(null);
   const [selectUnit, setSelectUnit] = useState(null);
 
@@ -361,37 +362,37 @@ const HomeScreen = () => {
           }}
         />
         <View style={{flexDirection: 'row'}}>
-        <TextInput placeholder='Enter quantity' style={styles.input}/>
-        <Dropdown
-          style={styles.dropdown1}
-          placeholderStyle={styles.placeholderStyle}
-          selectedTextStyle={styles.selectedTextStyle}
-          inputSearchStyle={styles.inputSearchStyle}
-          iconStyle={styles.iconStyle}
-          placeholder="Select Unit"
-          data={Unit}
-          maxHeight={300}
-          labelField="label"
-          valueField="value"
-          selectUnit={selectUnit}
-          onChange={item => {
-            setSelectUnit(item.selectUnit);
-          }}
-        />
+          <TextInput placeholder="Enter quantity" style={styles.input} />
+          <Dropdown
+            style={styles.dropdown1}
+            placeholderStyle={styles.placeholderStyle}
+            selectedTextStyle={styles.selectedTextStyle}
+            inputSearchStyle={styles.inputSearchStyle}
+            iconStyle={styles.iconStyle}
+            placeholder="Select Unit"
+            data={Unit}
+            maxHeight={300}
+            labelField="label"
+            valueField="value"
+            selectUnit={selectUnit}
+            onChange={item => {
+              setSelectUnit(item.selectUnit);
+            }}
+          />
         </View>
-        <Textarea 
-        containerStyle={styles.textareaContainer}
-        style={styles.textarea}
-        maxLength={500}
-        placeholder={'Describe Your Inquiry...'}
-        placeholderTextColor={'#000000'}
-        underlineColorAndroid={'transparent'}
+        <Textarea
+          containerStyle={styles.textareaContainer}
+          style={styles.textarea}
+          maxLength={500}
+          placeholder={'Describe Your Inquiry...'}
+          placeholderTextColor={'#000000'}
+          underlineColorAndroid={'transparent'}
         />
         <TouchableOpacity>
-        <Text style={styles.btn}>Get Verified Manufacturers</Text>
-      </TouchableOpacity>
+          <Text style={styles.btn}>Get Verified Manufacturers</Text>
+        </TouchableOpacity>
       </View>
-      
+      <CarouselItem />
     </ScrollView>
   );
 };

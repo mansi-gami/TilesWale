@@ -6,7 +6,7 @@ import {
   Dimensions,
   View,
 } from 'react-native';
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 const Carousel = () => {
   const screenWidth = Dimensions.get('window').width;
@@ -18,23 +18,24 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(prevIndex => {
-        const nextIndex = prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1;
+        const nextIndex =
+          prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1;
         flatlistRef.current.scrollToOffset({
           offset: nextIndex * screenWidth,
           animated: true,
         });
         return nextIndex;
       });
-    }, 2000); // Change image every 2 seconds
+    }, 3000); // Change image every 2 seconds
 
     return () => clearInterval(interval); // Cleanup interval on unmount
-  }, [activeIndex]); 
+  }, [activeIndex]);
 
-  const getItemLayout = (data, index) =>({
+  const getItemLayout = (data, index) => ({
     length: screenWidth,
     offset: screenWidth * index,
     index: index,
-  })
+  });
 
   const carouselData = [
     {
@@ -58,7 +59,15 @@ const Carousel = () => {
   const renderItem = ({item, index}) => {
     return (
       <View>
-        <Image source={item.image} style={{height: 200, width: screenWidth, borderRadius: 20, marginTop:10}} />
+        <Image
+          source={item.image}
+          style={{
+            height: 200,
+            width: screenWidth,
+            borderRadius: 20,
+            marginTop: 10,
+          }}
+        />
       </View>
     );
   };
@@ -67,9 +76,7 @@ const Carousel = () => {
     const scrollPosition = event.nativeEvent.contentOffset.x;
     const index = Math.floor(scrollPosition / screenWidth);
     setActiveIndex(index);
-
   };
-  
 
   return (
     <View>
@@ -78,7 +85,7 @@ const Carousel = () => {
         ref={flatlistRef}
         getItemLayout={getItemLayout}
         renderItem={renderItem}
-        keyExtractor={(item)=>item.id}
+        keyExtractor={item => item.id}
         horizontal={true}
         pagingEnabled={true}
         onScroll={handleScroll}
