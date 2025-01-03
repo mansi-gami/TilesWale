@@ -79,6 +79,9 @@ const HomeScreen = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectSize, setSelectSize] = useState(null);
   const [selectUnit, setSelectUnit] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showRequirementsButton, setShowRequirementsButton] = useState(true);
+  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
 
   const [placeholder, setPlaceholder] = useState('Hello');
 
@@ -99,301 +102,332 @@ const HomeScreen = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
-    <ScrollView style={styles.container}>
-      <Header title={'Home'} />
-      <View>
-        <TextInput style={styles.textInput} placeholder={placeholder} />
-        <Fontisto style={styles.search} name={'search'} size={20} />
-        <MaterialIcons
-          style={styles.voiceIcon}
-          name={'keyboard-voice'}
-          size={25}
-        />
-      </View>
-      <LinearGradient
-        colors={['#afd3e3', '#94eba4', '#c9f5d1']}
-        start={{x: 0, y: 1.0}}
-        end={{x: 1, y: 1}}
-        style={{
-          flex: 0,
-          height: 50,
-          width: 432,
-          margin: 8,
-          marginTop: 10,
-          borderRadius: 10,
-          flexDirection: 'row',
-        }}>
-        <Image
-          source={require('../../assets/locationIcon.png')}
-          style={styles.LocationIcon}
-        />
-        <Text style={styles.locationtxt}>Add Location for Local Search</Text>
-        <TouchableOpacity style={styles.button}>
-          <Text style={{color: 'white', margin: 5, fontWeight: 500}}>
-            Share Location
-          </Text>
-        </TouchableOpacity>
-      </LinearGradient>
-      <Carousel />
-      <View style={{flexDirection: 'row'}}>
-        <Text style={styles.brand}>Brands in Spotlight</Text>
-        <TouchableOpacity>
-          <Text style={styles.link}>View All</Text>
-        </TouchableOpacity>
-      </View>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-        <View style={styles.card}>
-          <Image
-            style={styles.images}
-            source={require('../../assets/alaska.jpeg')}
-          />
-          <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-            ALASKA SURFACES LLP
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            style={styles.images}
-            source={require('../../assets/coinn.jpeg')}
-          />
-          <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-            Coinn Tiles LLP
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            style={styles.images}
-            source={require('../../assets/hawk.webp')}
-          />
-          <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-            Hawk Granito Pvt Ltd.
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            style={styles.images}
-            source={require('../../assets/liberta.jpg')}
-          />
-          <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-            Liberta Vitrified LLP
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            style={styles.images}
-            source={require('../../assets/linum.png')}
-          />
-          <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-            Linum Ceramic
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            style={styles.images}
-            source={require('../../assets/millennium.jpeg')}
-          />
-          <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-            Linum Ceramic
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            style={styles.images}
-            source={require('../../assets/torino.png')}
-          />
-          <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-            Torino Tiles
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            style={styles.images}
-            source={require('../../assets/valenza.png')}
-          />
-          <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-            Valenza Granito
-          </Text>
-        </View>
-      </ScrollView>
-      <View style={styles.box}>
-        <Text style={styles.categories}>Explore by Categories</Text>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <LinearGradient
-            colors={['#ffffff', '#f5edc4']}
-            start={{x: 1, y: 0}}
-            end={{x: 1, y: 1}}
-            style={{
-              height: 150,
-              width: 120,
-              margin: 10,
-              borderRadius: 10,
-            }}>
-            <Text style={styles.title}>Tiles</Text>
-            <Image
-              style={styles.img}
-              source={require('../../assets/tiles.png')}
-            />
-          </LinearGradient>
-          <LinearGradient
-            colors={['#ffffff', '#f5edc4']}
-            start={{x: 1, y: 0}}
-            end={{x: 1, y: 1}}
-            style={{
-              height: 150,
-              width: 120,
-              margin: 10,
-              borderRadius: 10,
-            }}>
-            <Text style={styles.title}>Sanitary ware</Text>
-            <Image
-              style={styles.img}
-              source={require('../../assets/sanitaryware.png')}
-            />
-          </LinearGradient>
-          <LinearGradient
-            colors={['#ffffff', '#f5edc4']}
-            start={{x: 1, y: 0}}
-            end={{x: 1, y: 1}}
-            style={{
-              height: 150,
-              width: 120,
-              margin: 10,
-              borderRadius: 10,
-            }}>
-            <Text style={styles.title}>Kitchen Sink</Text>
-            <Image
-              style={styles.img}
-              source={require('../../assets/kitchenSink.png')}
-            />
-          </LinearGradient>
-          <LinearGradient
-            colors={['#ffffff', '#f5edc4']}
-            start={{x: 1, y: 0}}
-            end={{x: 1, y: 1}}
-            style={{
-              height: 150,
-              width: 120,
-              margin: 10,
-              borderRadius: 10,
-            }}>
-            <Text style={styles.title}>Bathware</Text>
-            <Image
-              style={styles.img}
-              source={require('../../assets/BathWare.png')}
-            />
-          </LinearGradient>
-          <LinearGradient
-            colors={['#ffffff', '#f5edc4']}
-            start={{x: 1, y: 0}}
-            end={{x: 1, y: 1}}
-            style={{
-              height: 150,
-              width: 120,
-              margin: 10,
-              borderRadius: 10,
-            }}>
-            <Text style={styles.title}>Adhesive</Text>
-            <Image
-              style={styles.img}
-              source={require('../../assets/Adhesive.png')}
-            />
-          </LinearGradient>
-        </ScrollView>
-      </View>
-      <View style={styles.form}>
-        <Text style={styles.heading}>Get Best Priced Quotations</Text>
-        <Text style={styles.para}>
-          Submit your inquiries, we will see the rest!
-        </Text>
-        <Dropdown
-          style={styles.dropdown}
-          placeholderStyle={styles.placeholderStyle}
-          selectedTextStyle={styles.selectedTextStyle}
-          inputSearchStyle={styles.inputSearchStyle}
-          iconStyle={styles.iconStyle}
-          placeholder="Select Category For"
-          data={data}
-          search
-          maxHeight={300}
-          labelField="label"
-          valueField="value"
-          searchPlaceholder="Search..."
-          selectedValue={selectedValue}
-          onChange={item => {
-            setSelectedValue(item.selectedValue);
-          }}
-        />
-        <Dropdown
-          style={styles.dropdown}
-          placeholderStyle={styles.placeholderStyle}
-          selectedTextStyle={styles.selectedTextStyle}
-          inputSearchStyle={styles.inputSearchStyle}
-          iconStyle={styles.iconStyle}
-          placeholder="Select Category"
-          data={Category}
-          search
-          maxHeight={300}
-          labelField="label"
-          valueField="value"
-          searchPlaceholder="Search..."
-          selectedCategory={selectedCategory}
-          onChange={item => {
-            setSelectedCategory(item.selectedCategory);
-          }}
-        />
+  const handleScroll = event => {
+    const contentHeight = event.nativeEvent.contentSize.height;
+    const scrollY = event.nativeEvent.contentOffset.y;
 
-        <Dropdown
-          style={styles.dropdown}
-          placeholderStyle={styles.placeholderStyle}
-          selectedTextStyle={styles.selectedTextStyle}
-          inputSearchStyle={styles.inputSearchStyle}
-          iconStyle={styles.iconStyle}
-          placeholder="Select Size"
-          data={Size}
-          search
-          maxHeight={300}
-          labelField="label"
-          valueField="value"
-          searchPlaceholder="Search..."
-          selectSize={selectSize}
-          onChange={item => {
-            setSelectSize(item.selectSize);
-          }}
-        />
+    setScrollPosition(scrollY); // Update the current scroll position
+
+    // Check if scrolling up or down
+    if (scrollY > prevScrollPosition) {
+      // Scrolling down: Show "+ Requirements"
+      setShowRequirementsButton(true);
+    } else if (scrollY < prevScrollPosition) {
+      // Scrolling up: Show only "+"
+      setShowRequirementsButton(false);
+    }
+
+    // Update the previous scroll position
+    setPrevScrollPosition(scrollY);
+  };
+
+  return (
+    <>
+      <ScrollView
+        style={styles.container}
+        onScroll={handleScroll}
+        showsVerticalScrollIndicator={false}>
+        <Header title={'Home'} />
+        <View>
+          <TextInput style={styles.textInput} placeholder={placeholder} />
+          <Fontisto style={styles.search} name={'search'} size={20} />
+          <MaterialIcons
+            style={styles.voiceIcon}
+            name={'keyboard-voice'}
+            size={25}
+          />
+        </View>
+        <LinearGradient
+          colors={['#afd3e3', '#94eba4', '#c9f5d1']}
+          start={{x: 0, y: 1.0}}
+          end={{x: 1, y: 1}}
+          style={{
+            flex: 0,
+            height: 50,
+            width: 432,
+            margin: 8,
+            marginTop: 10,
+            borderRadius: 10,
+            flexDirection: 'row',
+          }}>
+          <Image
+            source={require('../../assets/locationIcon.png')}
+            style={styles.LocationIcon}
+          />
+          <Text style={styles.locationtxt}>Add Location for Local Search</Text>
+          <TouchableOpacity style={styles.button}>
+            <Text style={{color: 'white', margin: 5, fontWeight: 500}}>
+              Share Location
+            </Text>
+          </TouchableOpacity>
+        </LinearGradient>
+        <Carousel />
         <View style={{flexDirection: 'row'}}>
-          <TextInput placeholder="Enter quantity" style={styles.input} />
+          <Text style={styles.brand}>Brands in Spotlight</Text>
+          <TouchableOpacity>
+            <Text style={styles.link}>View All</Text>
+          </TouchableOpacity>
+        </View>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.card}>
+            <Image
+              style={styles.images}
+              source={require('../../assets/alaska.jpeg')}
+            />
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
+              ALASKA SURFACES LLP
+            </Text>
+          </View>
+          <View style={styles.card}>
+            <Image
+              style={styles.images}
+              source={require('../../assets/coinn.jpeg')}
+            />
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
+              Coinn Tiles LLP
+            </Text>
+          </View>
+          <View style={styles.card}>
+            <Image
+              style={styles.images}
+              source={require('../../assets/hawk.webp')}
+            />
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
+              Hawk Granito Pvt Ltd.
+            </Text>
+          </View>
+          <View style={styles.card}>
+            <Image
+              style={styles.images}
+              source={require('../../assets/liberta.jpg')}
+            />
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
+              Liberta Vitrified LLP
+            </Text>
+          </View>
+          <View style={styles.card}>
+            <Image
+              style={styles.images}
+              source={require('../../assets/linum.png')}
+            />
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
+              Linum Ceramic
+            </Text>
+          </View>
+          <View style={styles.card}>
+            <Image
+              style={styles.images}
+              source={require('../../assets/millennium.jpeg')}
+            />
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
+              Linum Ceramic
+            </Text>
+          </View>
+          <View style={styles.card}>
+            <Image
+              style={styles.images}
+              source={require('../../assets/torino.png')}
+            />
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
+              Torino Tiles
+            </Text>
+          </View>
+          <View style={styles.card}>
+            <Image
+              style={styles.images}
+              source={require('../../assets/valenza.png')}
+            />
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
+              Valenza Granito
+            </Text>
+          </View>
+        </ScrollView>
+        <View style={styles.box}>
+          <Text style={styles.categories}>Explore by Categories</Text>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <LinearGradient
+              colors={['#ffffff', '#f5edc4']}
+              start={{x: 1, y: 0}}
+              end={{x: 1, y: 1}}
+              style={{
+                height: 150,
+                width: 120,
+                margin: 10,
+                borderRadius: 10,
+              }}>
+              <Text style={styles.title}>Tiles</Text>
+              <Image
+                style={styles.img}
+                source={require('../../assets/tiles.png')}
+              />
+            </LinearGradient>
+            <LinearGradient
+              colors={['#ffffff', '#f5edc4']}
+              start={{x: 1, y: 0}}
+              end={{x: 1, y: 1}}
+              style={{
+                height: 150,
+                width: 120,
+                margin: 10,
+                borderRadius: 10,
+              }}>
+              <Text style={styles.title}>Sanitary ware</Text>
+              <Image
+                style={styles.img}
+                source={require('../../assets/sanitaryware.png')}
+              />
+            </LinearGradient>
+            <LinearGradient
+              colors={['#ffffff', '#f5edc4']}
+              start={{x: 1, y: 0}}
+              end={{x: 1, y: 1}}
+              style={{
+                height: 150,
+                width: 120,
+                margin: 10,
+                borderRadius: 10,
+              }}>
+              <Text style={styles.title}>Kitchen Sink</Text>
+              <Image
+                style={styles.img}
+                source={require('../../assets/kitchenSink.png')}
+              />
+            </LinearGradient>
+            <LinearGradient
+              colors={['#ffffff', '#f5edc4']}
+              start={{x: 1, y: 0}}
+              end={{x: 1, y: 1}}
+              style={{
+                height: 150,
+                width: 120,
+                margin: 10,
+                borderRadius: 10,
+              }}>
+              <Text style={styles.title}>Bathware</Text>
+              <Image
+                style={styles.img}
+                source={require('../../assets/BathWare.png')}
+              />
+            </LinearGradient>
+            <LinearGradient
+              colors={['#ffffff', '#f5edc4']}
+              start={{x: 1, y: 0}}
+              end={{x: 1, y: 1}}
+              style={{
+                height: 150,
+                width: 120,
+                margin: 10,
+                borderRadius: 10,
+              }}>
+              <Text style={styles.title}>Adhesive</Text>
+              <Image
+                style={styles.img}
+                source={require('../../assets/Adhesive.png')}
+              />
+            </LinearGradient>
+          </ScrollView>
+        </View>
+        <View style={styles.form}>
+          <Text style={styles.heading}>Get Best Priced Quotations</Text>
+          <Text style={styles.para}>
+            Submit your inquiries, we will see the rest!
+          </Text>
           <Dropdown
-            style={styles.dropdown1}
+            style={styles.dropdown}
             placeholderStyle={styles.placeholderStyle}
             selectedTextStyle={styles.selectedTextStyle}
             inputSearchStyle={styles.inputSearchStyle}
             iconStyle={styles.iconStyle}
-            placeholder="Select Unit"
-            data={Unit}
+            placeholder="Select Category For"
+            data={data}
+            search
             maxHeight={300}
             labelField="label"
             valueField="value"
-            selectUnit={selectUnit}
+            searchPlaceholder="Search..."
+            selectedValue={selectedValue}
             onChange={item => {
-              setSelectUnit(item.selectUnit);
+              setSelectedValue(item.selectedValue);
             }}
           />
+          <Dropdown
+            style={styles.dropdown}
+            placeholderStyle={styles.placeholderStyle}
+            selectedTextStyle={styles.selectedTextStyle}
+            inputSearchStyle={styles.inputSearchStyle}
+            iconStyle={styles.iconStyle}
+            placeholder="Select Category"
+            data={Category}
+            search
+            maxHeight={300}
+            labelField="label"
+            valueField="value"
+            searchPlaceholder="Search..."
+            selectedCategory={selectedCategory}
+            onChange={item => {
+              setSelectedCategory(item.selectedCategory);
+            }}
+          />
+
+          <Dropdown
+            style={styles.dropdown}
+            placeholderStyle={styles.placeholderStyle}
+            selectedTextStyle={styles.selectedTextStyle}
+            inputSearchStyle={styles.inputSearchStyle}
+            iconStyle={styles.iconStyle}
+            placeholder="Select Size"
+            data={Size}
+            search
+            maxHeight={300}
+            labelField="label"
+            valueField="value"
+            searchPlaceholder="Search..."
+            selectSize={selectSize}
+            onChange={item => {
+              setSelectSize(item.selectSize);
+            }}
+          />
+          <View style={{flexDirection: 'row'}}>
+            <TextInput placeholder="Enter quantity" style={styles.input} />
+            <Dropdown
+              style={styles.dropdown1}
+              placeholderStyle={styles.placeholderStyle}
+              selectedTextStyle={styles.selectedTextStyle}
+              inputSearchStyle={styles.inputSearchStyle}
+              iconStyle={styles.iconStyle}
+              placeholder="Select Unit"
+              data={Unit}
+              maxHeight={300}
+              labelField="label"
+              valueField="value"
+              selectUnit={selectUnit}
+              onChange={item => {
+                setSelectUnit(item.selectUnit);
+              }}
+            />
+          </View>
+          <Textarea
+            containerStyle={styles.textareaContainer}
+            style={styles.textarea}
+            maxLength={500}
+            placeholder={'Describe Your Inquiry...'}
+            placeholderTextColor={'#000000'}
+            underlineColorAndroid={'transparent'}
+          />
+          <TouchableOpacity>
+            <Text style={styles.btn}>Get Verified Manufacturers</Text>
+          </TouchableOpacity>
         </View>
-        <Textarea
-          containerStyle={styles.textareaContainer}
-          style={styles.textarea}
-          maxLength={500}
-          placeholder={'Describe Your Inquiry...'}
-          placeholderTextColor={'#000000'}
-          underlineColorAndroid={'transparent'}
-        />
-        <TouchableOpacity>
-          <Text style={styles.btn}>Get Verified Manufacturers</Text>
-        </TouchableOpacity>
-      </View>
-      <CarouselItem />
-    </ScrollView>
+        <CarouselItem />
+        <View style={styles.blankView}></View>
+      </ScrollView>
+      <TouchableOpacity
+        style={showRequirementsButton ? styles.btnAddRound : styles.btnadd}>
+        <Text style={styles.btnaddText}>
+          {showRequirementsButton ? '+' : '+  Requirements'}
+        </Text>
+      </TouchableOpacity>
+    </>
   );
 };
 
