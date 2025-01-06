@@ -1,14 +1,15 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import Header from '../../component/Header/Header'
+import styles from './style';
 
 const DirectoryScreen = () => {
   return (
-    <View>
+    <ScrollView style={styles.container}>
       <Header title={'Directory'} />
       <Text>DirectoryScreen</Text>
-    </View>
-  )
-}
+    </ScrollView>
+  );
+};
 
-export default DirectoryScreen
+export default DirectoryScreen;

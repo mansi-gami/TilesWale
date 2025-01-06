@@ -35,6 +35,7 @@ import raghavLogo from '../assets/Raghavlogo.png';
 import mtLogo from '../assets/mtLogo.jpeg';
 import BluettaLogo from '../assets/BluettaLogo.png';
 import adhesive1 from '../assets/adhesive1.jpg';
+import Profile from '../assets/profileIcon.jpg';
 
 export {
     adhesive,alaska,
@@ -73,4 +74,5 @@ raghavLogo,
 mtLogo,
 BluettaLogo,
 adhesive1,
+Profile,
 }

@@ -160,6 +160,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     marginTop: 10,
     marginLeft: 55,
+    fontWeight: 800,
   },
   tax: {
     color: 'green',
