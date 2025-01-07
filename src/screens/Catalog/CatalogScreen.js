@@ -12,4 +12,4 @@ const CatalogScreen = () => {
   )
 }
 
-export default CatalogScreen;
+export default CatalogScreen; 
