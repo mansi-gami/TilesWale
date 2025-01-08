@@ -22,6 +22,7 @@ const DirectoryScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <Header title={'Directory'} />
+      <View style={styles.border}></View>
       <View style={styles.mainContent}>
         <View style={styles.location}>
           <Ionicons name={'location-outline'} size={30}/>

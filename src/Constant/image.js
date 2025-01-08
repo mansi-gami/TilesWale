@@ -37,6 +37,8 @@ import BluettaLogo from '../assets/BluettaLogo.png';
 import adhesive1 from '../assets/adhesive1.jpg';
 import Profile from '../assets/profileIcon.jpg';
 import tilesCard from '../assets/tilesCard.jpg';
+import NotFound from '../assets/NotFound.png';
+import tilesCatalogue from '../assets/tilesCatalogue.jpeg';
 
 export {
     adhesive,alaska,
@@ -76,5 +78,7 @@ mtLogo,
 BluettaLogo,
 adhesive1,
 Profile,
-tilesCard
+tilesCard,
+NotFound,
+tilesCatalogue,
 }

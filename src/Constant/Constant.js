@@ -14,6 +14,8 @@ import {
   adhesive,
   adhesive1,
   Profile,
+  tilesCatalogue,
+  liberta,
 } from './image';
 
 export const Tiles = [
@@ -176,5 +178,18 @@ export const AdhesiveLead = [
     name: 'Maihbub Patel',
     location: 'Mudhol Karnataka',
     btn: 'For Home / Personal Use',
+  },
+];
+
+export const TilesCatalogue = [
+  {
+    id: '09',
+    image: tilesCatalogue,
+    image1: liberta,
+    name: 'STONELUXE (GRANITE)',
+    type: 'PGVT & GVT',
+    size: '800 x 1200 mm (24 x 48 inch)',
+    Views: '8',
+    share: '12',
   },
 ];

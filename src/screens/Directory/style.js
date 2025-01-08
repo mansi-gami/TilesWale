@@ -5,15 +5,20 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ffffff',
   },
-  mainContent: {
-    flexDirection: 'row',
+  border:{
     borderColor: '#bab9b6',
     borderTopWidth: 0.5,
     marginTop: 10,
   },
+  mainContent: {
+    flexDirection: 'row',
+    marginTop: 10,  
+    backgroundColor: '#ddd',
+    borderRadius: 8,
+  },
   location: {
     flexDirection: 'row',
-    margin: 20,
+    margin: 10,
   },
   locationText: {
     fontSize: 20,
@@ -36,11 +41,11 @@ const styles = StyleSheet.create({
     right: 80,
   },
   dropdown1: {
-    height: 50,
-    width: 220,
+    height: 30,
+    width: 240,
     margin: 10,
-    marginLeft: 110,
-    backgroundColor: '#ffffff',
+    marginLeft: 90,
+    backgroundColor: '#ddd',
     borderRadius: 5,
     marginBottom: 0,
   },

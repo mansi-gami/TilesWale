@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   icon: {
-    marginLeft: 30,
+    marginLeft: 2,
   },
  
 });
