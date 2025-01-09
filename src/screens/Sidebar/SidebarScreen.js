@@ -79,15 +79,7 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
               colors={['#ffffff', '#afd3e3', '#9dcce0']}
               start={{x: 0, y: 0}}
               end={{x: 1, y: 1}}
-              style={{
-                flex: 0,
-                height: 50,
-                width: 305,
-                margin: 25,
-                marginTop: 0,
-                borderRadius: 10,
-                flexDirection: 'row',
-              }}>
+              style={styles.linear}>
               <Text style={styles.txt}>Adverties & Grow Your Business</Text>
               <Ionicons
                 style={styles.icon1}

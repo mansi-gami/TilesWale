@@ -3,25 +3,19 @@ import React from 'react';
 import Header from '../../component/Header/Header';
 import styles from './style';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import CatalogCard from '../../component/Card/CatalogCard';
+import CatalogCard from '../../component/CatalogueCard/CatalogCard';
 import { TilesCatalogue } from '../../Constant/Constant';
 
 function MyDownloads() {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#ffffff',
-          height: 800,
-        }}>
+        style={styles.download}>
         <Image
           source={require('../../assets/NotFound.png')}
-          style={{height: 90, width: 90}}
+          style={styles.image}
         />
-        <Text style={{fontSize: 20, color: '#000000', fontWeight: '800'}}>
+        <Text style={styles.comments}>
           No Catalogue Found
         </Text>
       </View>
@@ -31,8 +25,8 @@ function MyDownloads() {
 
 function Tiles() {
   return (
-    <ScrollView>
-      <View style={{flexDirection: 'row', backgroundColor: '#ffffff'}}>
+    <ScrollView style={styles.mainContent}>
+      <View style={styles.content}>
         <Text style={styles.text}>Recently Added Catalogues</Text>
         <Text style={styles.linkText}>View All</Text>
       </View>
@@ -40,7 +34,7 @@ function Tiles() {
         <CatalogCard Data={TilesCatalogue} category="Recently Added Catalogues" showSponsored={false}/>
         <CatalogCard Data={TilesCatalogue} category="Recently Added Catalogues" showSponsored={false}/>
       </ScrollView>
-      <View style={{flexDirection: 'row', backgroundColor: '#ffffff'}}>
+      <View style={styles.content}>
         <Text style={styles.text}>Featured Company Catalogue</Text>
         <Text style={styles.linkText}>View All</Text>
       </View>
@@ -54,16 +48,10 @@ function Tiles() {
 
 function Sanitaryware() {
   return (
-    <ScrollView>
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#ffffff',
-        }}>
-        <Text style={{fontSize: 20, color: '#000000', fontWeight: '800'}}>
-          Kitchen Screen Content
+    <ScrollView style={styles.mainContent}>
+      <View>
+        <Text>
+          Sanitaryware Screen Content
         </Text>
       </View>
     </ScrollView>
@@ -72,16 +60,10 @@ function Sanitaryware() {
 
 function KitchenSink() {
   return (
-    <ScrollView>
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#ffffff',
-        }}>
-        <Text style={{fontSize: 20, color: '#000000', fontWeight: '800'}}>
-          Kitchen Screen Content
+    <ScrollView style={styles.mainContent}>
+      <View>
+        <Text>
+          KitchenSink Screen Content
         </Text>
       </View>
     </ScrollView>
@@ -90,16 +72,10 @@ function KitchenSink() {
 
 function Bathware() {
   return (
-    <ScrollView>
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#ffffff',
-        }}>
-        <Text style={{fontSize: 20, color: '#000000', fontWeight: '800'}}>
-          Kitchen Screen Content
+    <ScrollView style={styles.mainContent}>
+      <View>
+        <Text>
+          Bathware Screen Content
         </Text>
       </View>
     </ScrollView>
@@ -108,16 +84,10 @@ function Bathware() {
 
 function Adhesive() {
   return (
-    <ScrollView>
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#ffffff',
-        }}>
-        <Text style={{fontSize: 20, color: '#000000', fontWeight: '800'}}>
-          Kitchen Screen Content
+    <ScrollView style={styles.mainContent}>
+      <View>
+        <Text>
+          Adhesive Screen Content
         </Text>
       </View>
     </ScrollView>

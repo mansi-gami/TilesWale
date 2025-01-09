@@ -7,6 +7,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import React, {useState} from 'react';
+import styles from './style';
 
 const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
   // const [selectedBox, setSelectedBox] = useState(null);
@@ -34,7 +35,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
             onPress={() => handleBoxSelect('tiles')}>
             <Image
               style={styles.image}
-              source={require('../assets/tiles.png')}
+              source={require('../../assets/tiles.png')}
             />
             <Text style={styles.text}>Tiles</Text>
           </TouchableOpacity>
@@ -49,7 +50,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
             onPress={() => handleBoxSelect('sanitaryware')}>
             <Image
               style={styles.image}
-              source={require('../assets/sanitaryware.png')}
+              source={require('../../assets/sanitaryware.png')}
             />
             <Text style={styles.text}>Sanitary</Text>
           </TouchableOpacity>
@@ -64,7 +65,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
             onPress={() => handleBoxSelect('kitchenSink')}>
             <Image
               style={styles.image}
-              source={require('../assets/kitchenSink.png')}
+              source={require('../../assets/kitchenSink.png')}
             />
             <Text style={styles.text}>Kitchen Sink</Text>
           </TouchableOpacity>
@@ -79,7 +80,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
             onPress={() => handleBoxSelect('BathWare')}>
             <Image
               style={styles.image}
-              source={require('../assets/BathWare.png')}
+              source={require('../../assets/BathWare.png')}
             />
             <Text style={styles.text}>Bathware</Text>
           </TouchableOpacity>
@@ -94,7 +95,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
             onPress={() => handleBoxSelect('Adhesive')}>
             <Image
               style={styles.image}
-              source={require('../assets/Adhesive.png')}
+              source={require('../../assets/Adhesive.png')}
             />
             <Text style={styles.text}>Adhesive Chemical & More</Text>
           </TouchableOpacity>
@@ -111,7 +112,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
           onPress={() => handleBoxSelect('filter')}>
           <Image
             style={styles.image}
-            source={require('../assets/filter.jpg')}
+            source={require('../../assets/filter.jpg')}
           />
           <Text style={styles.text}>Filter</Text>
         </TouchableOpacity>
@@ -122,82 +123,4 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
 
 export default HorizontalScrollBar;
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-  },
-  scroll: {
-    flexDirection: 'row',
-  },
-  box: {
-    flexDirection: 'row',
-    height: 35,
-    width: 90,
-    borderColor: 'gray',
-    borderWidth: 1.5,
-    borderRadius: 20,
-    margin: 10,
-    marginRight: 0,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-  box1: {
-    flexDirection: 'row',
-    height: 35,
-    width: 110,
-    borderColor: 'gray',
-    borderWidth: 1.5,
-    borderRadius: 20,
-    margin: 10,
-    marginRight: 0,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-  box2: {
-    flexDirection: 'row',
-    height: 35,
-    width: 140,
-    borderColor: 'gray',
-    borderWidth: 1.5,
-    borderRadius: 20,
-    margin: 10,
-    marginRight: 0,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-  box3: {
-    flexDirection: 'row',
-    height: 35,
-    width: 120,
-    borderColor: 'gray',
-    borderWidth: 1.5,
-    borderRadius: 20,
-    margin: 10,
-    marginRight: 0,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-  box4: {
-    flexDirection: 'row',
-    height: 35,
-    width: 230,
-    borderColor: 'gray',
-    borderWidth: 1.5,
-    borderRadius: 20,
-    margin: 10,
-    marginRight: 0,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-  image: {
-    height: 20,
-    width: 20,
-    alignSelf: 'center',
-  },
-  text: {
-    fontSize: 15,
-    alignSelf: 'center',
-    marginLeft: 8,
-    fontWeight: 600,
-  },
-});
+

@@ -4,6 +4,7 @@ import SidebarScreen from '../../screens/Sidebar/SidebarScreen';
 import Feather from 'react-native-vector-icons/Feather';
 import Fontisto from  'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import styles from './style';
 
 const Header = ({ title, onPress, leftIconSource, rightIconSource, containerStyle, textStyle, iconStyle }) => {
   const [showModal, setShowModal] = useState(false);
@@ -60,50 +61,6 @@ Header.defaultProps = {
   iconStyle: {}
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    // justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 15,
-    paddingTop: 10,
-    paddingBottom: 10,
-    backgroundColor: '#fff',
-    gap: 20,
-  },
-  title: {
-    flex: 1,
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  icon: {
-    width: 30,
-    height: 30,
-  },
-  location: {
-    height: 25,
-    width: 90,
-    backgroundColor: '#dce0dd',
-    
-    borderRadius: 20,
-    flexDirection: 'row',
-     
-  },
-  flag: {
-    height: 16,
-    width: 16,
-    borderRadius: 8,
-    marginVertical: 4,
-    marginLeft: 6,
-  },
-  india: {
-   textAlignVertical: 'center',
-   marginLeft: 7,
-  },
-  downarrow1: {
-    textAlignVertical: 'center',
-    marginLeft: 4,
-  },
-});
+
 
 export default Header;

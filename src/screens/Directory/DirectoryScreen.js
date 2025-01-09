@@ -5,7 +5,7 @@ import styles from './style';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LinearGradient from 'react-native-linear-gradient';
 import {Dropdown} from 'react-native-element-dropdown';
-import DirectoryCard from '../../component/Card/DirectoryCard';
+import DirectoryCard from '../../component/DirectoryCard/DirectoryCard';
 
 
 
@@ -14,7 +14,7 @@ const DirectoryType = [
   {label: 'Verified', value: '2'},
   {label: 'Unlocked', value: '3'},
   {label: 'New Arrival', value: '4'},
-  {label: 'Most Popular', value: '5'},
+  {label: 'Most Popular', value: '5'}, 
 ];
 
 const DirectoryScreen = () => {
@@ -50,32 +50,25 @@ const DirectoryScreen = () => {
           colors={['#afd3e3', '#94eba4', '#c9f5d1']}
           start={{x: 0, y: 1.0}}
           end={{x: 1, y: 1}}
-          style={{
-            flex: 0,
-            height: 50,
-            width: 432,
-            margin: 8,
-            borderRadius: 10,
-            flexDirection: 'row',
-          }}>
+          style={styles.linear}>
           <Image
             source={require('../../assets/locationIcon.png')}
             style={styles.LocationIcon}
           />
           <Text style={styles.locationtxt}>Add Location for Local Country</Text>
           <TouchableOpacity style={styles.button}>
-            <Text style={{color: 'white', margin: 5, fontWeight: 600, fontSize: 12, alignSelf: 'center'}}>
+            <Text style={styles.btnText}>
               Use Current Location
             </Text>
           </TouchableOpacity>
         </LinearGradient>
         <View style={{flexDirection: 'row'}}>
-        <Text style={{fontSize: 18,marginLeft: 10,fontWeight: 700}}>24</Text>
-        <Text style={{fontSize: 18,marginLeft: 5,}}>Retailer found in Gandhinagar City</Text>
+        <Text style={styles.retailerCount}>24</Text>
+        <Text style={styles.retailerText}>Retailer found in Gandhinagar City</Text>
         </View>
         <DirectoryCard/>
     </ScrollView>
-  );
+  ); 
 };
-
+  
 export default DirectoryScreen;

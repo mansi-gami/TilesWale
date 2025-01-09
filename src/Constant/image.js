@@ -39,6 +39,23 @@ import Profile from '../assets/profileIcon.jpg';
 import tilesCard from '../assets/tilesCard.jpg';
 import NotFound from '../assets/NotFound.png';
 import tilesCatalogue from '../assets/tilesCatalogue.jpeg';
+import firstPageImage from '../assets/FirstPageImage.png';
+import orangeTick from '../assets/orangeTick.png';
+import secondPageImage from '../assets/SecondPageImage.png';
+import thirdPageImage from '../assets/ThirdPageImage.png';
+import fourPageImage from '../assets/FourPageImage.png';
+import fivePageImage from '../assets/FirstPageImage.png';
+import sixPageImage from '../assets/SixPageImage.png';
+import englandFlag from '../assets/EnglandFlag.webp';
+import indiaFlag from '../assets/IndiaFlag.jpg';
+import arabicFlag from '../assets/ArabicFlag.png';
+import spanishFlag from '../assets/SpanishFlag.webp';
+import russianFlag from '../assets/RussianFlag.jpeg';
+import blueTick from '../assets/blueTick.png';
+import bgDesign from '../assets/BGDesign.jpg';
+import bgLogo from '../assets/BGLogo.jpg';
+import googleIcon from '../assets/googleIcon.jpg';
+import phoneIcon from '../assets/phoneIcon.jpg';
 
 export {
     adhesive,alaska,
@@ -81,4 +98,21 @@ Profile,
 tilesCard,
 NotFound,
 tilesCatalogue,
+firstPageImage,
+orangeTick,
+secondPageImage,
+thirdPageImage,
+fourPageImage,
+fivePageImage,
+sixPageImage,
+englandFlag,
+indiaFlag,
+arabicFlag,
+spanishFlag,
+russianFlag,
+blueTick,
+bgDesign,
+bgLogo,
+googleIcon,
+phoneIcon,
 }

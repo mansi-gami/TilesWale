@@ -5,14 +5,14 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ffffff',
   },
-  border:{
+  border: {
     borderColor: '#bab9b6',
     borderTopWidth: 0.5,
     marginTop: 10,
   },
   mainContent: {
     flexDirection: 'row',
-    marginTop: 10,  
+    marginTop: 10,
     backgroundColor: '#ddd',
     borderRadius: 8,
   },
@@ -68,6 +68,30 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     borderRadius: 5,
     alignSelf: 'center',
+  },
+  linear: {
+    flex: 0,
+    height: 50,
+    width: 432,
+    margin: 8,
+    borderRadius: 10,
+    flexDirection: 'row',
+  },
+  btnText: {
+    color: 'white',
+    margin: 5,
+    fontWeight: 600,
+    fontSize: 12,
+    alignSelf: 'center',
+  },
+  retailerCount: {
+    fontSize: 18,
+    marginLeft: 10,
+    fontWeight: 700,
+  },
+  retailerText: {
+    fontSize: 18,
+    marginLeft: 5,
   },
 });
 

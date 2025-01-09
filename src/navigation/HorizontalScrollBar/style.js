@@ -1,0 +1,83 @@
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+    container: {
+      flexDirection: 'row',
+    },
+    scroll: {
+      flexDirection: 'row',
+    },
+    box: {
+      flexDirection: 'row',
+      height: 35,
+      width: 90,
+      borderColor: 'gray',
+      borderWidth: 1.5,
+      borderRadius: 20,
+      margin: 10,
+      marginRight: 0,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    box1: {
+      flexDirection: 'row',
+      height: 35,
+      width: 110,
+      borderColor: 'gray',
+      borderWidth: 1.5,
+      borderRadius: 20,
+      margin: 10,
+      marginRight: 0,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    box2: {
+      flexDirection: 'row',
+      height: 35,
+      width: 140,
+      borderColor: 'gray',
+      borderWidth: 1.5,
+      borderRadius: 20,
+      margin: 10,
+      marginRight: 0,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    box3: {
+      flexDirection: 'row',
+      height: 35,
+      width: 120,
+      borderColor: 'gray',
+      borderWidth: 1.5,
+      borderRadius: 20,
+      margin: 10,
+      marginRight: 0,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    box4: {
+      flexDirection: 'row',
+      height: 35,
+      width: 230,
+      borderColor: 'gray',
+      borderWidth: 1.5,
+      borderRadius: 20,
+      margin: 10,
+      marginRight: 0,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    image: {
+      height: 20,
+      width: 20,
+      alignSelf: 'center',
+    },
+    text: {
+      fontSize: 15,
+      alignSelf: 'center',
+      marginLeft: 8,
+      fontWeight: 600,
+    },
+  });
+
+  export default styles;

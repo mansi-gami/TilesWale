@@ -1,11 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MarketScreen from '../screens/Market/MarketScreen';
-import HomeScreen from '../screens/Home/HomeScreen';
+import MarketScreen from '../../screens/Market/MarketScreen';
+import HomeScreen from '../../screens/Home/HomeScreen';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import LeadsScreen from '../screens/Leads/LeadsScreen';
-import DirectoryScreen from '../screens/Directory/DirectoryScreen';
-import CatalogScreen from '../screens/Catalog/CatalogScreen';
+import LeadsScreen from '../../screens/Leads/LeadsScreen';
+import DirectoryScreen from '../../screens/Directory/DirectoryScreen';
+import CatalogScreen from '../../screens/Catalog/CatalogScreen';
 
 const Tab = createBottomTabNavigator();
 

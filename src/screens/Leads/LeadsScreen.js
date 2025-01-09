@@ -2,8 +2,8 @@ import {View, Switch, Text, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../component/Header/Header';
 import styles from './style';
-import HorizontalScrollBar from '../../navigation/HorizontalScrollBar';
-import LeadCard from '../../component/Card/LeadCard';
+import HorizontalScrollBar from '../../navigation/HorizontalScrollBar/HorizontalScrollBar';
+import LeadCard from '../../component/LeadCard/LeadCard';
 import {
   AdhesiveLead,
   BathwareLead,

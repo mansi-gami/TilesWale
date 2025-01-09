@@ -22,6 +22,15 @@ const styles = StyleSheet.create({
     marginLeft: 400,
     marginTop: 15,
   },
+  linear: {
+    flex: 0,
+    height: 50,
+    width: 432,
+    margin: 8,
+    marginTop: 10,
+    borderRadius: 10,
+    flexDirection: 'row',
+  },
   LocationIcon: {
     height: 30,
     width: 30,
@@ -40,6 +49,11 @@ const styles = StyleSheet.create({
     margin: 8,
     marginLeft: 20,
     borderRadius: 5,
+  },
+  btnText: {
+    color: 'white',
+    margin: 5,
+    fontWeight: 500,
   },
   brand: {
     fontSize: 20,
@@ -68,6 +82,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     overflow: 'hidden',
     fontWeight: 500,
+  },
+  linearCard: {
+    height: 150,
+    width: 120,
+    margin: 10,
+    borderRadius: 10,
   },
   box: {
     height: 200,
@@ -196,32 +216,32 @@ const styles = StyleSheet.create({
     elevation: 7,
   },
   btnadd: {
-    position:'absolute',
+    position: 'absolute',
     height: 35,
     width: 170,
     borderRadius: 25,
     backgroundColor: '#f08d3a',
-    justifyContent:'center',
-    alignItems:'center',
-    right:15,
-    bottom:15,
-    paddingHorizontal:10
+    justifyContent: 'center',
+    alignItems: 'center',
+    right: 15,
+    bottom: 15,
+    paddingHorizontal: 10,
   },
   btnAddRound: {
-    position:'absolute',
+    position: 'absolute',
     height: 50,
     width: 50,
     borderRadius: 25,
     backgroundColor: '#f08d3a',
-    justifyContent:'center',
-    alignItems:'center',
-    right:15,
-    bottom:15,
-    paddingHorizontal:10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    right: 15,
+    bottom: 15,
+    paddingHorizontal: 10,
     fontSize: 20,
   },
-  blankView:{
-    height:100
+  blankView: {
+    height: 100,
   },
   btnaddText: {
     fontSize: 18,

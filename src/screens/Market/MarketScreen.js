@@ -2,7 +2,7 @@ import {View, Text, ScrollView, Image, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../component/Header/Header';
 import styles from './style';
-import HorizontalScrollBar from '../../navigation/HorizontalScrollBar';
+import HorizontalScrollBar from '../../navigation/HorizontalScrollBar/HorizontalScrollBar';
 import Card from '../../component/Card/Card';
 import {Adhesive, Bathware, KitchenSink, Sanitary, Tiles} from '../../Constant/Constant';
 

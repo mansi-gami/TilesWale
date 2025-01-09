@@ -9,6 +9,7 @@ import {
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import styles from './style';
 
 function CatalogCard({Data, category, showSponsored}) {
     
@@ -45,12 +46,7 @@ function CatalogCard({Data, category, showSponsored}) {
                 color={'#919294'}
               />
               <Text
-                style={{
-                  color: 'gray',
-                  fontSize: 18,
-                  marginTop: 5,
-                  marginLeft: 8,
-                }}>
+                style={styles.views}>
                 {item.Views}
               </Text>
               <MaterialCommunityIcons
@@ -60,12 +56,7 @@ function CatalogCard({Data, category, showSponsored}) {
                 color={'#919294'}
               />
               <Text
-                style={{
-                  color: 'gray',
-                  fontSize: 18,
-                  marginTop: 5,
-                  marginLeft: 8,
-                }}>
+                style={styles.shareCount}>
                 {item.share}
               </Text>
             </View>
@@ -79,69 +70,3 @@ function CatalogCard({Data, category, showSponsored}) {
 }
 
 export default CatalogCard;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-  },
-  card: {
-    height: 280,
-    width: 220,
-    borderColor: '#ddd',
-    borderWidth: 1,
-    margin: 15,
-    borderRadius: 15,
-  },
-  image: {
-    height: 150,
-    width: 220,
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
-  },
-  size: {
-    width: 210,
-    fontSize: 16,
-    overflow: 'hidden',
-    color: 'gray',
-    paddingLeft: 10,
-  },
-  name: {
-    width: 190,
-    fontSize: 16,
-    overflow: 'hidden',
-    fontWeight: 500,
-    paddingLeft: 10,
-    paddingTop: 10,
-  },
-  bottomColor: {
-    backgroundColor: '#e6e8ed',
-    height: 37,
-    marginTop: 20,
-    borderBottomRightRadius: 15,
-    borderBottomLeftRadius: 15,
-    flexDirection: 'row',
-  },
-  icon: {
-    marginLeft: 30,
-    marginTop: 8,
-  },
-  arrowIcon: {
-    marginTop: 8,
-    marginLeft: 70,
-  },
-  sponsored: {
-    position: 'absolute',
-    backgroundColor: '#000000',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderTopLeftRadius: 15,
-    width: 100,
-  },
-  image1: {
-    height: 150,
-    width: 210,
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
-  }
-});
