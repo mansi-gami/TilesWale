@@ -6,10 +6,12 @@ import LinearGradient from 'react-native-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
 
 const AdvertisementScreen6 = () => {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
-      <TouchableOpacity style={styles.skip} onPress={() => navigation.navigate('LanguageScreen')}>
+      <TouchableOpacity
+        style={styles.skip}
+        onPress={() => navigation.navigate('LanguageScreen')}>
         <Text style={styles.skipText}>Done</Text>
       </TouchableOpacity>
       <View>
@@ -18,23 +20,26 @@ const AdvertisementScreen6 = () => {
           start={{x: 1, y: 0}}
           end={{x: 1, y: 1}}
           style={styles.linear}>
-             <Text style={styles.text}>Tiles Store With</Text>
+          <View style={styles.detail}>
+            <Text style={styles.firstText}>Tiles Store With</Text>
 
-          <View style={{flexDirection: 'row'}}>
-            <Text style={styles.secondText}>15000+</Text>
-            <Text style={styles.firstText}>collection</Text>
+            <View style={{flexDirection: 'row'}}>
+              <Text style={styles.secondText}>15000+</Text>
+              <Text style={styles.firstText}> collection</Text>
+            </View>
           </View>
-         
-          <Image
-            style={styles.Image}
-            source={require('../../assets/SixPageImage.png')}
-          />
+          <View style={styles.image}>
+            <Image
+              style={styles.imageSize}
+              source={require('../../assets/SixPageImage.png')}
+            />
+          </View>
         </LinearGradient>
       </View>
-    
-      <View style={styles.bottomBar}>
 
-      <TouchableOpacity onPress={() => navigation.navigate('AdvertisementScreen5')}>
+      <View style={styles.bottomBar}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('AdvertisementScreen5')}>
           <MaterialIcons name={'keyboard-arrow-left'} size={30} />
         </TouchableOpacity>
 
@@ -46,8 +51,10 @@ const AdvertisementScreen6 = () => {
           <View style={styles.paginationDot} />
           <View style={styles.paginationDotActive} />
         </View>
-        <TouchableOpacity style={{flexDirection: 'row'}} onPress={() => navigation.navigate('LanguageScreen')}>
-          <Text style={styles.start} >Start</Text>
+        <TouchableOpacity
+          style={{flexDirection: 'row'}}
+          onPress={() => navigation.navigate('LanguageScreen')}>
+          <Text style={styles.start}>Start</Text>
           <MaterialIcons name={'keyboard-arrow-right'} size={30} />
         </TouchableOpacity>
       </View>

@@ -9,7 +9,7 @@ import {
 import React, {useState} from 'react';
 import styles from './style';
 
-const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
+const HorizontalScrollBar = ({selectedBox, setSelectedBox}) => {
   // const [selectedBox, setSelectedBox] = useState(null);
 
   const handleBoxSelect = boxId => {
@@ -41,6 +41,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[
+              styles.box,
               styles.box1,
               {
                 backgroundColor:
@@ -56,6 +57,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[
+              styles.box,
               styles.box2,
               {
                 backgroundColor:
@@ -71,6 +73,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[
+              styles.box,
               styles.box3,
               {
                 backgroundColor:
@@ -86,6 +89,7 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[
+              styles.box,
               styles.box4,
               {
                 backgroundColor:
@@ -122,5 +126,3 @@ const HorizontalScrollBar = ({selectedBox,setSelectedBox}) => {
 };
 
 export default HorizontalScrollBar;
-
-

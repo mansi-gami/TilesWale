@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
+import {scale} from 'react-native-size-matters';
 
 const Carousel = () => {
   const screenWidth = Dimensions.get('window').width;
@@ -62,10 +63,10 @@ const Carousel = () => {
         <Image
           source={item.image}
           style={{
-            height: 200,
+            height: scale(155),
             width: screenWidth,
-            borderRadius: 20,
-            marginTop: 10,
+            borderRadius: scale(15),
+            marginTop: scale(8),
           }}
         />
       </View>

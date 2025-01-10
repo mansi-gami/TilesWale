@@ -1,53 +1,57 @@
 import {StyleSheet} from 'react-native';
+import {scale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   container: {
-    height: 100,
-    width: 430,
+    flex: 1,
+    justifyContent: 'space-between',
     borderColor: '#ddd',
-    borderWidth: 1,
-    marginHorizontal: 10,
-    marginTop: 20,
-    borderRadius: 10,
+    borderWidth: scale(1),
+    marginHorizontal: scale(10),
+    marginVertical: scale(10),
+    borderRadius: scale(8),
   },
-  card: {
-    height: 70,
-    width: 70,
-    borderRadius: 10,
-    margin: 15,
+  content: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: scale(7),
+    marginVertical: scale(7),
+  },
+  card: { 
+    height: scale(55),
+    width: scale(55),
+    borderRadius: scale(8),
     borderColor: '#ddd',
-    borderWidth: 2,
+    borderWidth: scale(1.5),
     justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
-    height: 60,
-    width: 50,
+    height: scale(50),
+    width: scale(40),
+  },
+  detail: {
+    marginLeft: scale(15),
   },
   views: {
     flexDirection: 'row',
-    height: 30,
-    width: 50,
+    height: scale(23),
+    width: scale(38),
     borderColor: '#ddd',
-    borderWidth: 1,
-    left: 144,
-    top: 10,
+    borderWidth: scale(1),
+    marginLeft: scale(108),
     borderTopStartRadius: 10,
     borderBottomStartRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 5,
-  },
-  icon: {
-    marginLeft: 2,
+    gap: scale(3),
   },
   name: {
-    marginTop: 25,
-    fontSize: 18,
+    fontSize: scale(15),
     fontWeight: 600,
   },
   location: {
-    fontSize: 14,
+    fontSize: scale(11),
     color: 'gray',
   },
 });

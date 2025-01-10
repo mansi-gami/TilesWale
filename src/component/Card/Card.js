@@ -9,14 +9,18 @@ const Card = ({Data, category}) => {
       {Data?.map((item, index) => (
         <View style={styles.content}>
           <View style={styles.part1}>
-            <Image style={styles.logo} source={item.logo} />
-            <View style={styles.name}>
-              <Text style={styles.txt}>{item.name}</Text>
-              <Text>{item.otherName}</Text>
-              <Text style={styles.txt1}>{item.location}</Text>
+            <View style={styles.subPart1}>
+              <Image style={styles.logo} source={item.logo} />
+              <View style={styles.name}>
+                <Text style={styles.txt}>{item.name}</Text>
+                <Text>{item.otherName}</Text>
+                <Text style={styles.txt1}>{item.location}</Text>
+              </View>
             </View>
-            <View style={styles.btn}>
-              <Text style={styles.btnText}>{item.salesType}</Text>
+            <View style={styles.subPart2}>
+              <View style={styles.btn}>
+                <Text style={styles.btnText}>{item.salesType}</Text>
+              </View>
             </View>
           </View>
           <View style={styles.part2}>
@@ -24,7 +28,7 @@ const Card = ({Data, category}) => {
             <Image style={styles.shreeimg} source={item.image1} />
           </View>
           <View style={styles.part3}>
-            <View style={{width: 260}}>
+            <View style={styles.detail}>
               <Text
                 numberOfLines={1}
                 ellipsizeMode={'tail'}
@@ -33,24 +37,29 @@ const Card = ({Data, category}) => {
               </Text>
               <Text style={styles.txtSize}>{item.size}</Text>
               <Text style={styles.txtValue}>{item.value}</Text>
-              {(category === 'tiles' || category === 'sanitaryware' || category === 'kitchenSink') && item.repeat &&(
-              <TouchableOpacity style={styles.repeat}>
-                <Feather
-                  style={styles.icon}
-                  name={'repeat'}
-                  size={12}
-                  color={'#ffffff'}
-                />
-                <Text style={styles.repeatText}>{item.repeat}</Text>
-              </TouchableOpacity>)}
+              {(category === 'tiles' ||
+                category === 'sanitaryware' ||
+                category === 'kitchenSink') &&
+                item.repeat && (
+                  <TouchableOpacity style={styles.repeat}>
+                    <Feather
+                      style={styles.icon}
+                      name={'repeat'}
+                      size={12}
+                      color={'#ffffff'}
+                    />
+                    <Text style={styles.repeatText}>{item.repeat}</Text>
+                  </TouchableOpacity>
+                )}
               <View style={styles.time}>
                 <Text style={styles.timeText}>{item.time}</Text>
               </View>
             </View>
-            <View>
-                <Text style={styles.ruppe}>{item.ruppe}</Text>
-                <Text numberOfLines={2}
-                ellipsizeMode={'tail'} style={styles.tax}>{item.tax}</Text>
+            <View style={styles.price}>
+              <Text style={styles.ruppe}>{item.ruppe}</Text>
+              <Text numberOfLines={2} ellipsizeMode={'tail'} style={styles.tax}>
+                {item.tax}
+              </Text>
             </View>
           </View>
         </View>
@@ -60,5 +69,3 @@ const Card = ({Data, category}) => {
 };
 
 export default Card;
-
-

@@ -19,14 +19,17 @@ const AdvertisementScreen3 = () => {
           start={{x: 1, y: 0}}
           end={{x: 1, y: 1}}
           style={styles.linear}>
+            <View style={styles.detail}>
           <Text style={styles.text}>Daily</Text>
 
           <Text style={styles.text1}>Verified Leads</Text>
-        
+          </View>
+          <View style={styles.image}>
           <Image
-            style={styles.Image}
+            style={styles.imageSize}
             source={require('../../assets/ThirdPageImage.png')}
           />
+          </View>
         </LinearGradient>
       </View>
     

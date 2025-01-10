@@ -28,7 +28,7 @@ const Carousel = () => {
         });
         return nextIndex;
       });
-    }, 3000); // Change image every 2 seconds
+    }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [activeIndex]);
@@ -74,19 +74,19 @@ const Carousel = () => {
           {backgroundColor: item.color, width: screenWidth},
         ]}>
         {item.color === '#efd5f0' && (
-          <View style={{flexDirection: 'row'}}>
+          <View style={styles.mainContainer}>
             <View style={styles.textContainer}>
               <Text style={styles.carouselText}>GET</Text>
               <Text style={styles.carouselText1}>350+</Text>
               <Text style={styles.boldText}>
                 Contracts<Text style={styles.carouselText2}> for the top</Text>{' '}
               </Text>
-              <Text style={styles.carouselText3}>Bathware brands</Text>
+              <Text style={styles.boldText}>Bathware brands</Text>
               <View style={styles.btn}>
                 <Text style={styles.txt}>Reach Out</Text>
               </View>
             </View>
-            <View style={styles.imageContainer}>
+            <View>
               <Image
                 style={styles.image}
                 source={
@@ -99,10 +99,10 @@ const Carousel = () => {
           </View>
         )}
         {item.color === '#d5f0db' && (
-          <View style={{flexDirection: 'row'}}>
-            <View style={styles.imageContainerRight}>
+          <View style={styles.mainContainer2}>
+            <View>
               <Image
-                style={styles.imageRight}
+                style={styles.image}
                 source={
                   imageIndex === 0
                     ? require('../../assets/sanitaryware.png')
@@ -111,31 +111,31 @@ const Carousel = () => {
               />
             </View>
             <View style={styles.textContainerRight}>
-              <Text style={styles.carouselTextRight}>EXPLORE</Text>
-              <Text style={styles.carouselText1Right}>500+</Text>
-              <Text style={styles.boldTextRight}>
+              <Text style={styles.carouselText}>EXPLORE</Text>
+              <Text style={styles.carouselText1}>500+</Text>
+              <Text style={styles.boldText}>
                 Stunning
-                <Text style={styles.carouselText2Right}> brands of</Text>{' '}
+                <Text style={styles.carouselText2}> brands of</Text>{' '}
               </Text>
-              <Text style={styles.carouselText3Right}>SanitaryWare</Text>
-              <View style={styles.btnRight}>
-                <Text style={styles.txtRight}>Connect Now</Text>
+              <Text style={styles.boldText}>SanitaryWare</Text>
+              <View style={styles.btn}>
+                <Text style={styles.txt}>Connect Now</Text>
               </View>
             </View>
           </View>
         )}
         {item.color === '#f5bfc9' && (
-          <View style={{flexDirection: 'row'}}>
+          <View style={styles.mainContainer}>
             <View style={styles.textContainer}>
               <Text style={styles.carouselText}>DISCOVER</Text>
               <Text style={styles.carouselText1}>2000+</Text>
               <Text style={styles.carouselText2}>most popular</Text>
-              <Text style={styles.carouselText3}>Tile brands</Text>
+              <Text style={styles.boldText}>Tile brands</Text>
               <View style={styles.btn}>
                 <Text style={styles.txt}>Reach Out</Text>
               </View>
             </View>
-            <View style={styles.imageContainer}>
+            <View>
               <Image
                 style={styles.image}
                 source={
@@ -148,10 +148,10 @@ const Carousel = () => {
           </View>
         )}
         {item.color === '#c0eaed' && (
-          <View style={{flexDirection: 'row'}}>
-            <View style={styles.imageContainerRight}>
+          <View style={styles.mainContainer2}>
+            <View>
               <Image
-                style={styles.imageRight}
+                style={styles.image}
                 source={
                   imageIndex === 0
                     ? require('../../assets/kitchenSink.png')
@@ -159,15 +159,15 @@ const Carousel = () => {
                 }
               />
             </View>
-            <View style={styles.textContainerRight1}>
-              <Text style={styles.carouselTextRight1}>GET CONNECT WITH</Text>
-              <Text style={styles.carouselText1Right1}>450+</Text>
-              <Text style={styles.carouselText2Right1}>
-                Stylish<Text style={styles.boldTextRight}> Kitchen Sink</Text>{' '}
+            <View style={styles.textContainerRight}>
+              <Text style={styles.carouselText}>GET CONNECT WITH</Text>
+              <Text style={styles.carouselText1}>450+</Text>
+              <Text style={styles.carouselText2}>
+                Stylish<Text style={styles.boldText}> Kitchen Sink</Text>{' '}
               </Text>
-              <Text style={styles.carouselText3Right1}>brands</Text>
-              <View style={styles.btnRight1}>
-                <Text style={styles.txtRight1}>Get in touch</Text>
+              <Text style={styles.boldText}>brands</Text>
+              <View style={styles.btn}>
+                <Text style={styles.txt}>Get in touch</Text>
               </View>
             </View>
           </View>

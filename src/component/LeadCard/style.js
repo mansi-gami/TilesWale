@@ -1,102 +1,112 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
+import {scale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
-    box: {
-      height: 225,
-      width: 425,
-      borderColor: '#d7d9db',
-      borderWidth: 2,
-      borderRadius: 15,
-      margin: 12,
-    },
-    companyName: {
-      fontSize: 25,
-      fontWeight: 500,
-      margin: 10,
-      marginBottom: 0,
-    },
-    count: {
-      fontSize: 20,
-      color: 'green',
-      fontWeight: 600,
-      marginLeft: 10,
-    },
-    size: {
-      fontSize: 17,
-      marginLeft: 10,
-      color: '#878c91',
-    },
-    date: {
-      fontSize: 15,
-      marginLeft: 10,
-      color: '#878c91',
-    },
-    content: {
-      backgroundColor: '#d5e4f5',
-      marginTop: 20,
-      height: 87,
-      borderBottomRightRadius: 10,
-      borderBottomLeftRadius: 10,
-      flexDirection: 'row',
-    },
-    profile: {
-      height: 60,
-      width: 60,
-      borderRadius: 30,
-      margin: 10,
-    },
-    desc: {
-      width: 130,
-    },
-    name: {
-      fontSize: 20,
-      marginTop: 15,
-    },
-    location: {
-      fontStyle: 'italic',
-      color: '#878c91',
-    },
-    btn: {
-      backgroundColor: '#87888a',
-      height: 23,
-      width: 100,
-      borderRadius: 20,
-      marginTop: 30,
-      marginLeft: 100,
-    },
-    btnText: {
-      fontSize: 14,
-      color: '#ffffff',
-      fontWeight: 500,
-      textAlign: 'center',
-      marginLeft: 4,
-      marginRight: 4,
-    },
-    repeat: {
-      backgroundColor: 'blue',
-      height: 25,
-      width: 80,
-      marginLeft: 15,
-  
-      borderRadius: 20,
-      flexDirection: 'row',
-    },
-    num: {
-      backgroundColor: 'yellow',
-      height: 15,
-      width: 15,
-      borderRadius: 7,
-      textAlign: 'center',
-      fontSize: 10,
-      fontWeight: 800,
-      margin: 5,
-    },
-    numText: {
-      color: '#ffffff',
-      fontSize: 12,
-      alignSelf: 'center',
-      fontWeight: 700,
-    },
-  });
-  
-  export default  styles;
+  box: {
+    flex: 1,
+    justifyContent: 'center',
+    alignContent: 'center',
+    marginHorizontal: scale(10),
+    marginVertical: scale(10),
+    height: scale(180),
+    width: scale(330),
+    borderColor: '#d7d9db',
+    borderWidth: scale(1),
+    borderRadius: scale(12),
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    marginHorizontal: scale(10),
+  },
+  companyName: {
+    fontSize: scale(20),
+    fontWeight: 500,
+  },
+  part: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: scale(50),
+  },
+  count: {
+    fontSize: scale(16),
+    color: 'green',
+    fontWeight: 600,
+  },
+  size: {
+    fontSize: scale(13),
+    color: '#878c91',
+  },
+  date: {
+    fontSize: scale(11),
+    color: '#878c91',
+  },
+  content1: {
+    backgroundColor: '#d5e4f5',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: scale(10),
+    height: scale(65),
+    borderBottomRightRadius: scale(8),
+    borderBottomLeftRadius: scale(8),
+    flexDirection: 'row',
+  },
+  profile: {
+    height: scale(50),
+    width: scale(50),
+    borderRadius: scale(25),
+  },
+  desc: {
+    width: scale(120),
+    marginRight: scale(40),
+  },
+  name: {
+    fontSize: scale(17),
+  },
+  location: {
+    fontStyle: 'italic',
+    color: '#878c91',
+  },
+  btn: {
+    backgroundColor: '#87888a',
+    height: scale(18),
+    width: scale(75),
+    borderRadius: scale(15),
+  },
+  btnText: {
+    fontSize: scale(11),
+    color: '#ffffff',
+    fontWeight: 500,
+    textAlign: 'center',
+  },
+  design: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: scale(5),
+  },
+  repeat: {
+    backgroundColor: 'blue',
+    height: scale(20),
+    width: scale(65),
+    marginLeft: scale(15),
+    borderRadius: scale(16),
+    flexDirection: 'row',
+  },
+  num: {
+    backgroundColor: 'yellow',
+    height: scale(12),
+    width: scale(12),
+    borderRadius: scale(6),
+    textAlign: 'center',
+    fontSize: scale(9),
+    fontWeight: 800,
+  },
+  numText: {
+    color: '#ffffff',
+    fontSize: scale(10),
+    fontWeight: 700,
+  },
+});
+
+export default styles;

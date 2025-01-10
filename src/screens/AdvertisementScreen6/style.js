@@ -1,80 +1,79 @@
-import { StyleSheet } from "react-native";
-import { Image } from "react-native-reanimated/lib/typescript/Animated";
+import {StyleSheet} from 'react-native';
+import {scale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
-    mainContainer: {
-    
-    },
-    skip: {
-        flexDirection: 'row',
-        left: 370,
-        top: 40,
-    },
-    skipText: {
-        fontSize: 20,
-        fontWeight: 600,
-    },
-    linear: {
-        height: 750,
-        marginTop: 80,
-        borderRadius: 10,
-      },
-      firstText: {
-        fontSize: 35,
-        marginLeft: 10,
-        marginTop: 10,
-      },
-      secondText: {
-        fontSize: 45,
-        marginLeft: 30,
-        color: '#f59c02',
-        fontWeight: 800,
-      },
-      text: {
-        fontSize: 45,
-        marginLeft: 30, 
-        marginTop: 30,
-      },
-      Image: {
-        width: 400,
-        height: 800,
-        bottom: 160,
-        alignSelf: 'center',
-      },
-      bottomBar: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: 10,
-        backgroundColor: "#fff",
-        borderTopWidth: 1,
-        borderColor: "#ccc",
-      },
-      paginationContainer: {
-        flexDirection: "row",
-        alignItems: "center",
-      },
-      paginationDot: {
-        width: 6,
-        height: 6,
-        borderRadius: 3,
-        backgroundColor: "#ccc",
-        marginHorizontal: 15,
-      },
-      paginationDotActive: {
-        width: 10,
-        height: 10,
-        borderRadius: 5,
-        borderColor: '#000',
-        borderWidth: 3,
-        backgroundColor: "#fff",
-        marginHorizontal: 15,
-      },
-      start: {
-        fontSize: 17,
-        fontWeight: 600,
-        marginTop: 2,
-      },
-})
+  mainContainer: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  skip: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    marginVertical: scale(20),
+    marginHorizontal: scale(10),
+  },
+  skipText: {
+    fontSize: scale(12),
+    fontWeight: 600,
+  },
+  linear: {
+    height: scale(620),
+    borderRadius: scale(8),
+  },
+  detail: {
+    justifyContent: 'center',
+    marginHorizontal: scale(25),
+    marginVertical: scale(25),
+  },
+  firstText: {
+    fontSize: scale(35),
+  },
+  secondText: {
+    fontSize: scale(35),
+    color: '#f59c02',
+    fontWeight: 800,
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: scale(105),
+  },
+  imageSize: {
+    width: scale(320),
+  },
+  bottomBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    marginVertical: scale(10),
+  },
+  paginationContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  paginationDot: {
+    width: scale(5),
+    height: scale(5),
+    borderRadius: scale(2),
+    backgroundColor: '#ccc',
+    marginHorizontal: scale(12),
+  },
+  paginationDotActive: {
+    width: scale(8),
+    height: scale(8),
+    borderRadius: scale(4),
+    borderColor: '#000',
+    borderWidth: scale(2.2),
+    backgroundColor: '#fff',
+    marginHorizontal: scale(12),
+  },
+  start: {
+    fontSize: scale(14),
+    fontWeight: 600,
+    marginTop: scale(2),
+  },
+});
 
 export default styles;

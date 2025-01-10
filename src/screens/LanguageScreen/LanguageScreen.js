@@ -68,10 +68,13 @@ const LanguageScreen = () => {
           )}
         </TouchableOpacity>
       ))}
-
-      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('LoginActivityScreen')}>
+      <View style={styles.button}>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => navigation.navigate('LoginActivityScreen')}>
           <Text style={styles.btnText}>Done</Text>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

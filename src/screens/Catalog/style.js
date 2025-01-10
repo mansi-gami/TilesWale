@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {scale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,34 +14,33 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#ffffff',
-    height: 800,
   },
   image: {
-    height: 90,
-    width: 90,
+    alignSelf: 'center',
+    height: scale(70),
+    width: scale(70),
   },
   comments: {
-    fontSize: 20,
+    alignSelf: 'center',
+    fontSize: scale(16),
     color: '#000000',
-    fontWeight: '800',
+    fontWeight: 800,
   },
   content: {
     flexDirection: 'row',
     backgroundColor: '#ffffff',
+    justifyContent: 'space-between',
+    marginHorizontal: scale(8),
+    marginVertical: scale(8),
   },
   text: {
-    fontSize: 20,
+    fontSize: scale(16),
     color: '#000000',
     fontWeight: '500',
-    margin: 10,
-    width: 280,
   },
   linkText: {
-    fontSize: 20,
+    fontSize: scale(16),
     color: '#4071ed',
-    margin: 10,
-    width: 80,
-    marginLeft: 60,
   },
 });
 
