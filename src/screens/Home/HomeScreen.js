@@ -1,6 +1,6 @@
 import {
   View,
-  Text,
+  Text, 
   TextInput,
   Image,
   TouchableOpacity,
@@ -16,7 +16,8 @@ import {Dropdown} from 'react-native-element-dropdown';
 import Textarea from 'react-native-textarea';
 import styles from './styles';
 import CarouselItem from '../../component/CarouselItem/CarouselItem';
- 
+import { scale } from 'react-native-size-matters';
+
 const data = [
   {label: 'Tiles', value: '1'},
   {label: 'Sanitary Ware', value: '2'},
@@ -128,7 +129,7 @@ const HomeScreen = () => {
         onScroll={handleScroll}
         showsVerticalScrollIndicator={false}>
         <Header title={'Home'} />
-        <View>
+        <View style={styles.mainInput}>
           <TextInput style={styles.textInput} placeholder={placeholder} />
           <Fontisto style={styles.search} name={'search'} size={20} />
           <MaterialIcons
@@ -154,7 +155,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </LinearGradient>
         <Carousel />
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', gap: scale(125)}}>
           <Text style={styles.brand}>Brands in Spotlight</Text>
           <TouchableOpacity>
             <Text style={styles.link}>View All</Text>

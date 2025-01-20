@@ -1,64 +1,68 @@
 import {StyleSheet} from 'react-native';
+import {Directions} from 'react-native-gesture-handler';
+import {scale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   mainContainer: {
+    flex: 1,
     backgroundColor: '#ffffff',
-    height: 950,
   },
   bgImage: {
-    height: 255,
-    width: 450,
+    height: scale(180),
+    width: scale(380),
   },
   bgLogo: {
-    height: 120,
-    width: 150,
-    marginLeft: 30,
+    height: scale(90),
+    width: scale(130),
+    marginLeft: scale(20),
   },
   text: {
-    fontSize: 30,
-    marginLeft: 30,
+    fontSize: scale(22),
+    marginLeft: scale(20),
   },
   content: {
     flexDirection: 'row',
-    margin: 50,
-    marginTop: 0,
+    justifyContent: 'center',
+    gap: scale(60),
+    marginVertical: scale(20),
+  },
+  subContent: {
+    alignItems: 'center',
   },
   round: {
-    height: 80,
-    width: 80,
+    height: scale(70),
+    width: scale(70),
     borderColor: 'gray',
     borderWidth: 1.5,
-    borderRadius: 40,
-    marginTop: 50,
-    marginLeft: 50,
-    marginRight: 50,
+    borderRadius: scale(35),
     justifyContent: 'center',
     alignItems: 'center',
   },
   gooleIcon: {
-    height: 60,
-    width: 60,
-    borderRadius: 30,
+    height: scale(50),
+    width: scale(50),
+    borderRadius: scale(25),
   },
   txt: {
-    fontSize: 20,
-    marginLeft: 60,
-    marginTop: 10,
+    fontSize: scale(18),
+  },
+  privacyLinkText: {
+    flex: 0.8,
+    justifyContent: 'flex-end',
   },
   withoutLoginText: {
-    fontSize: 20,
+    fontSize: scale(16),
     textAlign: 'center',
   },
   withoutLinkText: {
-    fontSize: 15,
+    fontSize: scale(12),
     textAlign: 'center',
-    marginTop: 150,
   },
   withoutLinkText1: {
-    fontSize: 15,
+    fontSize: scale(12),
   },
   linkText: {
-    fontSize: 15,
+    fontSize: scale(12),
     color: '#60becc',
   },
   privacyContent: {

@@ -2,7 +2,7 @@ import {View, Text, Image, ActivityIndicator, StyleSheet} from 'react-native';
 import React, { useEffect } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from './style';
-
+ 
 export default function SplashScreen({navigation}) {
   useEffect(() => {  
   setTimeout(() => {
@@ -11,9 +11,10 @@ export default function SplashScreen({navigation}) {
   }, []);
   return (
     <>
+    <View style={styles.imageContent}>
       <Image
         source={require('../../assets/logo.jpeg')}
-        style={styles.image}></Image>
+        style={styles.image}></Image></View>
       <View style={styles.container}>
         <ActivityIndicator
           size={'large'}

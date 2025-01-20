@@ -4,7 +4,7 @@ import styles from './style';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import LinearGradient from 'react-native-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
-
+ 
 const AdvertisementScreen1 = () => {
   const navigation = useNavigation();
 

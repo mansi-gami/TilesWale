@@ -19,6 +19,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import styles from './styles';
+import { scale } from 'react-native-size-matters';
 
 const width = Dimensions.get('window');
 
@@ -56,7 +57,7 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
               </View>
             </View>
             <View style={styles.mainContainer}>
-              <View style={styles.content1}>
+              <View style={styles.content}>
                 <MaterialCommunityIcons
                   style={styles.icon}
                   name={'transit-connection-variant'}
@@ -67,7 +68,7 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
                   <Text>Connects</Text>
                 </View>
               </View>
-              <View style={styles.content2}>
+              <View style={styles.content}>
                 <Entypo style={styles.icon} name={'link'} size={25} />
                 <View>
                   <Text style={styles.count}>5</Text>
@@ -87,6 +88,7 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
                 size={30}
               />
             </LinearGradient>
+            <View style={styles.mainPart}>
             <View style={{flexDirection: 'row'}}>
               <Ionicons style={styles.icons} name={'heart-outline'} size={25} />
               <Text style={styles.contents}>
@@ -105,6 +107,7 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
               <Entypo style={styles.icons} name={'open-book'} size={25} />
               <Text style={styles.contents}>Catalogues</Text>
             </View>
+            
             <Text style={styles.heading}>My Business</Text>
             <View style={{flexDirection: 'row'}}>
               <MaterialCommunityIcons
@@ -114,7 +117,7 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
               />
               <Text style={styles.contents}>Fraud List</Text>
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <Text style={styles.about}>About TilesWale</Text>
               <Feather
                 style={styles.downarrow}
@@ -122,15 +125,16 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
                 size={30}
               />
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <Text style={styles.about}>Tools</Text>
               <Feather
                 style={styles.downarrow1}
                 name={'chevron-down'}
                 size={30}
               />
-            </View>
-            <View style={{flexDirection: 'row'}}>
+            </View></View>
+           
+            <View style={styles.logoStyle}>
               <View style={styles.logoContent}>
                 <Image
                   source={require('../../assets/fb.webp')}
@@ -147,7 +151,8 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
                   style={styles.logo}></Image>
               </View>
             </View>
-            <View style={{marginTop: 20}}>
+        
+            <View style={{margin: 'auto'}}>
               <Text style={styles.copyright}>TilesWale ©2024</Text>
               <Text style={styles.copyright}>(Version 2.2.9)</Text>
             </View>
@@ -157,6 +162,6 @@ const SidebarScreen = ({showModal, setShowModal, toggleModal}) => {
     </>
   );
 };
-
+ 
 export default SidebarScreen;
 

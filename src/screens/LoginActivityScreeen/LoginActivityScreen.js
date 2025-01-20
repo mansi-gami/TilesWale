@@ -19,7 +19,7 @@ const LoginActivityScreen = () => {
         <Text style={styles.text}>World's Largest B2B2C Live</Text>
         <Text style={styles.text}>Ceramic Marketplace</Text>
         <View style={styles.content}>
-          <View>
+          <View style={styles.subContent}>
             <TouchableOpacity style={styles.round}>
               <Image
                 style={styles.gooleIcon}
@@ -28,7 +28,7 @@ const LoginActivityScreen = () => {
             </TouchableOpacity>
             <Text style={styles.txt}>Google</Text>
           </View>
-          <View>
+          <View style={styles.subContent}>
             <TouchableOpacity style={styles.round}>
               <Image
                 style={styles.gooleIcon}
@@ -42,15 +42,19 @@ const LoginActivityScreen = () => {
           <Text style={styles.withoutLoginText}>Continue without Login</Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.withoutLinkText}>By continuing you agree to our</Text>
-      <View style={styles.privacyContent}>
-        <TouchableOpacity>
-          <Text style={styles.linkText}>Privacy Policy</Text>
-        </TouchableOpacity>
-        <Text style={styles.withoutLinkText1}> and</Text>
-        <TouchableOpacity>
-          <Text style={styles.linkText}> Terms-Condition</Text>
-        </TouchableOpacity>
+      <View style={styles.privacyLinkText}>
+        <Text style={styles.withoutLinkText}>
+          By continuing you agree to our
+        </Text>
+        <View style={styles.privacyContent}>
+          <TouchableOpacity>
+            <Text style={styles.linkText}>Privacy Policy</Text>
+          </TouchableOpacity>
+          <Text style={styles.withoutLinkText1}> and</Text>
+          <TouchableOpacity>
+            <Text style={styles.linkText}> Terms-Condition</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

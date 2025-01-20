@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginBottom: scale(120),
   },
   imageSize: {
-    width: scale(300),
+    width: scale(250),
   },
   tickMark: {
     height: scale(12),
