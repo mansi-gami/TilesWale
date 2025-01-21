@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {s, scale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     marginHorizontal: scale(5),
   },
   textInput: {
-    marginLeft: scale(25),
+    marginLeft: scale(20),
   },
   search: {
     position: 'absolute',

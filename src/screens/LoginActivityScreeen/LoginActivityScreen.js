@@ -2,9 +2,21 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import styles from './style';
 import {useNavigation} from '@react-navigation/native';
+import {_signInWithGoogle} from '../../config/Firebase/GoogleSignIn';
 
-const LoginActivityScreen = () => {
-  const navigation = useNavigation();
+const LoginActivityScreen = ({navigation}) => {
+  async function googleSignIn() {
+    _signInWithGoogle().then(data => {
+      if (!data) {
+        console.log('=> Error:', 'No Data');
+        navigation.navigate('Splash');
+        return;
+      }
+      console.log('=>Success', data);
+    });
+  }
+
+  // const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
       <View>
@@ -20,7 +32,9 @@ const LoginActivityScreen = () => {
         <Text style={styles.text}>Ceramic Marketplace</Text>
         <View style={styles.content}>
           <View style={styles.subContent}>
-            <TouchableOpacity style={styles.round}>
+            <TouchableOpacity
+              style={styles.round}
+              onPress={() => googleSignIn()}>
               <Image
                 style={styles.gooleIcon}
                 source={require('../../assets/googleIcon.jpg')}

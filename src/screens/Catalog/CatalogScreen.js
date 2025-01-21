@@ -118,7 +118,7 @@ function CatalogTopTabs() {
         tabBarLabelStyle: {fontSize: 20, fontWeight: '600', height: 30},
         tabBarStyle: {backgroundColor: 'white'},
       }}>
-      <Tab.Screen name="My Downloads" component={MyDownloads} />
+      <Tab.Screen name="MyDownloads" component={MyDownloads} />
       <Tab.Screen name="Tiles" component={Tiles} />
       <Tab.Screen name="Sanitaryware" component={Sanitaryware} />
       <Tab.Screen name="Kitchen Sink" component={KitchenSink} />

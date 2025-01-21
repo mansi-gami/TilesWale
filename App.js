@@ -13,6 +13,7 @@ import AdvertisementScreen5 from './src/screens/AdvertisementScreen5/Advertiseme
 import AdvertisementScreen6 from './src/screens/AdvertisementScreen6/AdvertisementScreen6';
 import LanguageScreen from './src/screens/LanguageScreen/LanguageScreen';
 import LoginActivityScreen from './src/screens/LoginActivityScreeen/LoginActivityScreen';
+import BrandScreen from './src/screens/Brand/BrandScreen';
 
 const stack = createNativeStackNavigator();
 const App = () => {
@@ -87,6 +88,16 @@ const App = () => {
           <stack.Screen
             name={'Lead'}
             component={MyTabs}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'LoginActivity'}
+            component={MyTabs}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'Brand'}
+            component={BrandScreen}
             // options={{headerShown: true}}
           />
         </stack.Navigator>

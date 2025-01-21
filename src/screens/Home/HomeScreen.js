@@ -17,6 +17,7 @@ import Textarea from 'react-native-textarea';
 import styles from './styles';
 import CarouselItem from '../../component/CarouselItem/CarouselItem';
 import { scale } from 'react-native-size-matters';
+import { useNavigation } from '@react-navigation/native';
 
 const data = [
   {label: 'Tiles', value: '1'},
@@ -76,6 +77,7 @@ const Unit = [
 ];
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   const [selectedValue, setSelectedValue] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectSize, setSelectSize] = useState(null);
@@ -157,7 +159,7 @@ const HomeScreen = () => {
         <Carousel />
         <View style={{flexDirection: 'row', gap: scale(125)}}>
           <Text style={styles.brand}>Brands in Spotlight</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate('Brand')}>
             <Text style={styles.link}>View All</Text>
           </TouchableOpacity>
         </View>

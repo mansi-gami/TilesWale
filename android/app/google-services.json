@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "684949494630",
+    "project_id": "tileswale-56bfe",
+    "storage_bucket": "tileswale-56bfe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684949494630:android:d206572fd2bfe0080b06a7",
+        "android_client_info": {
+          "package_name": "com.tileswale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684949494630-5uhjohop8d0c8pl9j1919llo4bh4aqgp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tileswale",
+            "cerificate_hash": ""
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtuFb9Z_cOhtnaddO8wz36t4KhoRLdXwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
