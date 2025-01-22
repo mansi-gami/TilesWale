@@ -14,6 +14,9 @@ import AdvertisementScreen6 from './src/screens/AdvertisementScreen6/Advertiseme
 import LanguageScreen from './src/screens/LanguageScreen/LanguageScreen';
 import LoginActivityScreen from './src/screens/LoginActivityScreeen/LoginActivityScreen';
 import BrandScreen from './src/screens/Brand/BrandScreen';
+import MoreImage from './src/screens/MoreImage/MoreImage';
+import MarketScreen from './src/screens/Market/MarketScreen';
+import ProductDetailScreen from './src/screens/ProductDetail/ProductDetailScreen';
 
 const stack = createNativeStackNavigator();
 const App = () => {
@@ -85,6 +88,11 @@ const App = () => {
             component={MyTabs}
             // options={{headerShown: true}}
           />
+          {/* <stack.Screen
+            name={'MarketScreen'}
+            component={MarketScreen}
+            // options={{headerShown: true}}
+          /> */}
           <stack.Screen
             name={'Lead'}
             component={MyTabs}
@@ -98,6 +106,16 @@ const App = () => {
           <stack.Screen
             name={'Brand'}
             component={BrandScreen}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'MoreImage'}
+            component={MoreImage}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'ProductDetailScreen'}
+            component={ProductDetailScreen}
             // options={{headerShown: true}}
           />
         </stack.Navigator>

@@ -2,12 +2,20 @@ import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Feather from 'react-native-vector-icons/Feather';
 import styles from './style';
+import {useNavigation} from '@react-navigation/native';
+import { TilesCatalogue } from '../../Constant/Constant';
 
 const Card = ({Data, category}) => {
+  const navigation = useNavigation();
   return (
     <>
       {Data?.map((item, index) => (
-        <View style={styles.content}>
+        <TouchableOpacity style={styles.content} onPress={() =>
+          navigation.navigate('ProductDetailScreen', {
+            category,
+            productImages: [item.image, item.image1],
+          })
+        }>
           <View style={styles.part1}>
             <View style={styles.subPart1}>
               <Image style={styles.logo} source={item.logo} />
@@ -23,10 +31,17 @@ const Card = ({Data, category}) => {
               </View>
             </View>
           </View>
-          <View style={styles.part2}>
+          <TouchableOpacity
+            style={styles.part2}
+            onPress={() =>
+              navigation.navigate('MoreImage', {
+                category,
+                images: [item.image, item.image1],
+              })
+            }>
             <Image style={styles.shreeimg} source={item.image} />
             <Image style={styles.shreeimg} source={item.image1} />
-          </View>
+          </TouchableOpacity>
           <View style={styles.part3}>
             <View style={styles.detail}>
               <Text
@@ -62,7 +77,7 @@ const Card = ({Data, category}) => {
               </Text>
             </View>
           </View>
-        </View>
+        </TouchableOpacity>
       ))}
     </>
   );

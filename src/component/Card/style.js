@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
     color: 'green',
     width: scale(80),
   },
+  
 });
 
 export default styles;
