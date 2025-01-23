@@ -59,10 +59,16 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 500,
   },
+  brandHeading: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: scale(10),
+  },
   brand: {
     fontSize: scale(17),
     fontWeight: 700,
-    marginHorizontal: scale(10),
+    // marginHorizontal: scale(10),
     marginVertical: scale(10),
   },
   link: {

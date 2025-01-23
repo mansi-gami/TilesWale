@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
     borderRadius: scale(8),
   },
   detail: {
-    justifyContent: 'center',
+    flex: 0.2,
+    // justifyContent: 'center',
     marginHorizontal: scale(25),
     marginVertical: scale(25),
   },
@@ -34,12 +35,16 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: scale(120),
+    alignSelf: 'center',
+    justifyContent: 'flex-end',
+    // top: scale(),
+    // alignItems: 'center',
+    // marginTop: scale(150),
   },
   imageSize: {
-    width: scale(250),
+    // flex: 1,
+    height: "100%",
+    // width: "100%",
   },
   tickMark: {
     height: scale(12),

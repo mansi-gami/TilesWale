@@ -15,7 +15,7 @@ const AdvertisementScreen5 = () => {
         <Text style={styles.skipText}>Skip</Text>
         <MaterialIcons name={'keyboard-arrow-right'} size={20} />
       </TouchableOpacity>
-      <View>
+      <View style={styles.linearContent}>
         <LinearGradient
           colors={['#e1f2fa', '#f2e7d3', '#dbc6a2']}
           start={{x: 1, y: 0}}
@@ -31,6 +31,7 @@ const AdvertisementScreen5 = () => {
           <View style={styles.image}>
             <Image
               style={styles.imageSize}
+              resizeMode= 'contain'
               source={require('../../assets/FivePageImage.png')}
             />
           </View>

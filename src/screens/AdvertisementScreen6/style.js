@@ -17,11 +17,15 @@ const styles = StyleSheet.create({
     fontWeight: 600,
   },
   linear: {
-    height: scale(620),
+    flex: 1,
     borderRadius: scale(8),
   },
+  linearContent: {
+    flex: 1,
+  },
   detail: {
-    justifyContent: 'center',
+    flex: 0.5,
+    // justifyContent: 'center',
     marginHorizontal: scale(25),
     marginVertical: scale(25),
   },
@@ -34,13 +38,17 @@ const styles = StyleSheet.create({
     fontWeight: 800,
   },
   image: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: scale(105),
+    flex: 0.5,
+    alignSelf: 'center',
+    justifyContent: 'flex-end',
+    // flex: 1,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // marginBottom: scale(105),
   },
   imageSize: {
-    width: scale(320),
+    height: '162%',
+    // width: scale(320),
   },
   bottomBar: {
     flexDirection: 'row',

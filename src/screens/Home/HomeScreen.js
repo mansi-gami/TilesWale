@@ -157,7 +157,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </LinearGradient>
         <Carousel />
-        <View style={{flexDirection: 'row', gap: scale(125)}}>
+        <View style={styles.brandHeading}>
           <Text style={styles.brand}>Brands in Spotlight</Text>
           <TouchableOpacity onPress={()=> navigation.navigate('Brand')}>
             <Text style={styles.link}>View All</Text>
@@ -400,5 +400,5 @@ const HomeScreen = () => {
     </>
   );
 };
-
+ 
 export default HomeScreen;

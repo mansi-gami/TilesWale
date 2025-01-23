@@ -13,7 +13,7 @@ const AdvertisementScreen3 = () => {
         <Text style={styles.skipText}>Skip</Text>
         <MaterialIcons name={'keyboard-arrow-right'} size={20} />
       </TouchableOpacity>
-      <View>
+      <View style={styles.linearContent}>
         <LinearGradient
           colors={['#e1f2fa', '#f2e7d3', '#dbc6a2']}
           start={{x: 1, y: 0}}
@@ -24,9 +24,10 @@ const AdvertisementScreen3 = () => {
 
           <Text style={styles.text1}>Verified Leads</Text>
           </View>
-          <View style={styles.image}>
+          <View style={styles.image}> 
           <Image
             style={styles.imageSize}
+            resizeMode= 'contain'
             source={require('../../assets/ThirdPageImage.png')}
           />
           </View>

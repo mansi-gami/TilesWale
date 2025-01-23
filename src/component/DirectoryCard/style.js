@@ -4,7 +4,7 @@ import {scale} from 'react-native-size-matters';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
+    // justifyContent: 'center',
     borderColor: '#ddd',
     borderWidth: scale(1),
     marginHorizontal: scale(10),
@@ -13,8 +13,9 @@ const styles = StyleSheet.create({
   },
   content: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    marginHorizontal: scale(7),
+    marginLeft: scale(7),
     marginVertical: scale(7),
   },
   card: { 
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     width: scale(38),
     borderColor: '#ddd',
     borderWidth: scale(1),
-    marginLeft: scale(108),
+    // marginLeft: scale(108),
     borderTopStartRadius: 10,
     borderBottomStartRadius: 10,
     justifyContent: 'center',

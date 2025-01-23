@@ -32,6 +32,12 @@ const style = StyleSheet.create({
     width: scale(35),
     borderRadius: scale(4),
   },
+  language: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   firstText: {
     fontSize: scale(15),
     fontWeight: 700,
@@ -42,7 +48,6 @@ const style = StyleSheet.create({
   blueTick: {
     height: scale(18),
     width: scale(18),
-    left: scale(160),
   },
   button: {
     flex: 0.9,

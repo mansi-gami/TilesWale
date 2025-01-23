@@ -33,8 +33,11 @@ export const Tiles = [
     value: 'Standard | Glossy',
     repeat: 'Regular',
     time: 'Today, 10:23 AM',
-    ruppe: '₹ 20.50',
+    rupee: '₹ 20.50',
     tax: 'Per Sq. Ft. (Tax Paid Rate)',
+    city: 'Morbi',
+    description: 'Hg 29',
+    available: 'Sq. Ft. available as per your requirement',
   },
 ];
 
@@ -52,8 +55,11 @@ export const Sanitary = [
     value: 'Premium',
     repeat: 'Regular',
     time: 'Post Expired',
-    ruppe: '₹ 125',
+    rupee: '₹ 125',
     tax: 'Per (Basic Rate)',
+    city: 'Gandhinagar',
+    description: 'White Finish',
+    available: 'available as per your requirement',
   },
 ];
 
@@ -70,8 +76,10 @@ export const KitchenSink = [
     type: 'Stainless Steel Kitchen Sink',
     repeat: 'Regular',
     time: 'Post Expired',
-    ruppe: '₹ 7000',
+    rupee: '₹ 7000',
     tax: 'Per Piece (Basic Rate)',
+    city: 'Morbi',
+    available: 'Piece available as per your requirement',
   },
 ];
 
@@ -88,8 +96,10 @@ export const Bathware = [
     type: 'Showers',
     repeat: 'Regular',
     time: 'Post Expired',
-    ruppe: '₹ 9000',
+    rupee: '₹ 9000',
     tax: 'Per Set (Basic Rate)',
+    city: 'Morbi',
+    available: 'Piece available as per your requirement',
   },
 ];
 
@@ -105,8 +115,11 @@ export const Adhesive = [
     image1: adhesive1,
     type: 'Adhesive',
     time: 'Post Expired',
-    ruppe: '₹ 160',
+    rupee: '₹ 160',
     tax: 'Per KG (Tax Paid Rate)',
+    city: 'Ahmedabad',
+    description: 'MYMIX FTA 20kg Bag',
+    available: '20KG Total Available',
   },
 ];
 

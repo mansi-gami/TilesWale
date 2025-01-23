@@ -7,7 +7,7 @@ import {useNavigation} from '@react-navigation/native';
  
 const AdvertisementScreen1 = () => {
   const navigation = useNavigation();
-
+ 
   return (
     <View style={styles.mainContainer}>
       <View>
@@ -18,7 +18,7 @@ const AdvertisementScreen1 = () => {
           <MaterialIcons name={'keyboard-arrow-right'} size={20} />
         </TouchableOpacity>
       </View>
-
+ 
       <View style={styles.linearContent}>
         <LinearGradient
           colors={['#e1f2fa', '#f2e7d3', '#dbc6a2']}
@@ -61,6 +61,7 @@ const AdvertisementScreen1 = () => {
           <View style={styles.image}>
             <Image
               style={styles.imageSize}
+              resizeMode= 'contain'
               source={require('../../assets/FirstPageImage.png')}
             />
           </View>

@@ -3,19 +3,33 @@ import React from 'react';
 import Feather from 'react-native-vector-icons/Feather';
 import styles from './style';
 import {useNavigation} from '@react-navigation/native';
-import { TilesCatalogue } from '../../Constant/Constant';
+import {TilesCatalogue} from '../../Constant/Constant';
+import {valenza} from '../../Constant/image';
 
 const Card = ({Data, category}) => {
   const navigation = useNavigation();
   return (
     <>
       {Data?.map((item, index) => (
-        <TouchableOpacity style={styles.content} onPress={() =>
-          navigation.navigate('ProductDetailScreen', {
-            category,
-            productImages: [item.image, item.image1],
-          })
-        }>
+        <TouchableOpacity
+          style={styles.content}
+          onPress={() =>
+            navigation.navigate('ProductDetailScreen', {
+              category,
+              productImages: [item.image, item.image1],
+              type: item.type,
+              rupee: item.rupee,
+              tax: item.tax,
+              size: item.size,
+              time: item.time,
+              city: item.city,
+              grade: item.value,
+              repeat: item.repeat,
+              value: item.value,
+              description: item.description,
+              available: item.available,
+            })
+          }>
           <View style={styles.part1}>
             <View style={styles.subPart1}>
               <Image style={styles.logo} source={item.logo} />
@@ -71,7 +85,7 @@ const Card = ({Data, category}) => {
               </View>
             </View>
             <View style={styles.price}>
-              <Text style={styles.ruppe}>{item.ruppe}</Text>
+              <Text style={styles.ruppe}>{item.rupee}</Text>
               <Text numberOfLines={2} ellipsizeMode={'tail'} style={styles.tax}>
                 {item.tax}
               </Text>

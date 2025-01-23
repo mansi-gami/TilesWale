@@ -9,13 +9,15 @@ const AdvertisementScreen4 = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
-      <TouchableOpacity
-        style={styles.skip}
-        onPress={() => navigation.navigate('LanguageScreen')}>
-        <Text style={styles.skipText}>Skip</Text>
-        <MaterialIcons name={'keyboard-arrow-right'} size={20} />
-      </TouchableOpacity>
       <View>
+        <TouchableOpacity
+          style={styles.skip}
+          onPress={() => navigation.navigate('LanguageScreen')}>
+          <Text style={styles.skipText}>Skip</Text>
+          <MaterialIcons name={'keyboard-arrow-right'} size={20} />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.linearContent}>
         <LinearGradient
           colors={['#e1f2fa', '#f2e7d3', '#dbc6a2']}
           start={{x: 1, y: 0}}
@@ -27,34 +29,34 @@ const AdvertisementScreen4 = () => {
               <Text style={styles.secondText}> Verified</Text>
             </View>
             <Text style={styles.secondText}>Manufacturer</Text>
-          
-          <View style={styles.comment}>
-            <Image
-              style={styles.tickMark}
-              source={require('../../assets/orangeTick.png')}
-            />
-            <Text style={styles.requirementText}>Free Contact Details</Text>
-          </View>
-          <View style={styles.comment}>
-            <Image
-              style={styles.tickMark}
-              source={require('../../assets/orangeTick.png')}
-            />
-            <Text style={styles.requirementText}>Send Direct Inquiries</Text>
-          </View>
-          <View style={styles.comment}>
-            <Image
-              style={styles.tickMark}
-              source={require('../../assets/orangeTick.png')}
-            />
-            <Text style={styles.requirementText}>Get Best Price Deals</Text>
+
+            <View style={styles.comment}>
+              <Image
+                style={styles.tickMark}
+                source={require('../../assets/orangeTick.png')}
+              />
+              <Text style={styles.requirementText}>Free Contact Details</Text>
+            </View>
+            <View style={styles.comment}>
+              <Image
+                style={styles.tickMark}
+                source={require('../../assets/orangeTick.png')}
+              />
+              <Text style={styles.requirementText}>Send Direct Inquiries</Text>
+            </View>
+            <View style={styles.comment}>
+              <Image
+                style={styles.tickMark}
+                source={require('../../assets/orangeTick.png')}
+              />
+              <Text style={styles.requirementText}>Get Best Price Deals</Text>
+            </View>
           </View>
           <View style={styles.image}>
             <Image
               style={styles.imageSize}
-              source={require('../../assets/FourPageImage.png')}
+              source={require('../../assets/Five.jpg')}
             />
-          </View>
           </View>
         </LinearGradient>
       </View>

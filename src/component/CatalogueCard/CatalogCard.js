@@ -51,18 +51,20 @@ function CatalogCard({Data, category, showSponsored}) {
                     {item.size}
                   </Text>
                 </View>
-                <View style={styles.bottomColor}>
-                  <View style={styles.views}>
-                    <Ionicons name={'eye'} size={20} color={'#919294'} />
-                    <Text style={styles.viewsText}>{item.Views}</Text>
-                  </View>
-                  <View style={styles.views}>
-                    <MaterialCommunityIcons
-                      name={'arrow-down-box'}
-                      size={20}
-                      color={'#919294'}
-                    />
-                    <Text style={styles.viewsText}>{item.share}</Text>
+                <View style={{flex: 1, justifyContent: 'flex-end'}}>
+                  <View style={styles.bottomColor}>
+                    <View style={styles.views}>
+                      <Ionicons name={'eye'} size={20} color={'#919294'} />
+                      <Text style={styles.viewsText}>{item.Views}</Text>
+                    </View>
+                    <View style={styles.views}>
+                      <MaterialCommunityIcons
+                        name={'arrow-down-box'}
+                        size={20}
+                        color={'#919294'}
+                      />
+                      <Text style={styles.viewsText}>{item.share}</Text>
+                    </View>
                   </View>
                 </View>
               </View>

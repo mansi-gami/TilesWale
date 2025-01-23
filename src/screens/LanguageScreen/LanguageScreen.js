@@ -2,6 +2,7 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import styles from './style';
 import {useNavigation} from '@react-navigation/native';
+import {scale} from 'react-native-size-matters';
 
 const LanguageScreen = () => {
   const navigation = useNavigation();
@@ -56,16 +57,20 @@ const LanguageScreen = () => {
             },
           ]}>
           <Image style={styles.image} source={language.image} />
-          <View>
-            <Text style={styles.firstText}>{language.firstText}</Text>
-            <Text style={styles.secondText}>{language.secondText}</Text>
+          <View
+            style={styles.language}>
+            <View>
+              <Text style={styles.firstText}>{language.firstText}</Text>
+              <Text style={styles.secondText}>{language.secondText}</Text>
+            </View>
+
+            {selectedLanguage === language.key && (
+              <Image
+                style={styles.blueTick}
+                source={require('../../assets/blueTick.png')}
+              />
+            )}
           </View>
-          {selectedLanguage === language.key && (
-            <Image
-              style={styles.blueTick}
-              source={require('../../assets/blueTick.png')}
-            />
-          )}
         </TouchableOpacity>
       ))}
       <View style={styles.button}>

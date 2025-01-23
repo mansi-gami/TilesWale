@@ -72,18 +72,21 @@ const styles = StyleSheet.create({
     height: scale(18),
     width: scale(75),
     borderRadius: scale(15),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   btnText: {
     fontSize: scale(11),
     color: '#ffffff',
     fontWeight: 500,
-    textAlign: 'center',
+    alignSelf: 'center',
   },
   design: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: scale(5),
+    gap: scale(3),
   },
   repeat: {
     backgroundColor: 'blue',

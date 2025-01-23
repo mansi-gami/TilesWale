@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   bottomColor: {
     backgroundColor: '#e6e8ed',
     height: scale(28),
-    marginTop: scale(16),
+    marginTop: scale(19),
     borderBottomRightRadius: scale(12),
     borderBottomLeftRadius: scale(12),
     flexDirection: 'row',

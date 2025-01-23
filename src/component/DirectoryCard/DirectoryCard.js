@@ -8,15 +8,17 @@ const DirectoryCard = () => {
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.content}>
-          <View style={styles.card}>
-            <Image
-              style={styles.image}
-              source={require('../../assets/tilesCard.jpg')}
-            />
-          </View>
-          <View style={styles.detail}>
-            <Text style={styles.name}>Akshar ceramic</Text>
-            <Text style={styles.location}>Gandhinagar, Gujarat.</Text>
+          <View style={{flexDirection: 'row', justifyContent:'center', alignItems:'center'}}>
+            <View style={styles.card}>
+              <Image
+                style={styles.image}
+                source={require('../../assets/tilesCard.jpg')}
+              />
+            </View>
+            <View style={styles.detail}>
+              <Text style={styles.name}>Akshar ceramic</Text>
+              <Text style={styles.location}>Gandhinagar, Gujarat.</Text>
+            </View>
           </View>
           <View style={styles.views}>
             <Ionicons name={'eye'} size={20} color={'#919294'} />

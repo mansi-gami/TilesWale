@@ -31,6 +31,7 @@ const AdvertisementScreen2 = () => {
             <View style={styles.image}>
               <Image
                 style={styles.imageSize}
+                resizeMode= 'contain'
                 source={require('../../assets/SecondPageImage.png')}
               />
             </View>

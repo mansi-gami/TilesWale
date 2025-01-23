@@ -69,7 +69,7 @@ const DirectoryScreen = () => {
       </View>
       <DirectoryCard />
     </ScrollView>
-  );
+  ); 
 };
 
 export default DirectoryScreen;

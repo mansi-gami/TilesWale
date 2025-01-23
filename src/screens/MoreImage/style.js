@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   },
   image: {
     height: scale(450),
+    // resizeMode: 'contain',
     marginTop: scale(50),
   },
   smallImageContent: {
