@@ -56,10 +56,10 @@ const DirectoryScreen = () => {
             style={styles.LocationIcon}
           />
           <Text style={styles.locationtxt}>Add Location for Local Country</Text>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.btnText}>Use Current Location</Text>
-          </TouchableOpacity>
         </View>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.btnText}>Use Current Location</Text>
+        </TouchableOpacity>
       </LinearGradient>
       <View style={styles.detail}>
         <Text style={styles.retailerCount}>24</Text>
@@ -69,7 +69,7 @@ const DirectoryScreen = () => {
       </View>
       <DirectoryCard />
     </ScrollView>
-  ); 
+  );
 };
 
 export default DirectoryScreen;

@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {scale} from 'react-native-size-matters';
- 
+
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginVertical: scale(20),
   },
   skipText: {
-    fontSize: scale(12),
+    // fontSize: scale(12),
     fontWeight: 600,
   },
   linearContent: {
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   imageSize: {
     // flex: 1,
-    height: "100%",
+    height: '99%',
     // width: "100%",
   },
   tickMark: {
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     left: scale(60),
   },
   startButtonText: {
-    fontSize: scale(12),
+    // fontSize: scale(12),
     fontWeight: 'bold',
     color: '#000',
   },

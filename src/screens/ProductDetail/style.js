@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: scale(10),
     padding: scale(10),
+    alignItems: 'center',
   },
   heading: {
     fontSize: scale(18),
@@ -129,6 +130,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: scale(10),
     gap: scale(5),
+    alignItems: 'center',
   },
   reportText: {
     color: 'gray',

@@ -55,7 +55,8 @@ const AdvertisementScreen4 = () => {
           <View style={styles.image}>
             <Image
               style={styles.imageSize}
-              source={require('../../assets/Five.jpg')}
+              source={require('../../assets/FourPageImage.png')}
+              resizeMode= 'contain'
             />
           </View>
         </LinearGradient>

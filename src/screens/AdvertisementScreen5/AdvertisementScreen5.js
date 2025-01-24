@@ -31,7 +31,7 @@ const AdvertisementScreen5 = () => {
           <View style={styles.image}>
             <Image
               style={styles.imageSize}
-              resizeMode= 'contain'
+              resizeMode="contain"
               source={require('../../assets/FivePageImage.png')}
             />
           </View>

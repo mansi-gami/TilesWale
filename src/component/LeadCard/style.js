@@ -74,12 +74,14 @@ const styles = StyleSheet.create({
     borderRadius: scale(15),
     justifyContent: 'center',
     alignItems: 'center',
+    paddingHorizontal: scale(5),
   },
   btnText: {
     fontSize: scale(11),
     color: '#ffffff',
     fontWeight: 500,
     alignSelf: 'center',
+    // marginHorizontal: scale(5),
   },
   design: {
     flexDirection: 'row',

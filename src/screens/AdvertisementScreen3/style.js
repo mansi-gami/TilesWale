@@ -10,11 +10,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     marginVertical: scale(20),
-  }, 
+  },
   skipText: {
-    fontSize: scale(12),
+    // fontSize: scale(12),
     fontWeight: 600,
-  }, 
+  },
   linear: {
     flex: 1,
     borderRadius: scale(8),
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     // marginBottom: scale(62),
   },
   imageSize: {
-    height: "163%",
+    height: '163%',
     // width: scale(300),
   },
   text: {

@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   start: {
     fontSize: scale(14),
     fontWeight: 600,
-    marginTop: scale(2),
+    // marginTop: scale(2),
   },
 });
 

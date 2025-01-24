@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginVertical: scale(20),
   },
   skipText: {
-    fontSize: scale(12),
+    // fontSize: scale(12),
     fontWeight: 600,
   },
   linearContent: {
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     borderRadius: scale(8),
   },
   detail: {
-    flex: 0.5,
+    flex: 0.2,
     // justifyContent: 'center',
     marginHorizontal: scale(25),
     marginVertical: scale(25),
@@ -34,10 +34,10 @@ const styles = StyleSheet.create({
     gap: scale(5),
   },
   image: {
-    flex: 0.5,
+    flex: 1,
     alignSelf: 'center',
-    justifyContent: 'center',
-    bottom: scale(58),
+    justifyContent: 'flex-end',
+    // bottom: scale(58),
     // alignSelf: 'center',
     // resizeMode: 'contain',
     // flex: 1,
@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     // marginTop: scale(144),
   },
   imageSize: {
-    resizeMode: 'center',
+    height: "98%",
+    // resizeMode: 'center',
     // width: scale(200),
     // height: scale(700),
   },

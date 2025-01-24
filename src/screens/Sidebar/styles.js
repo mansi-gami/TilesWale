@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     flex: 0,
     flexDirection: 'row',
     marginHorizontal: scale(10),
-    marginVertical: scale(10),
+    // marginVertical: scale(10),
     gap: scale(8),
   },
   modalContent: {
@@ -18,9 +18,11 @@ const styles = StyleSheet.create({
     height: scale(60),
     width: scale(60),
     borderRadius: scale(30),
+    marginTop: scale(10),
   },
   text1: {
-    fontSize: scale(22),
+    marginTop: scale(10),
+    fontSize: scale(18),
     fontWeight: 600,
   },
   text2: {

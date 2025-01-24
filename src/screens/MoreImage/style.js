@@ -1,22 +1,28 @@
 import {StyleSheet} from 'react-native';
-import {s, scale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   main: {
+    // flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: scale(10),
     marginVertical: scale(10),
   },
   image: {
-    height: scale(450),
+    // flex: 1,
+    height: "80%",
+    // marginVertical: scale(25),
+    // height: scale(450),
     // resizeMode: 'contain',
-    marginTop: scale(50),
+    // marginTop: scale(50),
   },
   smallImageContent: {
+    // flex: 0.5,
     flexDirection: 'row',
     marginHorizontal: scale(20),
-    marginTop: scale(60),
+    // justifyContent: 'flex-end'
+    // marginTop: scale(60),
     gap: scale(5),
   },
   smallImage: {
@@ -24,6 +30,7 @@ const styles = StyleSheet.create({
     height: scale(50),
     borderRadius: 5,
     marginHorizontal: scale(5),
+    marginBottom: scale(20),
   },
 });
 

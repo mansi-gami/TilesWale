@@ -53,7 +53,7 @@ const AdvertisementScreen6 = () => {
           <View style={styles.paginationDotActive} />
         </View>
         <TouchableOpacity
-          style={{flexDirection: 'row'}}
+          style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}
           onPress={() => navigation.navigate('LanguageScreen')}>
           <Text style={styles.start}>Start</Text>
           <MaterialIcons name={'keyboard-arrow-right'} size={30} />

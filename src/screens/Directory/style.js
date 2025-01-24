@@ -56,11 +56,10 @@ const styles = StyleSheet.create({
     borderRadius: scale(5),
   },
   locationContent: {
-    flexDirection: 'row',
+    flex: 0,
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginHorizontal: scale(5),
-    gap: scale(8),
+    flexDirection: 'row',
   },
   LocationIcon: {
     height: scale(25),
@@ -79,11 +78,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: scale(3),
   },
   linear: {
-    flex: 0,
-    height: scale(40),
-    marginHorizontal: scale(3),
-    borderRadius: scale(8),
     flexDirection: 'row',
+    marginHorizontal: scale(5),
+    marginVertical: scale(8),
+    borderRadius: scale(8),
+    height: scale(40),
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: scale(5),
   },
   btnText: {
     color: 'white',

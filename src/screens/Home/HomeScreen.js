@@ -1,6 +1,6 @@
 import {
   View,
-  Text, 
+  Text,
   TextInput,
   Image,
   TouchableOpacity,
@@ -16,8 +16,8 @@ import {Dropdown} from 'react-native-element-dropdown';
 import Textarea from 'react-native-textarea';
 import styles from './styles';
 import CarouselItem from '../../component/CarouselItem/CarouselItem';
-import { scale } from 'react-native-size-matters';
-import { useNavigation } from '@react-navigation/native';
+import {scale} from 'react-native-size-matters';
+import {useNavigation} from '@react-navigation/native';
 
 const data = [
   {label: 'Tiles', value: '1'},
@@ -104,7 +104,7 @@ const HomeScreen = () => {
     }, 1000); // Change every 2.5 seconds
     return () => clearInterval(interval);
   }, []);
- 
+
   const handleScroll = event => {
     const contentHeight = event.nativeEvent.contentSize.height;
     const scrollY = event.nativeEvent.contentOffset.y;
@@ -144,22 +144,24 @@ const HomeScreen = () => {
           colors={['#afd3e3', '#94eba4', '#c9f5d1']}
           start={{x: 0, y: 1.0}}
           end={{x: 1, y: 1}}
-          style={styles.linear}>
-          <Image
-            source={require('../../assets/locationIcon.png')}
-            style={styles.LocationIcon}
-          />
-          <Text style={styles.locationtxt}>Add Location for Local Search</Text>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.btnText}>
-              Share Location
+          style={styles.linearContent}>
+          <View style={styles.linear}>
+            <Image
+              source={require('../../assets/locationIcon.png')}
+              style={styles.LocationIcon}
+            />
+            <Text style={styles.locationtxt}>
+              Add Location for Local Search
             </Text>
+          </View>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.btnText}>Share Location</Text>
           </TouchableOpacity>
         </LinearGradient>
         <Carousel />
         <View style={styles.brandHeading}>
           <Text style={styles.brand}>Brands in Spotlight</Text>
-          <TouchableOpacity onPress={()=> navigation.navigate('Brand')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Brand')}>
             <Text style={styles.link}>View All</Text>
           </TouchableOpacity>
         </View>
@@ -400,5 +402,5 @@ const HomeScreen = () => {
     </>
   );
 };
- 
+
 export default HomeScreen;

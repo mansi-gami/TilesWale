@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginVertical: scale(20),
   },
   skipText: {
-    fontSize: scale(12),
+    // fontSize: scale(12),
     fontWeight: 600,
   },
   linearContent: {
@@ -39,13 +39,13 @@ const styles = StyleSheet.create({
     // marginBottom: scale(106),
   },
   imageSize: {
-    height: "162%",
+    height: '162%',
     // resizeMode: 'contain',
     // width: scale(300),
   },
   text: {
     fontSize: scale(32),
-  }, 
+  },
   text1: {
     color: '#f59c02',
     fontSize: scale(32),

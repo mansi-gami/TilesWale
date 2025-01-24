@@ -29,7 +29,11 @@ const MoreImage = () => {
 
   const renderItem = ({item}) => (
     <View>
-      <Image source={item} style={[styles.image, {width: screenWidth}]} />
+      <Image
+        source={item}
+        resizeMode= 'contain'
+        style={[styles.image, {width: screenWidth}]}
+      />
     </View>
   );
 
@@ -46,48 +50,50 @@ const MoreImage = () => {
 
   return (
     <>
-      <View>
+     
         <TouchableOpacity
           style={styles.main}
           onPress={() => navigation.goBack()}>
           <AntDesign name="arrowleft" size={30} />
           <Entypo name="share" size={30} />
         </TouchableOpacity>
-      </View>
-      <View>
-        <FlatList
-          data={images}
-          ref={flatlistRef}
-          getItemLayout={getItemLayout}
-          renderItem={renderItem}
-          keyExtractor={(item, index) => index.toString()}
-          horizontal
-          pagingEnabled
-          onScroll={handleScroll}
+          <FlatList
+            data={images}
+            ref={flatlistRef}
+            getItemLayout={getItemLayout}
+            renderItem={renderItem}
+            keyExtractor={(item, index) => index.toString()}
+            horizontal
+            pagingEnabled
+            onScroll={handleScroll}
+            showsHorizontalScrollIndicator={false}
+          />
+      
+        <ScrollView
+          horizontal={true}
           showsHorizontalScrollIndicator={false}
-        />
-      </View>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.smallImageContent}>
-        {images.map((item, index) => (
-          <TouchableOpacity
-            key={index}
-            onPress={() => handleThumbnailPress(index)}>
-            <Image
-              source={item}
-              style={[
-                styles.smallImage,
-                {
-                  borderWidth: activeIndex === index ? 1 : 0,
-                  borderColor: activeIndex === index ? 'black' : 'transparent',
-                },
-              ]}
-            />
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+          style={styles.smallImageContent}>
+          {images.map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => handleThumbnailPress(index)}>
+              <Image
+                source={item}
+                style={[
+                  styles.smallImage,
+                  {
+                    borderWidth: activeIndex === index ? 1 : 0,
+                    borderColor:
+                      activeIndex === index ? 'black' : 'transparent',
+                  },
+                ]}
+              />
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+     
     </>
   );
 };
 
 export default MoreImage;
-

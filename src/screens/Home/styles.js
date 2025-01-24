@@ -28,15 +28,21 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginLeft: scale(310),
   },
+  linearContent: {
+    flexDirection: 'row',
+    marginHorizontal: scale(5),
+    marginVertical: scale(8),
+    borderRadius: scale(8),
+    height: scale(40),
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: scale(5),
+  },
   linear: {
     flex: 0,
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: scale(8),
-    height: scale(40),
-    marginHorizontal: scale(5),
-    marginVertical: scale(8),
-    borderRadius: scale(8),
+    // paddingHorizontal: scale(8),
     flexDirection: 'row',
   },
   LocationIcon: {
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
   },
   locationtxt: {
     fontSize: scale(15),
-    alignSelf: 'center',
+    // alignSelf: 'center',
     fontWeight: 500,
   },
   button: {
@@ -58,6 +64,7 @@ const styles = StyleSheet.create({
   btnText: {
     color: 'white',
     fontWeight: 500,
+    paddingHorizontal: scale(5),
   },
   brandHeading: {
     flex: 1,

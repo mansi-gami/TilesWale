@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginVertical: scale(20),
   },
   skipText: {
-    fontSize: scale(12),
+    // fontSize: scale(12),
     fontWeight: 600,
   },
   linear: {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     // marginBottom: scale(106),
   },
   imageSize: {
-    height: "162%",
+    height: '162%',
     // width: scale(350),
   },
   bottomBar: {

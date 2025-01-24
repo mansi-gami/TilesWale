@@ -37,6 +37,7 @@ const ProductDetailScreen = ({item}) => {
   } = route.params;
   const screenWidth = Dimensions.get('window').width;
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showDetails, setShowDetails] = useState(true);
   const flatlistRef = useRef();
 
   useEffect(() => {
@@ -78,13 +79,15 @@ const ProductDetailScreen = ({item}) => {
   const navigation = useNavigation();
   return (
     <>
-      <ScrollView style={styles.mainContainer}>
-        <View style={styles.main}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <AntDesign name={'arrowleft'} size={30} />
-          </TouchableOpacity>
-          <Text style={styles.heading}>Product Details</Text>
-        </View>
+      <View style={styles.main}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <AntDesign name={'arrowleft'} size={30} />
+        </TouchableOpacity>
+        <Text style={styles.heading}>Product Details</Text>
+      </View>
+      <ScrollView
+        style={styles.mainContainer}
+        showsVerticalScrollIndicator={false}>
         <View>
           <FlatList
             data={productImages}
@@ -103,12 +106,12 @@ const ProductDetailScreen = ({item}) => {
             <Text style={styles.typeText}>{type}</Text>
           </View>
           <View style={styles.icon}>
-            <View style={styles.iconStyle}>
+            <TouchableOpacity style={styles.iconStyle}>
               <Octicons name={'heart'} size={25} />
-            </View>
-            <View style={styles.iconStyle}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.iconStyle}>
               <Feather name={'share-2'} size={25} />
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
         <View style={styles.rupee}>
@@ -142,19 +145,22 @@ const ProductDetailScreen = ({item}) => {
               </View>
             </View>
           </View>
-
-          <View style={styles.table}>
-            <View style={styles.box1}>
-              <View style={styles.row}>
-                <Text style={styles.cellKey}>Grade</Text>
+          {showDetails && (
+            <>
+              <View style={styles.table}>
+                <View style={styles.box1}>
+                  <View style={styles.row}>
+                    <Text style={styles.cellKey}>Grade</Text>
+                  </View>
+                </View>
+                <View style={styles.box2}>
+                  <View style={styles.row}>
+                    <Text style={styles.cellValue}>{value}</Text>
+                  </View>
+                </View>
               </View>
-            </View>
-            <View style={styles.box2}>
-              <View style={styles.row}>
-                <Text style={styles.cellValue}>{value}</Text>
-              </View>
-            </View>
-          </View>
+            </>
+          )}
 
           <View style={styles.table}>
             <View style={styles.box1}>
@@ -193,16 +199,16 @@ const ProductDetailScreen = ({item}) => {
       </ScrollView>
       <View style={styles.iconContent}>
         <View style={styles.content}>
-          <View style={styles.phone}>
+          <TouchableOpacity style={styles.phone}>
             <Foundation name={'telephone'} size={40} color={'#1d73b5'} />
-          </View>
-          <View style={styles.whatsapp}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.whatsapp}>
             <FontAwesome name={'whatsapp'} size={40} color={'#1d73b5'} />
-          </View>
-          <View style={styles.chat}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.chat}>
             <Ionicons name={'chatbox-ellipses'} size={30} color={'#ffffff'} />
             <Text style={styles.chatText}>Chat</Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     </>

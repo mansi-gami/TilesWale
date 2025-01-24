@@ -16,6 +16,8 @@ import {
   Profile,
   tilesCatalogue,
   liberta,
+  tiles1,
+  tilesImage,
 } from './image';
 
 export const Tiles = [
@@ -26,8 +28,8 @@ export const Tiles = [
     otherName: 'SHREE RAM CERAMIC',
     location: 'Morbi, Gujarat',
     salesType: 'Wholesaler',
-    image: shreeImg1,
-    image1: shreeImg2,
+    image: tiles1,
+    image1: tilesImage,
     type: 'Double Charged Vitrified Tiles',
     size: '600 x 600 mm ( 24 x 24 inch )',
     value: 'Standard | Glossy',
