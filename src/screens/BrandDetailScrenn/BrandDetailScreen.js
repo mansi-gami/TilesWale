@@ -18,34 +18,28 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
+import {scale} from 'react-native-size-matters';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import CatalogCard from '../../component/CatalogueCard/CatalogCard';
-import {AlaskaSurfaces} from '../../Constant/Constant';
 
 function Store() {
   return (
-    <ScrollView style={style.mainContent}>
+    <ScrollView
+      nestedScrollEnabled={true}
+      contentContainerStyle={{flexGrow: 1}}>
       <View>
-        <Text>KitchenSink Screen Content</Text>
+        <Text>Store Page</Text>
       </View>
     </ScrollView>
   );
 }
 
-function Rating() {
+function Review() {
   return (
-    <ScrollView style={style.mainContent}>
+    <ScrollView
+      nestedScrollEnabled={true}
+      contentContainerStyle={{flexGrow: 1}}>
       <View>
-        <Text>KitchenSink Screen Content</Text>
-      </View>
-    </ScrollView>
-  );
-}
-function Catalogue() {
-  return (
-    <ScrollView horizontal={true} style={style.mainContent}>
-      <View style={{flexDirection: 'row'}}>
-        <CatalogCard Data={AlaskaSurfaces} />
+        <Text>Review Page</Text>
       </View>
     </ScrollView>
   );
@@ -53,29 +47,11 @@ function Catalogue() {
 
 function Contacts() {
   return (
-    <ScrollView style={style.mainContent}>
+    <ScrollView
+      nestedScrollEnabled={true}
+      contentContainerStyle={{flexGrow: 1}}>
       <View>
-        <Text>KitchenSink Screen Content</Text>
-      </View>
-    </ScrollView>
-  );
-}
-
-function ProductInfo() {
-  return (
-    <ScrollView style={style.mainContent}>
-      <View>
-        <Text>KitchenSink Screen Content</Text>
-      </View>
-    </ScrollView>
-  );
-}
-
-function About() {
-  return (
-    <ScrollView style={style.mainContent}>
-      <View>
-        <Text>KitchenSink Screen Content</Text>
+        <Text>Contacts Page</Text>
       </View>
     </ScrollView>
   );
@@ -83,7 +59,7 @@ function About() {
 
 const Tab = createMaterialTopTabNavigator();
 
-function BrandDetailTab() {
+function BrandTopTab() {
   return (
     <Tab.Navigator
       initialRouteName="Store"
@@ -95,11 +71,8 @@ function BrandDetailTab() {
         tabBarStyle: {backgroundColor: 'white'},
       }}>
       <Tab.Screen name="Store" component={Store} />
-      <Tab.Screen name="Review & Rating" component={Rating} />
-      <Tab.Screen name="Catalogue" component={Catalogue} />
+      <Tab.Screen name="Review" component={Review} />
       <Tab.Screen name="Contacts" component={Contacts} />
-      <Tab.Screen name="ProductInfo" component={ProductInfo} />
-      <Tab.Screen name="About" component={About} />
     </Tab.Navigator>
   );
 }
@@ -154,6 +127,8 @@ const BrandDetailScreen = ({item}) => {
   return (
     <>
       <ScrollView
+        nestedScrollEnabled={true}
+        contentContainerStyle={{flexGrow: 1}}
         style={style.mainContainer}
         showsVerticalScrollIndicator={false}>
         <View>
@@ -251,6 +226,9 @@ const BrandDetailScreen = ({item}) => {
           <TouchableOpacity>
             <Entypo name={'star'} size={35} color={'#cbcfd1'} />
           </TouchableOpacity>
+        </View>
+        <View style={{height: 950}}>
+          <BrandTopTab />
         </View>
       </ScrollView>
       {/* <BrandDetailTab /> */}

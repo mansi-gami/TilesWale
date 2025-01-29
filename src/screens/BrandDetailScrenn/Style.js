@@ -4,6 +4,7 @@ import {scale} from 'react-native-size-matters';
 const style = StyleSheet.create({
   mainContainer: {
     flex: 1,
+    // height: scale(800),
     backgroundColor: '#ffffff',
   },
   mainContent: {
