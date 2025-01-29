@@ -18,49 +18,53 @@ const LeadsScreen = () => {
 
   const [selectedBox, setSelectedBox] = useState('tiles');
   return (
-    <ScrollView style={styles.container}>
-      <Header title={'Lead'} />
-      <HorizontalScrollBar
-        selectedBox={selectedBox}
-        setSelectedBox={setSelectedBox}
-      />
-      <View style={styles.switch}>
-        <Text style={styles.label}>View Local Householder Requirements</Text>
-        <Switch
-          trackColor={{false: '#767577', true: '#d5eced'}}
-          thumbColor={isLocal ? '#176dcf' : '#f4f3f4'}
-          ios_backgroundColor="#3e3e3e"
-          onValueChange={toggleSwitch}
-          value={isLocal}
-        />
+    <>
+      <View>
+        <Header title={'Lead'} />
       </View>
-      <View style={{borderColor: '#d7d9db', borderBottomWidth: 2}}></View>
-      {selectedBox === 'tiles' ? (
-        <LeadCard Data={TilesLead} category="tiles" />
-      ) : (
-        ''
-      )}
-      {selectedBox === 'sanitaryware' ? (
-        <LeadCard Data={SanitaryLead} category="sanitaryware" />
-      ) : (
-        ''
-      )}
-      {selectedBox === 'kitchenSink' ? (
-        <LeadCard Data={kitchenSinkLead} category="kitchenSink" />
-      ) : (
-        ''
-      )}
-      {selectedBox === 'BathWare' ? (
-        <LeadCard Data={BathwareLead} category="BathWare" />
-      ) : (
-        ''
-      )}
-      {selectedBox === 'Adhesive' ? (
-        <LeadCard Data={AdhesiveLead} category="Adhesive" />
-      ) : (
-        ''
-      )}
-    </ScrollView>
+      <ScrollView style={styles.container}>
+        <HorizontalScrollBar
+          selectedBox={selectedBox}
+          setSelectedBox={setSelectedBox}
+        />
+        <View style={styles.switch}>
+          <Text style={styles.label}>View Local Householder Requirements</Text>
+          <Switch
+            trackColor={{false: '#767577', true: '#d5eced'}}
+            thumbColor={isLocal ? '#176dcf' : '#f4f3f4'}
+            ios_backgroundColor="#3e3e3e"
+            onValueChange={toggleSwitch}
+            value={isLocal}
+          />
+        </View>
+        <View style={{borderColor: '#d7d9db', borderBottomWidth: 2}}></View>
+        {selectedBox === 'tiles' ? (
+          <LeadCard Data={TilesLead} category="tiles" />
+        ) : (
+          ''
+        )}
+        {selectedBox === 'sanitaryware' ? (
+          <LeadCard Data={SanitaryLead} category="sanitaryware" />
+        ) : (
+          ''
+        )}
+        {selectedBox === 'kitchenSink' ? (
+          <LeadCard Data={kitchenSinkLead} category="kitchenSink" />
+        ) : (
+          ''
+        )}
+        {selectedBox === 'BathWare' ? (
+          <LeadCard Data={BathwareLead} category="BathWare" />
+        ) : (
+          ''
+        )}
+        {selectedBox === 'Adhesive' ? (
+          <LeadCard Data={AdhesiveLead} category="Adhesive" />
+        ) : (
+          ''
+        )}
+      </ScrollView>
+    </>
   );
 };
 

@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   imageSize: {
     // flex: 1,
-    height: '99%',
+    height: '95%',
     // width: "100%",
   },
   tickMark: {

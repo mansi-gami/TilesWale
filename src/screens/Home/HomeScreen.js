@@ -18,6 +18,18 @@ import styles from './styles';
 import CarouselItem from '../../component/CarouselItem/CarouselItem';
 import {scale} from 'react-native-size-matters';
 import {useNavigation} from '@react-navigation/native';
+import BrandCard from '../../component/BrandCrad/BrandCard';
+import {
+  AlaskaSurfaces,
+  CoinnTiles,
+  HawkGranito,
+  Liberta,
+  linumCeramic,
+  MillenniumCeramic,
+  Torino,
+  Valenza,
+} from '../../Constant/Constant';
+import {liberta} from '../../Constant/image';
 
 const data = [
   {label: 'Tiles', value: '1'},
@@ -126,12 +138,16 @@ const HomeScreen = () => {
 
   return (
     <>
+      <View>
+        <Header title={'Home'} />
+      </View>
       <ScrollView
         style={styles.container}
         onScroll={handleScroll}
         showsVerticalScrollIndicator={false}>
-        <Header title={'Home'} />
-        <View style={styles.mainInput}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('SearchPage')}
+          style={styles.mainInput}>
           <TextInput style={styles.textInput} placeholder={placeholder} />
           <Fontisto style={styles.search} name={'search'} size={20} />
           <MaterialIcons
@@ -139,7 +155,7 @@ const HomeScreen = () => {
             name={'keyboard-voice'}
             size={25}
           />
-        </View>
+        </TouchableOpacity>
         <LinearGradient
           colors={['#afd3e3', '#94eba4', '#c9f5d1']}
           start={{x: 0, y: 1.0}}
@@ -166,78 +182,14 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <View style={styles.card}>
-            <Image
-              style={styles.images}
-              source={require('../../assets/alaska.jpeg')}
-            />
-            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-              ALASKA SURFACES LLP
-            </Text>
-          </View>
-          <View style={styles.card}>
-            <Image
-              style={styles.images}
-              source={require('../../assets/coinn.jpeg')}
-            />
-            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-              Coinn Tiles LLP
-            </Text>
-          </View>
-          <View style={styles.card}>
-            <Image
-              style={styles.images}
-              source={require('../../assets/hawk.webp')}
-            />
-            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-              Hawk Granito Pvt Ltd.
-            </Text>
-          </View>
-          <View style={styles.card}>
-            <Image
-              style={styles.images}
-              source={require('../../assets/liberta.jpg')}
-            />
-            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-              Liberta Vitrified LLP
-            </Text>
-          </View>
-          <View style={styles.card}>
-            <Image
-              style={styles.images}
-              source={require('../../assets/linum.png')}
-            />
-            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-              Linum Ceramic
-            </Text>
-          </View>
-          <View style={styles.card}>
-            <Image
-              style={styles.images}
-              source={require('../../assets/millennium.jpeg')}
-            />
-            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-              Linum Ceramic
-            </Text>
-          </View>
-          <View style={styles.card}>
-            <Image
-              style={styles.images}
-              source={require('../../assets/torino.png')}
-            />
-            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-              Torino Tiles
-            </Text>
-          </View>
-          <View style={styles.card}>
-            <Image
-              style={styles.images}
-              source={require('../../assets/valenza.png')}
-            />
-            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.texts}>
-              Valenza Granito
-            </Text>
-          </View>
+          <BrandCard Data={AlaskaSurfaces} />
+          <BrandCard Data={CoinnTiles} />
+          <BrandCard Data={HawkGranito} />
+          <BrandCard Data={Liberta} />
+          <BrandCard Data={linumCeramic} />
+          <BrandCard Data={MillenniumCeramic} />
+          <BrandCard Data={Torino} />
+          <BrandCard Data={Valenza} />
         </ScrollView>
         <View style={styles.box}>
           <Text style={styles.categories}>Explore by Categories</Text>

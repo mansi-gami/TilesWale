@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     // marginTop: scale(144),
   },
   imageSize: {
-    height: "98%",
+    height: "94%",
     // resizeMode: 'center',
     // width: scale(200),
     // height: scale(700),

@@ -1,4 +1,11 @@
-import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import Header from '../../component/Header/Header';
 import styles from './style';
@@ -25,7 +32,9 @@ function Tiles() {
     <ScrollView style={styles.mainContent}>
       <View style={styles.content}>
         <Text style={styles.text}>Recently Added Catalogues</Text>
-        <Text style={styles.linkText}>View All</Text>
+        <TouchableOpacity>
+          <Text style={styles.linkText}>View All</Text>
+        </TouchableOpacity>
       </View>
       <ScrollView
         horizontal={true}
@@ -44,7 +53,9 @@ function Tiles() {
       </ScrollView>
       <View style={styles.content}>
         <Text style={styles.text}>Featured Company Catalogue</Text>
-        <Text style={styles.linkText}>View All</Text>
+        <TouchableOpacity>
+          <Text style={styles.linkText}>View All</Text>
+        </TouchableOpacity>
       </View>
       <ScrollView
         horizontal={true}

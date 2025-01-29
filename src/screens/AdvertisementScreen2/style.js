@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     // marginBottom: scale(106),
   },
   imageSize: {
-    height: '162%',
+    height: '157%',
     // resizeMode: 'contain',
     // width: scale(300),
   },

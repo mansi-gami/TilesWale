@@ -12,6 +12,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './style';
+import {useNavigation} from '@react-navigation/native';
 
 const Header = ({
   title,
@@ -30,6 +31,7 @@ const Header = ({
 
   const shouldShowLocation = title !== 'Home' && title !== 'Directory';
   const shouldShowSearch = title !== 'Home';
+  const navigation = useNavigation();
   return (
     <View style={[styles.container, containerStyle]}>
       <TouchableOpacity
@@ -61,12 +63,17 @@ const Header = ({
         </View>
       )}
       {shouldShowSearch && (
-        <View>
+        <TouchableOpacity onPress={() => navigation.navigate('SearchPage')}>
           <Fontisto name={'search'} size={20} />
-        </View>
+        </TouchableOpacity>
       )}
-      <Fontisto name={'bell'} size={20} />
-      <AntDesign name={'message1'} size={20} />
+      <TouchableOpacity
+        onPress={() => navigation.navigate('NotificationsPage')}>
+        <Fontisto name={'bell'} size={20} />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('ChatPage')}>
+        <AntDesign name={'message1'} size={20} />
+      </TouchableOpacity>
     </View>
   );
 };

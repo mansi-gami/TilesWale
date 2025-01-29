@@ -18,6 +18,29 @@ import {
   liberta,
   tiles1,
   tilesImage,
+  linumceramic1,
+  linumceramic2,
+  linum,
+  alaska,
+  coinn,
+  hawk,
+  millennium,
+  torino,
+  valenza,
+  alaska1,
+  alaska2,
+  coinn1,
+  coinn2,
+  hawk1,
+  hawk2,
+  liberta1,
+  liberta2,
+  millennium1,
+  millennium2,
+  torino1,
+  torino2,
+  valenza1,
+  valenza2,
 } from './image';
 
 export const Tiles = [
@@ -206,5 +229,101 @@ export const TilesCatalogue = [
     size: '800 x 1200 mm (24 x 48 inch)',
     Views: '8',
     share: '12',
+  },
+];
+
+export const AlaskaSurfaces = [
+  {
+    id: '10',
+    logo: alaska,
+    name: 'ALASKA SURFACES LLP',
+    image: alaska1,
+    image1: alaska2,
+    manufacturer: 'Manufacturer',
+    rating: '4.7 ★',
+  },
+];
+
+export const CoinnTiles = [
+  {
+    id: '11',
+    logo: coinn,
+    name: 'Coinn Tiles LLP',
+    image: coinn1,
+    image1: coinn2,
+    manufacturer: 'Manufacturer',
+    rating: '4.4 ★',
+  },
+];
+
+export const HawkGranito = [
+  {
+    id: '12',
+    logo: hawk,
+    name: 'Hawk Granito Pvt Ltd.',
+    image: hawk1,
+    image1: hawk2,
+    manufacturer: 'Manufacturer',
+    rating: '4.4 ★',
+  },
+];
+
+export const Liberta = [
+  {
+    id: '13',
+    logo: liberta,
+    name: 'Liberta Vitrified LLP',
+    image: liberta1,
+    image1: liberta2,
+    manufacturer: 'Manufacturer',
+    rating: '4.3 ★',
+  },
+];
+
+export const linumCeramic = [
+  {
+    id: '14',
+    logo: linum,
+    name: 'Linum Ceramic',
+    image: linumceramic1,
+    image1: linumceramic2,
+    manufacturer: 'OEM Manufacturer',
+    rating: '4.1 ★',
+  },
+];
+
+export const MillenniumCeramic = [
+  {
+    id: '15',
+    logo: millennium,
+    name: 'Millennium Ceramic',
+    image: millennium1,
+    image1: millennium2,
+    manufacturer: 'Manufacturer',
+    rating: '4.4 ★',
+  },
+];
+
+export const Torino = [
+  {
+    id: '16',
+    logo: torino,
+    name: 'Torino Tiles',
+    image: torino1,
+    image1: torino2,
+    manufacturer: 'Manufacturer',
+    rating: '4.8 ★',
+  },
+];
+
+export const Valenza = [
+  {
+    id: '17',
+    logo: valenza,
+    name: 'Valenza Granito',
+    image: valenza1,
+    image1: valenza2,
+    manufacturer: 'Manufacturer',
+    rating: '4.7 ★',
   },
 ];

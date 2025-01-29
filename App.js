@@ -17,6 +17,11 @@ import BrandScreen from './src/screens/Brand/BrandScreen';
 import MoreImage from './src/screens/MoreImage/MoreImage';
 import MarketScreen from './src/screens/Market/MarketScreen';
 import ProductDetailScreen from './src/screens/ProductDetail/ProductDetailScreen';
+import SearchPage from './src/screens/SearchPage/SearchPage';
+import NotificationsPage from './src/screens/NotificationsPage/NotificationsPage';
+import ChatPage from './src/screens/ChatPage/ChatPage';
+import BrandCard from './src/component/BrandCrad/BrandCard';
+import BrandDetailScreen from './src/screens/BrandDetailScrenn/BrandDetailScreen';
 
 const stack = createNativeStackNavigator();
 const App = () => {
@@ -116,6 +121,31 @@ const App = () => {
           <stack.Screen
             name={'ProductDetailScreen'}
             component={ProductDetailScreen}
+            // options={{headerShown: true}}
+          />
+           <stack.Screen
+            name={'SearchPage'}
+            component={SearchPage}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'NotificationsPage'}
+            component={NotificationsPage}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'ChatPage'}
+            component={ChatPage}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'BrandCard'}
+            component={BrandCard}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'BrandDetailScreen'}
+            component={BrandDetailScreen}
             // options={{headerShown: true}}
           />
         </stack.Navigator>

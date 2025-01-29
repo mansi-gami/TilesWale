@@ -58,6 +58,22 @@ import googleIcon from '../assets/googleIcon.jpg';
 import phoneIcon from '../assets/phoneIcon.jpg';
 import tiles1 from '../assets/tiles1.png';
 import tilesImage from '../assets/tilesImage.webp';
+import alaska1 from '../assets/alaska1.webp';
+import alaska2 from '../assets/alaska2.jpg';
+import coinn1 from '../assets/coinn1.jpeg';
+import coinn2 from '../assets/coinn2.jpeg';
+import hawk1 from '../assets/hawk1.jpg';
+import hawk2 from '../assets/hawk2.jpeg';
+import liberta1 from '../assets/liberta1.jpg';
+import liberta2 from '../assets/liberta2.jpg';
+import linumceramic1 from '../assets/linumceramic1.webp';
+import linumceramic2 from '../assets/linumceramic2.jpg';
+import millennium1 from '../assets/millennium1.jpeg';
+import millennium2 from '../assets/millennium2.jpg';
+import torino1 from '../assets/torino1.png';
+import torino2 from '../assets/torino2.jpeg';
+import valenza1 from '../assets/valenza1.jpeg';
+import valenza2 from '../assets/valenza2.jpg';
 
 export {
   adhesive,
@@ -120,4 +136,20 @@ export {
   phoneIcon,
   tiles1,
   tilesImage,
+  linumceramic1,
+  linumceramic2,
+  alaska1,
+  alaska2,
+  coinn1,
+  coinn2,
+  hawk1,
+  hawk2,
+  liberta1,
+  liberta2,
+  millennium1,
+  millennium2,
+  torino1,
+  torino2,
+  valenza1,
+  valenza2,
 };

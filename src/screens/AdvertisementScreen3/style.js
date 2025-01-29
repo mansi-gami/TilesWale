@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     // marginBottom: scale(62),
   },
   imageSize: {
-    height: '163%',
+    height: '157%',
     // width: scale(300),
   },
   text: {

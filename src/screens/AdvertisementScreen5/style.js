@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     // marginBottom: scale(106),
   },
   imageSize: {
-    height: '162%',
+    height: '157%',
     // width: scale(350),
   },
   bottomBar: {
