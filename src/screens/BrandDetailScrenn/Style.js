@@ -4,7 +4,6 @@ import {scale} from 'react-native-size-matters';
 const style = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    // height: scale(800),
     backgroundColor: '#ffffff',
   },
   mainContent: {
@@ -123,6 +122,41 @@ const style = StyleSheet.create({
   rateText: {
     fontSize: scale(15),
     fontWeight: 600,
+  },
+  descriptionText: {
+    color: '#08505e',
+    fontSize: scale(16),
+    fontWeight: 700,
+    // marginTop: scale(10),
+  },
+  line: {
+    borderColor: 'gray',
+    borderWidth: scale(0.3),
+    width: scale(230),
+  },
+  aboutText: {
+    fontSize: scale(14),
+    color: '#585b5c',
+    marginHorizontal: scale(10),
+  },
+  specificationCard: {
+    marginTop: scale(10),
+    flexDirection: 'row',
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+    paddingHorizontal: scale(15),
+    gap: scale(15),
+    height: scale(60),
+    marginHorizontal: scale(10),
+    borderRadius: scale(10),
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: scale(0),
+      height: scale(3),
+    },
+    shadowOpacity: 0.29,
+    shadowRadius: 4.5,
+    elevation: 7,
   },
 });
 

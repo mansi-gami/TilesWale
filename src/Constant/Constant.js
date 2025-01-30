@@ -241,6 +241,9 @@ export const AlaskaSurfaces = [
     image1: alaska2,
     manufacturer: 'Manufacturer',
     rating: '4.7 ★',
+    about: 'No Description Available',
+    type: ['PGVT & GVT'],
+    size: ['600 x 1200 mm (24 x 48 inch), 600 x 600 mm (24 x 24 inch)'],
   },
 ];
 
@@ -253,6 +256,10 @@ export const CoinnTiles = [
     image1: coinn2,
     manufacturer: 'Manufacturer',
     rating: '4.4 ★',
+    about:
+      'Coinn has emerged as a leading porcelain tile company in india, with worldwide reach. In the short span of mere 4 years, we have become one of the most trusted porcelain tiles manufacturing brand in the world - by offering quality products and impeccable customer services to clients and channel partners around the world.',
+    type: ['Digital Porcelain Tiles'],
+    size: ['600 x 600 mm (24 x 24 inch), 600 x 1200 mm (24 x 48 inch)'],
   },
 ];
 
@@ -265,6 +272,22 @@ export const HawkGranito = [
     image1: hawk2,
     manufacturer: 'Manufacturer',
     rating: '4.4 ★',
+    about:
+      'Innovation & creativity with excellence. These all terms convey the embodiment of Hawk Granito. Driving edge innovation, propelled mechanization, modern splendor, and their energy to stay admirable urge them to continue making impeccable items. Aside from specialized brightness, they likewise have solid manpower. At Hawk, specialists play out the job of rudder for them as they lead fundamental and guide the group towards development.',
+    type: [
+      'PGVT & GVT',
+      'Full body Vitrified Tiles',
+      'Double Charged Vitrified Tiles',
+      'Digital Parking Tiles',
+      'Digital Porcelain Tiles',
+    ],
+    size: [
+      '600 x 1200 mm (24 x 48 inch), 600 x 600 mm (24 x 24 inch)',
+      '800 x 800 mm (32 x 32 inch), 600 x 1200 mm (24 x 48 inch)',
+      '800 x 800 mm (32 x 32 inch), 600 x 1200 mm (24 x 48 inch), 600 x 600 mm (24 x 24 inch)',
+      '400 x 400 mm (16 x 16 inch), 500 x 500 mm (20 x 20)',
+      '600 x 600 mm (24 x 24 inch)',
+    ],
   },
 ];
 
@@ -277,6 +300,9 @@ export const Liberta = [
     image1: liberta2,
     manufacturer: 'Manufacturer',
     rating: '4.3 ★',
+    about: 'No Description Available',
+    type: ['PGVT & GVT'],
+    size: ['600 x 1200 mm (24 x 48 inch)'],
   },
 ];
 
@@ -289,6 +315,26 @@ export const linumCeramic = [
     image1: linumceramic2,
     manufacturer: 'OEM Manufacturer',
     rating: '4.1 ★',
+    about:
+      'Linum Ceramic is a leading manufacturer and marketer of high-quality ceramic tiles, based in (Morbi,Gujarat,India). Our company has been in business for over 8 years and has built a reputation for providing innovative designs and exceptional quality products. We offer a wide range of ceramic tiles for residential and commercial applications.',
+    type: [
+      'PGVT & GVT',
+      'Digital Wall Tiles',
+      'Full body Vitrified Tiles',
+      'Double Charged Vitrified Tiles',
+      'Step and Riser / Strip',
+      'Digital Parking Tiles',
+      'Digital Porcelain Tiles',
+    ],
+    size: [
+      '600 x 600 mm (24 x 24 inch), 600 x 1200 mm (24 x 48 inch)',
+      '300 x 450 mm (12 x 18 inch), 200 x 600 mm (12 x 24 inch), 250 x 375 mm (10 x 15 inch)',
+      '600 x 600 mm (24 x 24 inch),800 x 800 mm (32 x 32 inch),600 x 1200 mm (24 x 48 inch)',
+      '600 x 600 mm (24 x 24 inch),600 x 1200 mm (24 x 48 inch)',
+      '200 x 1200 mm (08 x 48 inch), 300 x 1200 mm (12 x 48 inch), 200 x 900 mm (08 x 36 inch),300 x 900 mm (12 x 36 inch)',
+      '300 x 300 mm (12 x 12 inch),400 x 400 mm (16 x 16 inch)',
+      '600 x 600 mm (24 x 24 inch),600 x 1200 mm (24 x 48 inch)',
+    ],
   },
 ];
 
@@ -301,6 +347,12 @@ export const MillenniumCeramic = [
     image1: millennium2,
     manufacturer: 'Manufacturer',
     rating: '4.4 ★',
+    about:
+      'Millennium Tiles has long been known for its product quality and customer services. We are worlds leading vitrified tiles manufacturers situated in Morbi, India - Millennium Tiles is the most talented vitrified tiles manufacturer of Morbi-floor tiles hub of India. Like the tropical stroms in the Atlantic Ocean from where we have derived our name from, we at Millennium Vitrified Tiles Pvt. Ltd., are here with a storm of passion to bring a revolution in Designing and Architecture. We have Granito tiles in various size like 600 x 600 mm, 800 x 800 mm, 600 x 1200 mm, 300 x 300 mm and 400 x 400 mm to give a better after-fit finish.',
+    type: ['PGVT & GVT'],
+    size: [
+      '600 x 600 mm (24 x 24 inch), 600 x 1200 mm (24 x 48 inch), 800 x 1600 mm (32 x 64 inch)',
+    ],
   },
 ];
 
@@ -313,6 +365,22 @@ export const Torino = [
     image1: torino2,
     manufacturer: 'Manufacturer',
     rating: '4.8 ★',
+    about: 'No Description Available',
+    type: [
+      'Digital Wall Tiles',
+      'PGVT & GVT',
+      'High Depth Elevation Tiles',
+      'Digital Parking Tiles',
+      'Digital Porcelain Tiles',
+    ],
+    size: [
+      '300 x 450 mm (12 x 18 inch), 300 x 600 mm (12 x 24 inch)',
+      '800 x 1600 mm (32 x 64 inch)',
+      '600 x 1200 mm (24 x 48 inch) , 300 x 600 mm (12 x 24 inch) , 300 x 300 mm (12 x 12 inch)',
+      '600 x 600 mm (24 x 24 inch)',
+      '400 x 400 mm (16 x 16 inch) , 500 x 500 mm (20 x 20), 600 x 600 mm (24 x 24 inch)',
+      ,
+    ],
   },
 ];
 
@@ -325,5 +393,9 @@ export const Valenza = [
     image1: valenza2,
     manufacturer: 'Manufacturer',
     rating: '4.7 ★',
+    about:
+      'VALENZA Granito LLP, an ISO 9001:2015 certified company, is leading manufacturer and exporter of ceramic and porcelain vitrified tiles all around the world. With 21+ glorious years experience Valenza Group has a remarkable history in international market with a dedicated in-house designing and quality assurance team. Our goal is to achive customer satisfaction by serving innovative, qualitative and true value of money product.',
+    type: ['PGVT & GVT'],
+    size: ['600 x 1200 mm (24 x 48 inch)'],
   },
 ];

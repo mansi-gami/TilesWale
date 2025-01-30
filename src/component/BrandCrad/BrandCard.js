@@ -10,13 +10,16 @@ const BrandCard = ({Data, category}) => {
       {Data?.map((item, index) => (
         <TouchableOpacity
           onPress={() =>
-            navigation.navigate('BrandDetailScreen', {
+            navigation.push('BrandDetailScreen', {
               category,
               brandImage: [item.image, item.image1],
               logoImage: item.logo,
               name: item.name,
               manufacturer: item.manufacturer,
               rating: item.rating,
+              about: item.about,
+              type: item.type,
+              size: item.size,
             })
           }
           style={style.card}>

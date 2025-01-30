@@ -45,6 +45,18 @@ function Review() {
   );
 }
 
+function Catalogue() {
+  return (
+    <ScrollView
+      nestedScrollEnabled={true}
+      contentContainerStyle={{flexGrow: 1}}>
+      <View>
+        <Text>Catalogue Page</Text>
+      </View>
+    </ScrollView>
+  );
+}
+
 function Contacts() {
   return (
     <ScrollView
@@ -57,9 +69,71 @@ function Contacts() {
   );
 }
 
+function ProductInfo({type = [], size = []}) {
+  return (
+    <ScrollView
+      nestedScrollEnabled={true}
+      contentContainerStyle={{flexGrow: 1}}>
+      <View
+        style={{
+          marginTop: scale(15),
+          marginHorizontal: scale(10),
+        }}>
+        <Text style={style.descriptionText}>Tiles' Specifications</Text>
+      </View>
+      {type.map((type, index) => (
+        <View style={style.specificationCard}>
+          <View>
+            <Text
+              style={{fontWeight: 700, width: scale(70), fontSize: scale(12)}}>
+              {type}
+            </Text>
+          </View>
+          <View
+            style={{
+              borderColor: 'gray',
+              borderWidth: 0.5,
+              height: scale(45),
+            }}></View>
+          <View>
+            {size[index]
+              ? size[index]
+                  .split(',')
+                  .map((s, idx) => <Text key={idx}>{s.trim()}</Text>)
+              : 'No size available'}
+          </View>
+        </View>
+      ))}
+    </ScrollView>
+  );
+}
+
+function About({about}) {
+  return (
+    <ScrollView
+      nestedScrollEnabled={true}
+      contentContainerStyle={{flexGrow: 1}}>
+      <View>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginTop: scale(15),
+            gap: scale(8),
+            alignItems: 'center',
+            marginHorizontal: scale(10),
+          }}>
+          <Text style={style.descriptionText}>Description</Text>
+          <View style={style.line}></View>
+        </View>
+        <Text style={style.aboutText}>{about}</Text>
+      </View>
+    </ScrollView>
+  );
+}
+
 const Tab = createMaterialTopTabNavigator();
 
-function BrandTopTab() {
+function BrandTopTab({about, type, size}) {
   return (
     <Tab.Navigator
       initialRouteName="Store"
@@ -67,12 +141,17 @@ function BrandTopTab() {
         tabBarScrollEnabled: true,
         tabBarActiveTintColor: '#4071ed',
         tabBarInactiveTintColor: 'gray',
-        tabBarLabelStyle: {fontSize: 20, fontWeight: '600', height: 30},
+        tabBarLabelStyle: {fontSize: 15, fontWeight: '600', height: 20},
         tabBarStyle: {backgroundColor: 'white'},
       }}>
       <Tab.Screen name="Store" component={Store} />
-      <Tab.Screen name="Review" component={Review} />
+      <Tab.Screen name="Review&Rating" component={Review} />
+      <Tab.Screen name="Catalogue" component={Catalogue} />
       <Tab.Screen name="Contacts" component={Contacts} />
+      <Tab.Screen name="ProductInfo">
+        {() => <ProductInfo type={type} size={size} />}
+      </Tab.Screen>
+      <Tab.Screen name="About">{() => <About about={about} />}</Tab.Screen>
     </Tab.Navigator>
   );
 }
@@ -80,7 +159,8 @@ function BrandTopTab() {
 const BrandDetailScreen = ({item}) => {
   const route = useRoute();
 
-  const {brandImage, logoImage, name, manufacturer, rating} = route.params;
+  const {brandImage, logoImage, name, manufacturer, rating, about, type, size} =
+    route.params;
 
   const screenWidth = Dimensions.get('window').width;
   const [activeIndex, setActiveIndex] = useState(0);
@@ -228,7 +308,7 @@ const BrandDetailScreen = ({item}) => {
           </TouchableOpacity>
         </View>
         <View style={{height: 950}}>
-          <BrandTopTab />
+          <BrandTopTab about={about} type={type} size={size} />
         </View>
       </ScrollView>
       {/* <BrandDetailTab /> */}
