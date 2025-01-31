@@ -5,6 +5,7 @@ import {
   Text,
   Dimensions,
   View,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
 import styles from './style';
@@ -82,9 +83,9 @@ const Carousel = () => {
                 Contracts<Text style={styles.carouselText2}> for the top</Text>{' '}
               </Text>
               <Text style={styles.boldText}>Bathware brands</Text>
-              <View style={styles.btn}>
+              <TouchableOpacity style={styles.btn}>
                 <Text style={styles.txt}>Reach Out</Text>
-              </View>
+              </TouchableOpacity>
             </View>
             <View>
               <Image
@@ -118,9 +119,9 @@ const Carousel = () => {
                 <Text style={styles.carouselText2}> brands of</Text>{' '}
               </Text>
               <Text style={styles.boldText}>SanitaryWare</Text>
-              <View style={styles.btn}>
+              <TouchableOpacity style={styles.btn}>
                 <Text style={styles.txt}>Connect Now</Text>
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
         )}
@@ -131,9 +132,9 @@ const Carousel = () => {
               <Text style={styles.carouselText1}>2000+</Text>
               <Text style={styles.carouselText2}>most popular</Text>
               <Text style={styles.boldText}>Tile brands</Text>
-              <View style={styles.btn}>
+              <TouchableOpacity style={styles.btn}>
                 <Text style={styles.txt}>Reach Out</Text>
-              </View>
+              </TouchableOpacity>
             </View>
             <View>
               <Image
@@ -166,9 +167,9 @@ const Carousel = () => {
                 Stylish<Text style={styles.boldText}> Kitchen Sink</Text>{' '}
               </Text>
               <Text style={styles.boldText}>brands</Text>
-              <View style={styles.btn}>
+              <TouchableOpacity style={styles.btn}>
                 <Text style={styles.txt}>Get in touch</Text>
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
         )}

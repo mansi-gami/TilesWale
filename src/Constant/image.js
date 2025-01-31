@@ -74,6 +74,16 @@ import torino1 from '../assets/torino1.png';
 import torino2 from '../assets/torino2.jpeg';
 import valenza1 from '../assets/valenza1.jpeg';
 import valenza2 from '../assets/valenza2.jpg';
+import contactImage from '../assets/contactImage.jpg';
+import contactImage1 from '../assets/contactImage1.jpg';
+import alaskaCatalogue1 from '../assets/alaska_catalogue1.jpg';
+import alaskaCatalogue2 from '../assets/alaska_catalogue2.jpeg';
+import alaskaCatalogue3 from '../assets/alaska_catalogue3.webp';
+import alaskaCatalogue4 from '../assets/alaska_catalogue4.webp';
+import coinCatalogue1 from '../assets/coinn_catalogue1.webp';
+import coinCatalogue2 from '../assets/coinn_catalogue2.webp';
+import coinCatalogue3 from '../assets/coinn_catalogue3.webp';
+import coinCatalogue4 from '../assets/coinn_catalogue4.webp';
 
 export {
   adhesive,
@@ -152,4 +162,14 @@ export {
   torino2,
   valenza1,
   valenza2,
+  contactImage,
+  contactImage1,
+  alaskaCatalogue1,
+  alaskaCatalogue2,
+  alaskaCatalogue3,
+  alaskaCatalogue4,
+  coinCatalogue1,
+  coinCatalogue2,
+  coinCatalogue3,
+  coinCatalogue4,
 };

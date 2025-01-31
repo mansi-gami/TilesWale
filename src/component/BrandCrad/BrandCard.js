@@ -20,6 +20,14 @@ const BrandCard = ({Data, category}) => {
               about: item.about,
               type: item.type,
               size: item.size,
+              contactImage: item.contactImage,
+              contactName: item.contactName,
+              catalogueImage: item.catalogueImage,
+              catalogueName: item.catalogueName,
+              catalogueSize: item.catalogueSize,
+              catalogueType: item.catalogueType,
+              viewers: item.viewers,
+              share: item.share,
             })
           }
           style={style.card}>

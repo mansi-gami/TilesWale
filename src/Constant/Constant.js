@@ -41,6 +41,16 @@ import {
   torino2,
   valenza1,
   valenza2,
+  contactImage,
+  contactImage1,
+  alaskaCatalogue1,
+  alaskaCatalogue2,
+  alaskaCatalogue3,
+  alaskaCatalogue4,
+  coinCatalogue1,
+  coinCatalogue2,
+  coinCatalogue3,
+  coinCatalogue4,
 } from './image';
 
 export const Tiles = [
@@ -244,6 +254,29 @@ export const AlaskaSurfaces = [
     about: 'No Description Available',
     type: ['PGVT & GVT'],
     size: ['600 x 1200 mm (24 x 48 inch), 600 x 600 mm (24 x 24 inch)'],
+    contactImage: [contactImage],
+    contactName: ['Dhruv Rankja'],
+    catalogueImage: [
+      alaskaCatalogue1,
+      alaskaCatalogue2,
+      alaskaCatalogue3,
+      alaskaCatalogue4,
+    ],
+    catalogueName: [
+      'GLOSSY MATT (PASTELO)',
+      'ARTISAN (DECOR CARVING)',
+      'CARVE (CARVING)',
+      'ECHO (BOOK MATCH)',
+    ],
+    catalogueSize: [
+      '600 x 1200 mm (24 x 48 inch)',
+      '600 x 1200 mm (24 x 48 inch)',
+      '600 x 1200 mm (24 x 48 inch)',
+      '600 x 1200 m (24 x 48 inch)',
+    ],
+    catalogueType: ['PGVT & GVT', 'PGVT & GVT', 'PGVT & GVT', 'PGVT & GVT'],
+    viewers: ['10', '5', '7', '18'],
+    share: ['25', '12', '2', '6'],
   },
 ];
 
@@ -260,6 +293,34 @@ export const CoinnTiles = [
       'Coinn has emerged as a leading porcelain tile company in india, with worldwide reach. In the short span of mere 4 years, we have become one of the most trusted porcelain tiles manufacturing brand in the world - by offering quality products and impeccable customer services to clients and channel partners around the world.',
     type: ['Digital Porcelain Tiles'],
     size: ['600 x 600 mm (24 x 24 inch), 600 x 1200 mm (24 x 48 inch)'],
+    contactImage: [contactImage1, contactImage],
+    contactName: ['Mr. Meet', 'Dhir Patel'],
+    catalogueImage: [
+      coinCatalogue1,
+      coinCatalogue2,
+      coinCatalogue3,
+      coinCatalogue4,
+    ],
+    catalogueName: [
+      'GLOSSY MATT (PASTELO)',
+      'ARTISAN (DECOR CARVING)',
+      'CARVE (CARVING)',
+      'ECHO (BOOK MATCH)',
+    ],
+    catalogueSize: [
+      '600 x 1200 mm (24 x 48 inch)',
+      '600 x 1200 mm (24 x 48 inch)',
+      '600 x 1200 mm (24 x 48 inch)',
+      '600 x 1200 m (24 x 48 inch)',
+    ],
+    catalogueType: [
+      'Digital Porcelain Tiles',
+      'Digital Porcelain Tiles',
+      'Digital Porcelain Tiles',
+      'Digital Porcelain Tiles',
+    ],
+    viewers: ['10', '5', '7', '18'],
+    share: ['25', '12', '2', '6'],
   },
 ];
 
@@ -288,6 +349,8 @@ export const HawkGranito = [
       '400 x 400 mm (16 x 16 inch), 500 x 500 mm (20 x 20)',
       '600 x 600 mm (24 x 24 inch)',
     ],
+    contactImage: [contactImage],
+    contactName: ['Dhruv Rankja'],
   },
 ];
 
@@ -303,6 +366,8 @@ export const Liberta = [
     about: 'No Description Available',
     type: ['PGVT & GVT'],
     size: ['600 x 1200 mm (24 x 48 inch)'],
+    contactImage: [contactImage],
+    contactName: ['Dhruv Rankja'],
   },
 ];
 
@@ -335,6 +400,8 @@ export const linumCeramic = [
       '300 x 300 mm (12 x 12 inch),400 x 400 mm (16 x 16 inch)',
       '600 x 600 mm (24 x 24 inch),600 x 1200 mm (24 x 48 inch)',
     ],
+    contactImage: [contactImage],
+    contactName: ['Dhruv Rankja'],
   },
 ];
 
@@ -353,6 +420,8 @@ export const MillenniumCeramic = [
     size: [
       '600 x 600 mm (24 x 24 inch), 600 x 1200 mm (24 x 48 inch), 800 x 1600 mm (32 x 64 inch)',
     ],
+    contactImage: [contactImage],
+    contactName: ['Dhruv Rankja'],
   },
 ];
 
@@ -379,8 +448,9 @@ export const Torino = [
       '600 x 1200 mm (24 x 48 inch) , 300 x 600 mm (12 x 24 inch) , 300 x 300 mm (12 x 12 inch)',
       '600 x 600 mm (24 x 24 inch)',
       '400 x 400 mm (16 x 16 inch) , 500 x 500 mm (20 x 20), 600 x 600 mm (24 x 24 inch)',
-      ,
     ],
+    contactImage: [contactImage],
+    contactName: ['Dhruv Rankja'],
   },
 ];
 
@@ -397,5 +467,7 @@ export const Valenza = [
       'VALENZA Granito LLP, an ISO 9001:2015 certified company, is leading manufacturer and exporter of ceramic and porcelain vitrified tiles all around the world. With 21+ glorious years experience Valenza Group has a remarkable history in international market with a dedicated in-house designing and quality assurance team. Our goal is to achive customer satisfaction by serving innovative, qualitative and true value of money product.',
     type: ['PGVT & GVT'],
     size: ['600 x 1200 mm (24 x 48 inch)'],
+    contactImage: [contactImage],
+    contactName: ['Dhruv Rankja'],
   },
 ];

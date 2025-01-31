@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import {
   View,
   Text,
@@ -20,6 +19,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {scale} from 'react-native-size-matters';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import Zocial from 'react-native-vector-icons/Zocial';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function Store() {
   return (
@@ -38,33 +39,146 @@ function Review() {
     <ScrollView
       nestedScrollEnabled={true}
       contentContainerStyle={{flexGrow: 1}}>
-      <View>
-        <Text>Review Page</Text>
+      <View style={{flexDirection: 'row'}}>
+        <View>
+          <Text>4.7</Text>
+          <Text>★</Text>
+          <Text>18 Rating</Text>
+        </View>
+        <View style={{
+              borderColor: 'gray',
+              borderWidth: 0.3,
+              height: scale(45),
+            }}></View>
+            <View></View>
       </View>
     </ScrollView>
   );
 }
 
-function Catalogue() {
+function Catalogue({
+  catalogueImage = [],
+  catalogueName = [],
+  catalogueSize = [],
+  catalogueType = [],
+  viewers = [],
+  share = [],
+}) {
+  const imagePairs = [];
+
+  for (let i = 0; i < catalogueImage.length; i += 2) {
+    imagePairs.push({
+      images: catalogueImage.slice(i, i + 2),
+      names: catalogueName.slice(i, i + 2),
+      sizes: catalogueSize.slice(i, i + 2),
+      types: catalogueType.slice(i, i + 2),
+      viewers: viewers.slice(i, i + 2),
+      share: share.slice(i, i + 2),
+    });
+  }
   return (
     <ScrollView
       nestedScrollEnabled={true}
       contentContainerStyle={{flexGrow: 1}}>
-      <View>
-        <Text>Catalogue Page</Text>
-      </View>
+      {imagePairs.map((pair, index) => (
+        <View style={{flexDirection: 'row'}} key={index}>
+          {pair.images.map((image, idx) => (
+            <View style={{flex: 1}} key={idx}>
+              <TouchableOpacity style={style.card}>
+                <Image style={style.catalogueImage} source={image} />
+                <Text
+                  numberOfLines={1}
+                  ellipsizeMode={'tail'}
+                  style={style.catalogueName}>
+                  {pair.names[idx]}
+                </Text>
+                <Text
+                  numberOfLines={1}
+                  ellipsizeMode={'tail'}
+                  style={style.catalogueType}>
+                  {pair.types[idx]}
+                </Text>
+                <Text
+                  numberOfLines={1}
+                  ellipsizeMode={'tail'}
+                  style={style.catalogueSize}>
+                  {pair.sizes[idx]}
+                </Text>
+                <View style={{flex: 1, justifyContent: 'flex-end'}}>
+                  <View style={style.bottomColor}>
+                    <View style={style.views}>
+                      <Ionicons name={'eye'} size={20} color={'#919294'} />
+                      <Text style={style.viewsText}>{pair.viewers[idx]}</Text>
+                    </View>
+                    <View style={style.views}>
+                      <MaterialCommunityIcons
+                        name={'arrow-down-box'}
+                        size={20}
+                        color={'#919294'}
+                      />
+                      <Text style={style.viewsText}>{pair.share[idx]}</Text>
+                    </View>
+                  </View>
+                </View>
+              </TouchableOpacity>
+            </View>
+          ))}
+        </View>
+      ))}
     </ScrollView>
   );
 }
 
-function Contacts() {
+function Contacts({contactImage = [], contactName = []}) {
   return (
     <ScrollView
       nestedScrollEnabled={true}
       contentContainerStyle={{flexGrow: 1}}>
-      <View>
-        <Text>Contacts Page</Text>
-      </View>
+      {contactImage.map((contactImage, index) => (
+        <View
+          style={[style.specificationCard, {justifyContent: 'space-between'}]}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: scale(10),
+            }}>
+            <View>
+              <Image
+                style={{
+                  height: scale(40),
+                  width: scale(40),
+                  borderRadius: scale(20),
+                }}
+                source={contactImage}
+              />
+            </View>
+            <View>
+              <Text
+                style={{
+                  fontWeight: 700,
+                  fontSize: scale(15),
+                  // marginRight: scale(40),
+                }}>
+                {contactName[index]}
+              </Text>
+            </View>
+          </View>
+          <View>
+            <View style={{flexDirection: 'row', gap: scale(20)}}>
+              <TouchableOpacity style={style.iconBG}>
+                <Ionicons name={'call'} color={'white'} size={20} />
+              </TouchableOpacity>
+              <TouchableOpacity style={style.wpIconBG}>
+                <FontAwesome name={'whatsapp'} color={'white'} size={20} />
+              </TouchableOpacity>
+              <TouchableOpacity style={style.emailIconBG}>
+                <Zocial name={'email'} color={'white'} size={20} />
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      ))}
     </ScrollView>
   );
 }
@@ -133,7 +247,19 @@ function About({about}) {
 
 const Tab = createMaterialTopTabNavigator();
 
-function BrandTopTab({about, type, size}) {
+function BrandTopTab({
+  about,
+  type,
+  size,
+  contactImage,
+  contactName,
+  catalogueImage,
+  catalogueName,
+  catalogueSize,
+  catalogueType,
+  viewers,
+  share,
+}) {
   return (
     <Tab.Navigator
       initialRouteName="Store"
@@ -145,9 +271,24 @@ function BrandTopTab({about, type, size}) {
         tabBarStyle: {backgroundColor: 'white'},
       }}>
       <Tab.Screen name="Store" component={Store} />
-      <Tab.Screen name="Review&Rating" component={Review} />
-      <Tab.Screen name="Catalogue" component={Catalogue} />
-      <Tab.Screen name="Contacts" component={Contacts} />
+      <Tab.Screen name="Review & Rating" component={Review} />
+      <Tab.Screen name="Catalogue">
+        {() => (
+          <Catalogue
+            catalogueImage={catalogueImage}
+            catalogueName={catalogueName}
+            catalogueSize={catalogueSize}
+            catalogueType={catalogueType}
+            viewers={viewers}
+            share={share}
+          />
+        )}
+      </Tab.Screen>
+      <Tab.Screen name="Contacts">
+        {() => (
+          <Contacts contactImage={contactImage} contactName={contactName} />
+        )}
+      </Tab.Screen>
       <Tab.Screen name="ProductInfo">
         {() => <ProductInfo type={type} size={size} />}
       </Tab.Screen>
@@ -157,10 +298,32 @@ function BrandTopTab({about, type, size}) {
 }
 
 const BrandDetailScreen = ({item}) => {
+  const [ratingStar, setRatingStar] = useState(0);
+
+  const handleRating = selectedRating => {
+    setRatingStar(selectedRating); // Update the rating when a star is pressed
+  };
+
   const route = useRoute();
 
-  const {brandImage, logoImage, name, manufacturer, rating, about, type, size} =
-    route.params;
+  const {
+    brandImage,
+    logoImage,
+    name,
+    manufacturer,
+    rating,
+    about,
+    type,
+    size,
+    contactImage,
+    contactName,
+    catalogueImage,
+    catalogueName,
+    catalogueSize,
+    catalogueType,
+    viewers,
+    share,
+  } = route.params;
 
   const screenWidth = Dimensions.get('window').width;
   const [activeIndex, setActiveIndex] = useState(0);
@@ -243,9 +406,9 @@ const BrandDetailScreen = ({item}) => {
               </View>
             </View>
           </View>
-          <View>
+          <TouchableOpacity>
             <Feather name={'share-2'} size={25} />
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={style.Icon}>
           <View style={style.iconContent}>
@@ -291,27 +454,34 @@ const BrandDetailScreen = ({item}) => {
         </View>
         <View style={style.rateContent}>
           <Text style={style.rateText}>Rate this company</Text>
-          <TouchableOpacity>
-            <Entypo name={'star'} size={35} color={'#cbcfd1'} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Entypo name={'star'} size={35} color={'#cbcfd1'} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Entypo name={'star'} size={35} color={'#cbcfd1'} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Entypo name={'star'} size={35} color={'#cbcfd1'} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Entypo name={'star'} size={35} color={'#cbcfd1'} />
-          </TouchableOpacity>
+          {[1, 2, 3, 4, 5].map(starNumber => (
+            <TouchableOpacity
+              key={starNumber}
+              onPress={() => handleRating(starNumber)}>
+              <Entypo
+                name="star"
+                size={35}
+                color={starNumber <= ratingStar ? '#FFD700' : '#cbcfd1'} // Gold for filled stars, grey for empty ones
+              />
+            </TouchableOpacity>
+          ))}
         </View>
         <View style={{height: 950}}>
-          <BrandTopTab about={about} type={type} size={size} />
+          <BrandTopTab
+            about={about}
+            type={type}
+            size={size}
+            contactImage={contactImage}
+            contactName={contactName}
+            catalogueImage={catalogueImage}
+            catalogueName={catalogueName}
+            catalogueSize={catalogueSize}
+            catalogueType={catalogueType}
+            viewers={viewers}
+            share={share}
+          />
         </View>
       </ScrollView>
-      {/* <BrandDetailTab /> */}
     </>
   );
 };
