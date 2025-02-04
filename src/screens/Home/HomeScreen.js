@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import Header from '../../component/Header/Header';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -18,7 +18,9 @@ import styles from './styles';
 import CarouselItem from '../../component/CarouselItem/CarouselItem';
 import {scale} from 'react-native-size-matters';
 import {useNavigation} from '@react-navigation/native';
-import BrandCard from '../../component/BrandCrad/BrandCard';
+import BrandCard from '../../component/BrandCard/BrandCard';
+import RBSheet from 'react-native-raw-bottom-sheet';
+
 import {
   AlaskaSurfaces,
   CoinnTiles,
@@ -30,6 +32,7 @@ import {
   Valenza,
 } from '../../Constant/Constant';
 import {liberta} from '../../Constant/image';
+import AddRequirement from '../../component/AddRequirement/AddRequirement';
 
 const data = [
   {label: 'Tiles', value: '1'},
@@ -135,6 +138,9 @@ const HomeScreen = () => {
     // Update the previous scroll position
     setPrevScrollPosition(scrollY);
   };
+
+  const refRBSheet = useRef();
+  // const showRequirementsButton = true;
 
   return (
     <>
@@ -346,11 +352,42 @@ const HomeScreen = () => {
         <View style={styles.blankView}></View>
       </ScrollView>
       <TouchableOpacity
-        style={showRequirementsButton ? styles.btnAddRound : styles.btnadd}>
+        style={showRequirementsButton ? styles.btnAddRound : styles.btnadd}
+        onPress={() => refRBSheet.current.open()}>
         <Text style={styles.btnaddText}>
           {showRequirementsButton ? '+' : '+  Requirements'}
         </Text>
       </TouchableOpacity>
+      <RBSheet
+        ref={refRBSheet}
+        useNativeDriver={false}
+        height={550}
+        customStyles={{
+          wrapper: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          },
+          draggableIcon: {
+            backgroundColor: '#000',
+          },
+          container: {
+            borderTopLeftRadius: scale(10),
+            borderTopRightRadius: scale(10),
+            // padding: scale(20),
+            backgroundColor: '#ffffff',
+          },
+        }}
+        customModalProps={{
+          animationType: 'slide',
+          statusBarTranslucent: true,
+        }}
+        customAvoidingViewProps={{
+          enabled: false,
+        }}>
+        {/* Content inside the bottom sheet */}
+        <View style={{padding: 20}}>
+          <AddRequirement />
+        </View>
+      </RBSheet>
     </>
   );
 };

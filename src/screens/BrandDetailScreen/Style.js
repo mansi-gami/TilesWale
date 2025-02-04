@@ -59,12 +59,12 @@ const style = StyleSheet.create({
     paddingVertical: scale(1),
   },
   ratingText: {
+    alignItems: 'center',
     backgroundColor: 'green',
     color: '#ffffff',
     fontWeight: 500,
     borderRadius: scale(10),
     paddingHorizontal: scale(7),
-    paddingVertical: scale(1),
   },
   verifiedText: {
     color: '#527582',
@@ -127,7 +127,6 @@ const style = StyleSheet.create({
     color: '#08505e',
     fontSize: scale(16),
     fontWeight: 700,
-    // marginTop: scale(10),
   },
   line: {
     borderColor: 'gray',
@@ -239,6 +238,71 @@ const style = StyleSheet.create({
   viewsText: {
     color: 'gray',
     fontSize: scale(14),
+  },
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    elevation: 3,
+  },
+  leftSection: {
+    alignItems: 'center',
+    width: '30%',
+  },
+  ratingTextCount: {
+    fontSize: scale(28),
+    fontWeight: 'bold',
+  },
+  starsContainer: {
+    flexDirection: 'row',
+    marginVertical: scale(3),
+  },
+  totalRatings: {
+    fontSize: scale(12),
+    color: '#666',
+  },
+  divider: {
+    borderColor: 'gray',
+    borderWidth: scale(0.2),
+    height: scale(80),
+    marginHorizontal: scale(10),
+  },
+  rightSection: {
+    flex: 1,
+  },
+  ratingRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: scale(5),
+  },
+  ratingNumber: {
+    marginHorizontal: scale(6),
+    fontSize: scale(12),
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: scale(8),
+    backgroundColor: '#E0E0E0',
+    borderRadius: scale(3),
+    overflow: 'hidden',
+  },
+  progressBar: {
+    height: '100%',
+    borderRadius: scale(3),
+  },
+  ratingCount: {
+    marginLeft: scale(6),
+    fontSize: scale(12),
+    color: '#333',
+  },
+  otherReview: {
+    fontSize: scale(16),
+    fontWeight: 500,
+    color: '#234f5c',
+    marginTop: scale(10),
+    marginLeft: scale(10),
   },
 });
 

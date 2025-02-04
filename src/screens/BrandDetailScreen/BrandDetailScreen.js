@@ -22,35 +22,77 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import Zocial from 'react-native-vector-icons/Zocial';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-function Store() {
-  return (
-    <ScrollView
-      nestedScrollEnabled={true}
-      contentContainerStyle={{flexGrow: 1}}>
-      <View>
-        <Text>Store Page</Text>
-      </View>
-    </ScrollView>
-  );
-}
+// function Store() {
+//   return (
+//     <ScrollView
+//       nestedScrollEnabled={true}
+//       contentContainerStyle={{flexGrow: 1}}>
+//       <View>
+//         <Text>Store Page</Text>
+//       </View>
+//     </ScrollView>
+//   );
+// }
 
-function Review() {
+function Review({rating}) {
+  const ratingsData = [
+    {stars: 5, count: 16, color: '#4CAF50'}, // Green
+    {stars: 4, count: 10, color: '#8BC34A'}, // Light Green
+    {stars: 3, count: 1, color: '#FFC107'}, // Amber
+    {stars: 2, count: 1, color: '#FF9800'}, // Orange
+    {stars: 1, count: 4, color: '#F44336'}, // Red
+  ];
+
+  const totalRatings = 18;
+
   return (
     <ScrollView
       nestedScrollEnabled={true}
       contentContainerStyle={{flexGrow: 1}}>
-      <View style={{flexDirection: 'row'}}>
-        <View>
-          <Text>4.7</Text>
-          <Text>★</Text>
-          <Text>18 Rating</Text>
+      <View style={style.container}>
+        {/* Left Section: Average Rating */}
+        <View style={style.leftSection}>
+          <Text style={style.ratingTextCount}>4.7</Text>
+          <View style={style.starsContainer}>
+            {[...Array(5)].map((_, index) => (
+              <FontAwesome
+                key={index}
+                name={index < 4 ? 'star' : 'star-half-full'}
+                size={20}
+                color="#FFC107"
+              />
+            ))}
+          </View>
+          <Text style={style.totalRatings}>{totalRatings} Ratings</Text>
         </View>
-        <View style={{
-              borderColor: 'gray',
-              borderWidth: 0.3,
-              height: scale(45),
-            }}></View>
-            <View></View>
+
+        {/* Divider */}
+        <View style={style.divider}></View>
+
+        {/* Right Section: Rating Distribution */}
+        <View style={style.rightSection}>
+          {ratingsData.map(({stars, count, color}) => (
+            <View key={stars} style={style.ratingRow}>
+              <FontAwesome name="star" size={16} color="#000" />
+              <Text style={style.ratingNumber}>{stars}</Text>
+              <View style={style.progressBarContainer}>
+                <View
+                  style={[
+                    style.progressBar,
+                    {
+                      backgroundColor: color,
+                      width: `${(count / totalRatings) * 100}%`,
+                    },
+                  ]}
+                />
+              </View>
+              <Text style={style.ratingCount}>{count}</Text>
+            </View>
+          ))}
+        </View>
+      </View>
+      <View>
+        <Text style={style.otherReview}>Other Reviews</Text>
       </View>
     </ScrollView>
   );
@@ -206,7 +248,7 @@ function ProductInfo({type = [], size = []}) {
           <View
             style={{
               borderColor: 'gray',
-              borderWidth: 0.5,
+              borderWidth: 0.2,
               height: scale(45),
             }}></View>
           <View>
@@ -259,10 +301,11 @@ function BrandTopTab({
   catalogueType,
   viewers,
   share,
+  rating,
 }) {
   return (
     <Tab.Navigator
-      initialRouteName="Store"
+      initialRouteName="Review & Rating"
       screenOptions={{
         tabBarScrollEnabled: true,
         tabBarActiveTintColor: '#4071ed',
@@ -270,8 +313,10 @@ function BrandTopTab({
         tabBarLabelStyle: {fontSize: 15, fontWeight: '600', height: 20},
         tabBarStyle: {backgroundColor: 'white'},
       }}>
-      <Tab.Screen name="Store" component={Store} />
-      <Tab.Screen name="Review & Rating" component={Review} />
+      {/* <Tab.Screen name="Store" component={Store} /> */}
+      <Tab.Screen name="Review & Rating">
+        {() => <Review rating={rating} />}
+      </Tab.Screen>
       <Tab.Screen name="Catalogue">
         {() => (
           <Catalogue
@@ -479,6 +524,7 @@ const BrandDetailScreen = ({item}) => {
             catalogueType={catalogueType}
             viewers={viewers}
             share={share}
+            rating={rating}
           />
         </View>
       </ScrollView>

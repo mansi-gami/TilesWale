@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginHorizontal: scale(10),
     marginVertical: scale(10),
-    height: scale(180),
+    height: scale(232),
     width: scale(330),
     borderColor: '#d7d9db',
     borderWidth: scale(1),
@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: 'center',
+    marginTop: scale(10),
+    // justifyContent: 'center',
     marginHorizontal: scale(10),
   },
   companyName: {
@@ -44,12 +45,32 @@ const styles = StyleSheet.create({
   content1: {
     backgroundColor: '#d5e4f5',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    // alignItems: 'center',
     paddingHorizontal: scale(10),
-    height: scale(65),
+    height: scale(125),
     borderBottomRightRadius: scale(8),
     borderBottomLeftRadius: scale(8),
+    // flexDirection: 'row',
+    paddingVertical: scale(10),
+  },
+  nameDetail: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: scale(5),
+  },
+  btnDetail: {
+    backgroundColor: '#34a1eb',
+    height: scale(40),
+    borderRadius: scale(10),
+    justifyContent: 'center',
+    alignItems: 'center',
+    // marginVertical: scale(5),
+  },
+  leadBtnText: {
+    fontSize: scale(15),
+    color: '#ffffff',
+    fontWeight: 600,
   },
   profile: {
     height: scale(50),

@@ -12,7 +12,7 @@ import AdvertisementScreen4 from './src/screens/AdvertisementScreen4/Advertiseme
 import AdvertisementScreen5 from './src/screens/AdvertisementScreen5/AdvertisementScreen5';
 import AdvertisementScreen6 from './src/screens/AdvertisementScreen6/AdvertisementScreen6';
 import LanguageScreen from './src/screens/LanguageScreen/LanguageScreen';
-import LoginActivityScreen from './src/screens/LoginActivityScreeen/LoginActivityScreen';
+import LoginActivityScreen from './src/screens/LoginActivityScreen/LoginActivityScreen';
 import BrandScreen from './src/screens/Brand/BrandScreen';
 import MoreImage from './src/screens/MoreImage/MoreImage';
 import MarketScreen from './src/screens/Market/MarketScreen';
@@ -20,8 +20,8 @@ import ProductDetailScreen from './src/screens/ProductDetail/ProductDetailScreen
 import SearchPage from './src/screens/SearchPage/SearchPage';
 import NotificationsPage from './src/screens/NotificationsPage/NotificationsPage';
 import ChatPage from './src/screens/ChatPage/ChatPage';
-import BrandCard from './src/component/BrandCrad/BrandCard';
-import BrandDetailScreen from './src/screens/BrandDetailScrenn/BrandDetailScreen';
+import BrandCard from './src/component/BrandCard/BrandCard';
+import BrandDetailScreen from './src/screens/BrandDetailScreen/BrandDetailScreen';
 
 const stack = createNativeStackNavigator();
 const App = () => {

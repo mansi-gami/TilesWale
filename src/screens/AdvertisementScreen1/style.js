@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   skip: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
+    alignItems: 'center',
     marginVertical: scale(20),
   },
   skipText: {
@@ -91,6 +92,7 @@ const styles = StyleSheet.create({
   startButton: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
+    alignItems: 'center',
     marginVertical: scale(15),
     left: scale(60),
   },

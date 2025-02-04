@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
 import React from 'react';
 import styles from './style';
 
@@ -24,6 +24,7 @@ const LeadCard = ({Data, category}) => {
             <Text style={styles.date}>{item.date}</Text>
           </View>
           <View style={styles.content1}>
+            <View style={styles.nameDetail}>
             <Image style={styles.profile} source={item.profile} />
             <View>
               <View style={styles.desc}>
@@ -38,6 +39,11 @@ const LeadCard = ({Data, category}) => {
                 <Text style={styles.btnText}>{item.btn}</Text>
               </ScrollView>
             </View>
+            </View>
+            <TouchableOpacity style={styles.btnDetail}> 
+              <Text style={styles.leadBtnText}>Get this lead</Text>
+              <Text style={{color: '#ffffff'}}>Phone Number & Shop Photo Available</Text>
+            </TouchableOpacity>
           </View>
         </View>
       ))}
