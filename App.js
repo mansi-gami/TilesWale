@@ -22,6 +22,8 @@ import NotificationsPage from './src/screens/NotificationsPage/NotificationsPage
 import ChatPage from './src/screens/ChatPage/ChatPage';
 import BrandCard from './src/component/BrandCard/BrandCard';
 import BrandDetailScreen from './src/screens/BrandDetailScreen/BrandDetailScreen';
+import TilesRequirementForm from './src/screens/TilesRequirementForm/TilesRequirementForm';
+import AddRequirement from './src/component/AddRequirement/AddRequirement';
 
 const stack = createNativeStackNavigator();
 const App = () => {
@@ -146,6 +148,16 @@ const App = () => {
           <stack.Screen
             name={'BrandDetailScreen'}
             component={BrandDetailScreen}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'TilesRequirementForm'}
+            component={TilesRequirementForm}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'AddRequirement'}
+            component={AddRequirement}
             // options={{headerShown: true}}
           />
         </stack.Navigator>
