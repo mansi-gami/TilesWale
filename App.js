@@ -24,6 +24,7 @@ import BrandCard from './src/component/BrandCard/BrandCard';
 import BrandDetailScreen from './src/screens/BrandDetailScreen/BrandDetailScreen';
 import TilesRequirementForm from './src/screens/TilesRequirementForm/TilesRequirementForm';
 import AddRequirement from './src/component/AddRequirement/AddRequirement';
+import FilterPage from './src/screens/FilterPage/FilterPage';
 
 const stack = createNativeStackNavigator();
 const App = () => {
@@ -31,11 +32,11 @@ const App = () => {
     <>
       <NavigationContainer>
         <stack.Navigator
-          initialRouteName="AdvertisementScreen1"
+          initialRouteName="FilterPage"
           screenOptions={{
             headerShown: false,
           }}>
-            <stack.Screen
+          <stack.Screen
             name={'LanguageScreen'}
             component={LanguageScreen}
             // options={{headerShown: false}}
@@ -125,7 +126,7 @@ const App = () => {
             component={ProductDetailScreen}
             // options={{headerShown: true}}
           />
-           <stack.Screen
+          <stack.Screen
             name={'SearchPage'}
             component={SearchPage}
             // options={{headerShown: true}}
@@ -158,6 +159,11 @@ const App = () => {
           <stack.Screen
             name={'AddRequirement'}
             component={AddRequirement}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'FilterPage'}
+            component={FilterPage}
             // options={{headerShown: true}}
           />
         </stack.Navigator>

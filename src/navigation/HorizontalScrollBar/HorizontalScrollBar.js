@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import styles from './style';
+import {useNavigation, useRoute} from '@react-navigation/native';
 
 const HorizontalScrollBar = ({selectedBox, setSelectedBox}) => {
   // const [selectedBox, setSelectedBox] = useState(null);
@@ -20,6 +21,9 @@ const HorizontalScrollBar = ({selectedBox, setSelectedBox}) => {
     }
   };
 
+  const route = useRoute();
+  const currentScreen = route.name;
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -105,22 +109,25 @@ const HorizontalScrollBar = ({selectedBox, setSelectedBox}) => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-      <View style={styles.notScroll}>
-        <TouchableOpacity
-          style={[
-            styles.box,
-            {
-              backgroundColor: selectedBox === 'filter' ? '#f7ddd7' : '#FFFFFF',
-            },
-          ]}
-          onPress={() => handleBoxSelect('filter')}>
-          <Image
-            style={styles.image}
-            source={require('../../assets/filter.jpg')}
-          />
-          <Text style={styles.text}>Filter</Text>
-        </TouchableOpacity>
-      </View>
+      {currentScreen === 'Market' && (
+        <View style={styles.notScroll}>
+          <TouchableOpacity
+            style={[
+              styles.box,
+              {
+                backgroundColor:
+                  selectedBox === 'filter' ? '#f7ddd7' : '#FFFFFF',
+              },
+            ]}
+            onPress={() => navigation.navigate('FilterPage')}>
+            <Image
+              style={styles.image}
+              source={require('../../assets/filter.jpg')}
+            />
+            <Text style={styles.text}>Filter</Text>
+          </TouchableOpacity>
+        </View>
+      )}
     </View>
   );
 };
