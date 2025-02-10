@@ -51,6 +51,7 @@ import {
   coinCatalogue2,
   coinCatalogue3,
   coinCatalogue4,
+  locationIcon,
 } from './image';
 
 export const Tiles = [
@@ -471,3 +472,160 @@ export const Valenza = [
     contactName: ['Dhruv Rankja'],
   },
 ];
+
+export const tileData = {
+  categories: [
+    {
+      category: 'PGVT & GVT',
+      subOptions: ['Glossy Finish', 'Matt Finish', 'High Gloss'],
+    },
+    {
+      category: 'Digital Wall Tiles',
+      subOptions: ['Kitchen Wall', 'Bathroom Wall', 'Living Room'],
+    },
+    {
+      category: 'Digital Porcelain Tiles',
+      subOptions: ['Matt Finish', 'Polished', 'Rustic Look'],
+    },
+    {
+      category: 'Nano Vitrified Tiles',
+      subOptions: ['Glossy', 'Satin', 'Plain'],
+    },
+    {
+      category: 'Wooden Planks',
+      subOptions: ['Dark Wood', 'Light Wood', 'Rustic Wood'],
+    },
+  ],
+  grades: [
+    {id: 1, grade: 'Premium'},
+    {id: 2, grade: 'Standard'},
+    {id: 3, grade: 'Commerce'},
+    {id: 4, grade: 'Reject'},
+    {id: 5, grade: 'Dead Stock'},
+    {id: 6, grade: 'Diamond Cutting'},
+  ],
+  units: [
+    {id: 1, unit: 'Box'},
+    {id: 2, unit: 'Area'},
+  ],
+  saleTypes: [
+    {id: 1, saleType: 'Regular'},
+    {id: 2, saleType: 'One Time'},
+  ],
+  priceTypes: [
+    {id: 1, priceType: 'Basic Rate'},
+    {id: 2, priceType: 'Tax Paid Rate'},
+  ],
+  features: [
+    {
+      id: 1,
+      features: 'Plain White',
+    },
+    {
+      id: 2,
+      features: 'Ivory',
+    },
+    {
+      id: 3,
+      features: 'Water Proof',
+    },
+    {
+      id: 4,
+      features: 'Recyclable',
+    },
+    {
+      id: 5,
+      features: 'Lightness',
+    },
+    {
+      id: 6,
+      features: 'Resistant to Stains',
+    },
+    {
+      id: 7,
+      features: 'Easy to clean',
+    },
+    {
+      id: 8,
+      features: 'Resistant to Scratches',
+    },
+    {
+      id: 9,
+      features: 'Cotton Finish',
+    },
+    {
+      id: 10,
+      features: 'Lamination',
+    },
+    {
+      id: 11,
+      features: 'Semi Waterproof',
+    },
+    {
+      id: 12,
+      features: 'Anti Bacterial',
+    },
+    {
+      id: 13,
+      features: 'Quick Dry',
+    },
+    {
+      id: 14,
+      features: 'Anti UV',
+    },
+    {
+      id: 15,
+      features: 'Softness',
+    },
+  ],
+  RoleType: [
+    {id: 1, roleType: 'For Home/PErsonal Use'},
+    {id: 2, roleType: 'Wholesaler'},
+    {id: 3, roleType: 'Retailer'},
+    {id: 4, roleType: 'Manufacturer'},
+    {id: 5, roleType: 'Builder / Contractor'},
+    {id: 6, roleType: 'Architect / Interior'},
+    {id: 7, roleType: 'Installer / Mistry'},
+    {id: 8, roleType: 'Exporter'},
+    {id: 9, roleType: 'Importer'},
+    {id: 10, roleType: 'Wholesaler & Retailer'},
+    {id: 11, roleType: 'CHA'},
+    {id: 12, roleType: 'Freight Forwarder'},
+    {id: 13, roleType: 'Transporter'},
+  ],
+  Location: [
+    {
+      id: 1,
+      location: 'Andaman and Nicobar',
+    },
+    {
+      id: 2,
+      location: 'Andhra Pradesh',
+    },
+    {
+      id: 3,
+      location: 'Arunachal Pradesh',
+    },
+    {
+      id: 4,
+      location: 'Assam',
+    },
+    {
+      id: 5,
+      location: 'Bihar',
+    },
+  ],
+  Price: [
+    {id: 1, price: '10 to 100'},
+    {id: 2, price: '100 between 1000'},
+    {id: 3, price: '1000 between 10000'},
+    {id: 4, price: '10000 between 20000'},
+  ],
+  PostedOn: [
+    {id: 1, postOn: 'Today'},
+    {id: 2, postOn: 'Yesterday'},
+    {id: 3, postOn: 'Last Week'},
+    {id: 4, postOn: 'This Month'},
+    {id: 5, postOn: 'This Year'},
+  ],
+};

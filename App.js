@@ -32,7 +32,7 @@ const App = () => {
     <>
       <NavigationContainer>
         <stack.Navigator
-          initialRouteName="FilterPage"
+          initialRouteName="AdvertisementScreen1"
           screenOptions={{
             headerShown: false,
           }}>
