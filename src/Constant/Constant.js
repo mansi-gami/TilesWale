@@ -1,3 +1,4 @@
+import {Surface} from 'react-native-paper';
 import {
   shreeImg1,
   shreeRamlogo,
@@ -627,5 +628,396 @@ export const tileData = {
     {id: 3, postOn: 'Last Week'},
     {id: 4, postOn: 'This Month'},
     {id: 5, postOn: 'This Year'},
+  ],
+  VerifiedUser: [
+    {id: 1, verifiedUser: 'Verified'},
+    {id: 2, verifiedUser: 'Unverified'},
+  ],
+  Surface: [
+    {id: 1, surfaceName: 'Glossy'},
+    {id: 2, surfaceName: 'Matt'},
+    {id: 3, surfaceName: 'Satin'},
+    {id: 4, surfaceName: 'Sugar'},
+    {id: 5, surfaceName: 'Polished'},
+    {id: 6, surfaceName: 'Rustic'},
+    {id: 7, surfaceName: 'Bookmatch'},
+    {id: 8, surfaceName: 'Carving'},
+    {id: 9, surfaceName: 'High Glossy'},
+    {id: 10, surfaceName: 'Metallic'},
+    {id: 11, surfaceName: 'Glint'},
+    {id: 12, surfaceName: 'Silk'},
+    {id: 13, surfaceName: 'Wood'},
+    {id: 14, surfaceName: 'Galicha'},
+    {id: 15, surfaceName: 'Marble'},
+    {id: 16, surfaceName: '3D Matt'},
+    {id: 17, surfaceName: 'Black & White'},
+    {id: 18, surfaceName: 'Moroccan'},
+  ],
+};
+
+export const sanitaryData = {
+  categories: [
+    {id: 1, name: 'Counter Basin'},
+    {id: 2, name: 'Wash Basin'},
+    {id: 3, name: 'One Piece Closet'},
+    {id: 4, name: 'Wash Basin Pedestal'},
+    {id: 5, name: 'Table Top Wash Basin'},
+    {id: 6, name: 'Water Closet'},
+    {id: 7, name: 'Table Top'},
+    {id: 8, name: 'Wash Basin Half Pendestal'},
+    {id: 9, name: 'Pan'},
+    {id: 10, name: 'One Piece Basin'},
+    {id: 11, name: 'Urinal'},
+    {id: 12, name: 'Cabinet Vanity'},
+    {id: 13, name: 'Wall hung'},
+    {id: 14, name: 'Wash Basin with Pedestal'},
+  ],
+  grades: [
+    {id: 1, grade: 'Premium'},
+    {id: 2, grade: 'Standard'},
+    {id: 3, grade: 'Commerce'},
+    {id: 4, grade: 'Reject / Dead Stock'},
+  ],
+  units: [
+    {id: 1, unit: 'Box'},
+    {id: 2, unit: 'Area'},
+  ],
+  saleTypes: [
+    {id: 1, saleType: 'Regular'},
+    {id: 2, saleType: 'One Time'},
+  ],
+  priceTypes: [
+    {id: 1, priceType: 'Basic Rate'},
+    {id: 2, priceType: 'Tax Paid Rate'},
+  ],
+  features: [
+    {
+      id: 1,
+      features: 'White Finish',
+    },
+    {
+      id: 2,
+      features: 'Elongated Shape',
+    },
+    {
+      id: 3,
+      features: 'Cotton Finish',
+    },
+    {
+      id: 4,
+      features: 'Ceramic Material',
+    },
+    {
+      id: 5,
+      features: 'Vitreous china Material',
+    },
+    {
+      id: 6,
+      features: 'Anti-Germ Glazing',
+    },
+    {
+      id: 7,
+      features: 'Tornado Flushing',
+    },
+    {
+      id: 8,
+      features: 'Rimless WC',
+    },
+    {
+      id: 9,
+      features: 'All Colors',
+    },
+  ],
+  RoleType: [
+    {id: 1, roleType: 'For Home/PErsonal Use'},
+    {id: 2, roleType: 'Wholesaler'},
+    {id: 3, roleType: 'Retailer'},
+    {id: 4, roleType: 'Manufacturer'},
+    {id: 5, roleType: 'Builder / Contractor'},
+    {id: 6, roleType: 'Architect / Interior'},
+    {id: 7, roleType: 'Installer / Mistry'},
+    {id: 8, roleType: 'Exporter'},
+    {id: 9, roleType: 'Importer'},
+    {id: 10, roleType: 'Wholesaler & Retailer'},
+    {id: 11, roleType: 'CHA'},
+    {id: 12, roleType: 'Freight Forwarder'},
+    {id: 13, roleType: 'Transporter'},
+  ],
+  Location: [
+    {
+      id: 1,
+      location: 'Andaman and Nicobar',
+    },
+    {
+      id: 2,
+      location: 'Andhra Pradesh',
+    },
+    {
+      id: 3,
+      location: 'Arunachal Pradesh',
+    },
+    {
+      id: 4,
+      location: 'Assam',
+    },
+    {
+      id: 5,
+      location: 'Bihar',
+    },
+  ],
+  Price: [
+    {id: 1, price: '10 to 100'},
+    {id: 2, price: '100 between 1000'},
+    {id: 3, price: '1000 between 10000'},
+    {id: 4, price: '10000 between 20000'},
+  ],
+  PostedOn: [
+    {id: 1, postOn: 'Today'},
+    {id: 2, postOn: 'Yesterday'},
+    {id: 3, postOn: 'Last Week'},
+    {id: 4, postOn: 'This Month'},
+    {id: 5, postOn: 'This Year'},
+  ],
+  VerifiedUser: [
+    {id: 1, verifiedUser: 'Verified'},
+    {id: 2, verifiedUser: 'Unverified'},
+  ],
+  Surface: [
+    {id: 1, surfaceName: 'Glossy'},
+    {id: 2, surfaceName: 'Matt'},
+    {id: 3, surfaceName: 'Satin'},
+    {id: 4, surfaceName: 'Sugar'},
+    {id: 5, surfaceName: 'Polished'},
+    {id: 6, surfaceName: 'Rustic'},
+    {id: 7, surfaceName: 'Bookmatch'},
+    {id: 8, surfaceName: 'Carving'},
+    {id: 9, surfaceName: 'High Glossy'},
+    {id: 10, surfaceName: 'Metallic'},
+    {id: 11, surfaceName: 'Glint'},
+    {id: 12, surfaceName: 'Silk'},
+    {id: 13, surfaceName: 'Wood'},
+    {id: 14, surfaceName: 'Galicha'},
+    {id: 15, surfaceName: 'Marble'},
+    {id: 16, surfaceName: '3D Matt'},
+    {id: 17, surfaceName: 'Black & White'},
+    {id: 18, surfaceName: 'Moroccan'},
+  ],
+};
+
+export const KitchenSinkData = {
+  categories: [
+    {id: 1, name: 'Stainless Steel Kitchen Sink'},
+    {id: 2, name: 'Quartz Kitchen Sink'},
+    {id: 3, name: 'Handmade Kitchen Sink'},
+  ],
+  grades: [{id: 1, grade: '304 Grade'}],
+  units: [
+    {id: 1, unit: 'Box'},
+    {id: 2, unit: 'Area'},
+  ],
+  saleTypes: [
+    {id: 1, saleType: 'Regular'},
+    {id: 2, saleType: 'One Time'},
+  ],
+  priceTypes: [
+    {id: 1, priceType: 'Basic Rate'},
+    {id: 2, priceType: 'Tax Paid Rate'},
+  ],
+  RoleType: [
+    {id: 1, roleType: 'For Home/PErsonal Use'},
+    {id: 2, roleType: 'Wholesaler'},
+    {id: 3, roleType: 'Retailer'},
+    {id: 4, roleType: 'Manufacturer'},
+    {id: 5, roleType: 'Builder / Contractor'},
+    {id: 6, roleType: 'Architect / Interior'},
+    {id: 7, roleType: 'Installer / Mistry'},
+    {id: 8, roleType: 'Exporter'},
+    {id: 9, roleType: 'Importer'},
+    {id: 10, roleType: 'Wholesaler & Retailer'},
+    {id: 11, roleType: 'CHA'},
+    {id: 12, roleType: 'Freight Forwarder'},
+    {id: 13, roleType: 'Transporter'},
+  ],
+  Location: [
+    {
+      id: 1,
+      location: 'Andaman and Nicobar',
+    },
+    {
+      id: 2,
+      location: 'Andhra Pradesh',
+    },
+    {
+      id: 3,
+      location: 'Arunachal Pradesh',
+    },
+    {
+      id: 4,
+      location: 'Assam',
+    },
+    {
+      id: 5,
+      location: 'Bihar',
+    },
+  ],
+  Price: [
+    {id: 1, price: '10 to 100'},
+    {id: 2, price: '100 between 1000'},
+    {id: 3, price: '1000 between 10000'},
+    {id: 4, price: '10000 between 20000'},
+  ],
+  PostedOn: [
+    {id: 1, postOn: 'Today'},
+    {id: 2, postOn: 'Yesterday'},
+    {id: 3, postOn: 'Last Week'},
+    {id: 4, postOn: 'This Month'},
+    {id: 5, postOn: 'This Year'},
+  ],
+  VerifiedUser: [
+    {id: 1, verifiedUser: 'Verified'},
+    {id: 2, verifiedUser: 'Unverified'},
+  ],
+};
+
+export const BathwareData = {
+  Type: [
+    {id: 1, name: 'Bath Fitting & Accessories'},
+    {id: 2, name: 'Faucets'},
+    {id: 3, name: 'Showers'},
+    {id: 4, name: 'Bath Tub'},
+    {id: 5, name: 'Cistern & Seat Cover'},
+    {id: 6, name: 'Allied Products'},
+    {id: 7, name: 'Mirror'},
+  ],
+  units: [
+    {id: 1, unit: 'Box'},
+    {id: 2, unit: 'Area'},
+  ],
+  saleTypes: [
+    {id: 1, saleType: 'Regular'},
+    {id: 2, saleType: 'One Time'},
+  ],
+  priceTypes: [
+    {id: 1, priceType: 'Basic Rate'},
+    {id: 2, priceType: 'Tax Paid Rate'},
+  ],
+  RoleType: [
+    {id: 1, roleType: 'For Home/PErsonal Use'},
+    {id: 2, roleType: 'Wholesaler'},
+    {id: 3, roleType: 'Retailer'},
+    {id: 4, roleType: 'Manufacturer'},
+    {id: 5, roleType: 'Builder / Contractor'},
+    {id: 6, roleType: 'Architect / Interior'},
+    {id: 7, roleType: 'Installer / Mistry'},
+    {id: 8, roleType: 'Exporter'},
+    {id: 9, roleType: 'Importer'},
+    {id: 10, roleType: 'Wholesaler & Retailer'},
+    {id: 11, roleType: 'CHA'},
+    {id: 12, roleType: 'Freight Forwarder'},
+    {id: 13, roleType: 'Transporter'},
+  ],
+  Location: [
+    {
+      id: 1,
+      location: 'Andaman and Nicobar',
+    },
+    {
+      id: 2,
+      location: 'Andhra Pradesh',
+    },
+    {
+      id: 3,
+      location: 'Arunachal Pradesh',
+    },
+    {
+      id: 4,
+      location: 'Assam',
+    },
+    {
+      id: 5,
+      location: 'Bihar',
+    },
+  ],
+  Price: [
+    {id: 1, price: '10 to 100'},
+    {id: 2, price: '100 between 1000'},
+    {id: 3, price: '1000 between 10000'},
+    {id: 4, price: '10000 between 20000'},
+  ],
+  PostedOn: [
+    {id: 1, postOn: 'Today'},
+    {id: 2, postOn: 'Yesterday'},
+    {id: 3, postOn: 'Last Week'},
+    {id: 4, postOn: 'This Month'},
+    {id: 5, postOn: 'This Year'},
+  ],
+  VerifiedUser: [
+    {id: 1, verifiedUser: 'Verified'},
+    {id: 2, verifiedUser: 'Unverified'},
+  ],
+};
+
+export const AdhesiveData = {
+  Type: [
+    {id: 1, name: 'Adhesive & Chemicals'},
+    {id: 2, name: 'Tiles Display Stand'},
+    {id: 3, name: 'Roofing Tiles, Machine'},
+    {id: 4, name: 'Tiles Accessories'},
+    {id: 5, name: 'WPC'},
+    {id: 6, name: 'SPC'},
+  ],
+  RoleType: [
+    {id: 1, roleType: 'For Home/PErsonal Use'},
+    {id: 2, roleType: 'Wholesaler'},
+    {id: 3, roleType: 'Retailer'},
+    {id: 4, roleType: 'Manufacturer'},
+    {id: 5, roleType: 'Builder / Contractor'},
+    {id: 6, roleType: 'Architect / Interior'},
+    {id: 7, roleType: 'Installer / Mistry'},
+    {id: 8, roleType: 'Exporter'},
+    {id: 9, roleType: 'Importer'},
+    {id: 10, roleType: 'Wholesaler & Retailer'},
+    {id: 11, roleType: 'CHA'},
+    {id: 12, roleType: 'Freight Forwarder'},
+    {id: 13, roleType: 'Transporter'},
+  ],
+  Location: [
+    {
+      id: 1,
+      location: 'Andaman and Nicobar',
+    },
+    {
+      id: 2,
+      location: 'Andhra Pradesh',
+    },
+    {
+      id: 3,
+      location: 'Arunachal Pradesh',
+    },
+    {
+      id: 4,
+      location: 'Assam',
+    },
+    {
+      id: 5,
+      location: 'Bihar',
+    },
+  ],
+  Price: [
+    {id: 1, price: '10 to 100'},
+    {id: 2, price: '100 between 1000'},
+    {id: 3, price: '1000 between 10000'},
+    {id: 4, price: '10000 between 20000'},
+  ],
+  PostedOn: [
+    {id: 1, postOn: 'Today'},
+    {id: 2, postOn: 'Yesterday'},
+    {id: 3, postOn: 'Last Week'},
+    {id: 4, postOn: 'This Month'},
+    {id: 5, postOn: 'This Year'},
+  ],
+  VerifiedUser: [
+    {id: 1, verifiedUser: 'Verified'},
+    {id: 2, verifiedUser: 'Unverified'},
   ],
 };

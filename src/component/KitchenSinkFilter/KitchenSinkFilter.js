@@ -1,53 +1,29 @@
-import {View, Text, ScrollView, TouchableOpacity, FlatList} from 'react-native';
+import {View, Text, TouchableOpacity, ScrollView, FlatList} from 'react-native';
 import React, {useState} from 'react';
-import {scale} from 'react-native-size-matters';
-import {Checkbox} from 'react-native-paper';
-import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import style from './style';
-import {tileData} from '../../Constant/Constant';
-import {RadioButton} from 'react-native-paper';
+import {scale} from 'react-native-size-matters';
+import {KitchenSinkData} from '../../Constant/Constant';
+import {Checkbox, RadioButton} from 'react-native-paper';
 
-const TilesFilter = () => {
-  const [selectedGrades, setSelectedGrades] = useState([]);
-  const [selectedTiles, setSelectedTiles] = useState({});
-  const [expandedCategory, setExpandedCategory] = useState(null);
-  const [selectedUnit, setSelectedUnit] = useState([]);
+const KitchenSinkFilter = () => {
   const [selectedCategory, setSelectedCategory] = useState('Categories');
+  const [selectedKitchenSink, setSelectedKitchenSink] = useState([]);
+  const [selectedGrades, setSelectedGrades] = useState([]);
+  const [selectedUnit, setSelectedUnit] = useState([]);
   const [selectedSaleType, setSelectedSaleType] = useState([]);
   const [selectedPriceType, setSelectedPriceType] = useState([]);
-  const [selectedFeatures, setSelectedFeatures] = useState([]);
+  const [selectedRoleType, setSelectedRoleType] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState([]);
   const [selectedPrice, setSelectedPrice] = useState([]);
-  const [selectedRoleType, setSelectedRoleType] = useState([]);
   const [selectedPostOn, setSelectedPostOn] = useState([]);
   const [selectedVerified, setSelectedVerified] = useState([]);
-  const [selectedSurface, setSelectedSurface] = useState([]);
 
-  const toggleCategory = category => {
-    setSelectedTiles(prev => {
-      const allSelected =
-        prev[category]?.length ===
-        tileData.categories.find(t => t.category === category).subOptions
-          .length;
-      return {
-        ...prev,
-        [category]: allSelected
-          ? []
-          : tileData.categories.find(t => t.category === category).subOptions,
-      };
-    });
-  };
-
-  const toggleSubOption = (category, subOption) => {
-    setSelectedTiles(prev => {
-      const selected = prev[category] || [];
-      return {
-        ...prev,
-        [category]: selected.includes(subOption)
-          ? selected.filter(item => item !== subOption)
-          : [...selected, subOption],
-      };
-    });
+  const toggleKitchenSink = categories => {
+    setSelectedKitchenSink(prev =>
+      prev.includes(categories)
+        ? prev.filter(item => item !== categories)
+        : [...prev, categories],
+    );
   };
 
   const toggleGrade = grade => {
@@ -82,30 +58,6 @@ const TilesFilter = () => {
     );
   };
 
-  const toggleFeatures = features => {
-    setSelectedFeatures(prev =>
-      prev.includes(features)
-        ? prev.filter(item => item !== features)
-        : [...prev, features],
-    );
-  };
-
-  const toggleLocation = loaction => {
-    setSelectedLocation(prev =>
-      prev.includes(loaction)
-        ? prev.filter(item => item !== loaction)
-        : [...prev, loaction],
-    );
-  };
-
-  const togglePrice = price => {
-    setSelectedPrice(prev =>
-      prev.includes(price)
-        ? prev.filter(item => item !== price)
-        : [...prev, price],
-    );
-  };
-
   const toggleRoleType = roleType => {
     setSelectedRoleType(prev =>
       prev.includes(roleType)
@@ -114,11 +66,19 @@ const TilesFilter = () => {
     );
   };
 
-  const toggleSurface = surfaceName => {
-    setSelectedSurface(prev =>
-      prev.includes(surfaceName)
-        ? prev.filter(item => item !== surfaceName)
-        : [...prev, surfaceName],
+  const toggleLocation = location => {
+    setSelectedLocation(prev =>
+      prev.includes(location)
+        ? prev.filter(item => item !== location)
+        : [...prev, location],
+    );
+  };
+
+  const togglePrice = price => {
+    setSelectedPrice(prev =>
+      prev.includes(price)
+        ? prev.filter(item => item !== price)
+        : [...prev, price],
     );
   };
 
@@ -133,13 +93,11 @@ const TilesFilter = () => {
               'Total Units',
               'Sale Type',
               'Price Type',
-              'Features / Colors',
               'Role Type',
               'Location',
               'Price',
               'Posted On',
               'Verified User',
-              'Surface',
             ].map(item => (
               <TouchableOpacity
                 key={item}
@@ -176,76 +134,39 @@ const TilesFilter = () => {
           </View>
           <View style={{flex: 1}}>
             <ScrollView
-              style={{backgroundColor: '#ffffff', marginTop: scale(10)}}>
-              {selectedCategory === 'Categories' &&
-                tileData.categories.map(tile => (
-                  <View key={tile.category} style={{marginBottom: 10}}>
-                    {/* Main Category */}
+              style={{
+                backgroundColor: '#ffffff',
+                marginTop: scale(10),
+              }}>
+              {selectedCategory === 'Categories' && (
+                <FlatList
+                  data={KitchenSinkData.categories}
+                  keyExtractor={item => item.id.toString()}
+                  renderItem={({item}) => (
                     <TouchableOpacity
-                      onPress={() =>
-                        setExpandedCategory(
-                          expandedCategory === tile.category
-                            ? null
-                            : tile.category,
-                        )
-                      }
-                      style={{flexDirection: 'row', alignItems: 'center'}}>
+                      onPress={() => toggleKitchenSink(item.categories)}
+                      style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        // padding: 5,
+                      }}>
                       <Checkbox
                         status={
-                          selectedTiles[tile.category]?.length ===
-                          tile.subOptions.length
+                          selectedKitchenSink.includes(item.categories)
                             ? 'checked'
                             : 'unchecked'
                         }
-                        onPress={() => toggleCategory(tile.category)}
+                        onPress={() => toggleKitchenSink(item.categories)}
                       />
-                      <Text style={{flex: 1, fontSize: 16}}>
-                        {tile.category}
-                      </Text>
-                      <FontAwesome6
-                        name={
-                          expandedCategory === tile.category
-                            ? 'angle-up'
-                            : 'angle-down'
-                        }
-                        size={20}
-                        color="black"
-                      />
+                      <Text>{item.name}</Text>
                     </TouchableOpacity>
-
-                    {/* Sub Options */}
-                    {expandedCategory === tile.category && (
-                      <FlatList
-                        data={tile.subOptions}
-                        keyExtractor={item => item}
-                        renderItem={({item}) => (
-                          <View
-                            style={{
-                              flexDirection: 'row',
-                              alignItems: 'center',
-                              paddingLeft: 20,
-                            }}>
-                            <Checkbox
-                              status={
-                                selectedTiles[tile.category]?.includes(item)
-                                  ? 'checked'
-                                  : 'unchecked'
-                              }
-                              onPress={() =>
-                                toggleSubOption(tile.category, item)
-                              }
-                            />
-                            <Text>{item}</Text>
-                          </View>
-                        )}
-                      />
-                    )}
-                  </View>
-                ))}
+                  )}
+                />
+              )}
 
               {selectedCategory === 'Grade' && (
                 <FlatList
-                  data={tileData.grades}
+                  data={KitchenSinkData.grades}
                   keyExtractor={item => item.id.toString()}
                   renderItem={({item}) => (
                     <TouchableOpacity
@@ -271,7 +192,7 @@ const TilesFilter = () => {
 
               {selectedCategory === 'Total Units' && (
                 <FlatList
-                  data={tileData.units}
+                  data={KitchenSinkData.units}
                   keyExtractor={item => item.id.toString()}
                   renderItem={({item}) => (
                     <TouchableOpacity
@@ -296,7 +217,7 @@ const TilesFilter = () => {
 
               {selectedCategory === 'Sale Type' && (
                 <FlatList
-                  data={tileData.saleTypes}
+                  data={KitchenSinkData.saleTypes}
                   keyExtractor={item => item.id.toString()}
                   renderItem={({item}) => (
                     <TouchableOpacity
@@ -321,7 +242,7 @@ const TilesFilter = () => {
 
               {selectedCategory === 'Price Type' && (
                 <FlatList
-                  data={tileData.priceTypes}
+                  data={KitchenSinkData.priceTypes}
                   keyExtractor={item => item.id.toString()}
                   renderItem={({item}) => (
                     <TouchableOpacity
@@ -344,26 +265,26 @@ const TilesFilter = () => {
                 />
               )}
 
-              {selectedCategory === 'Features / Colors' && (
+              {selectedCategory === 'Role Type' && (
                 <FlatList
-                  data={tileData.features}
+                  data={KitchenSinkData.RoleType}
                   keyExtractor={item => item.id.toString()}
                   renderItem={({item}) => (
                     <TouchableOpacity
-                      onPress={() => toggleFeatures(item.features)}
+                      onPress={() => togglePrice(item.roleType)}
                       style={{
                         flexDirection: 'row',
                         alignItems: 'center',
                       }}>
                       <Checkbox
                         status={
-                          selectedFeatures.includes(item.features)
+                          selectedRoleType.includes(item.roleType)
                             ? 'checked'
                             : 'unchecked'
                         }
-                        onPress={() => toggleFeatures(item.features)}
+                        onPress={() => toggleRoleType(item.roleType)}
                       />
-                      <Text>{item.features}</Text>
+                      <Text>{item.roleType}</Text>
                     </TouchableOpacity>
                   )}
                 />
@@ -371,7 +292,7 @@ const TilesFilter = () => {
 
               {selectedCategory === 'Location' && (
                 <FlatList
-                  data={tileData.Location}
+                  data={KitchenSinkData.Location}
                   keyExtractor={item => item.id.toString()}
                   renderItem={({item}) => (
                     <TouchableOpacity
@@ -396,7 +317,7 @@ const TilesFilter = () => {
 
               {selectedCategory === 'Price' && (
                 <FlatList
-                  data={tileData.Price}
+                  data={KitchenSinkData.Price}
                   keyExtractor={item => item.id.toString()}
                   renderItem={({item}) => (
                     <TouchableOpacity
@@ -419,37 +340,12 @@ const TilesFilter = () => {
                 />
               )}
 
-              {selectedCategory === 'Role Type' && (
-                <FlatList
-                  data={tileData.RoleType}
-                  keyExtractor={item => item.id.toString()}
-                  renderItem={({item}) => (
-                    <TouchableOpacity
-                      onPress={() => togglePrice(item.roleType)}
-                      style={{
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                      }}>
-                      <Checkbox
-                        status={
-                          selectedRoleType.includes(item.roleType)
-                            ? 'checked'
-                            : 'unchecked'
-                        }
-                        onPress={() => toggleRoleType(item.roleType)}
-                      />
-                      <Text>{item.roleType}</Text>
-                    </TouchableOpacity>
-                  )}
-                />
-              )}
-
               {selectedCategory === 'Posted On' && (
                 <RadioButton.Group
                   onValueChange={newValue => setSelectedPostOn(newValue)}
                   value={selectedPostOn}>
                   <FlatList
-                    data={tileData.PostedOn}
+                    data={KitchenSinkData.PostedOn}
                     keyExtractor={item => item.id.toString()}
                     renderItem={({item}) => (
                       <TouchableOpacity
@@ -471,7 +367,7 @@ const TilesFilter = () => {
                   onValueChange={newValue => setSelectedVerified(newValue)}
                   value={selectedVerified}>
                   <FlatList
-                    data={tileData.VerifiedUser}
+                    data={KitchenSinkData.VerifiedUser}
                     keyExtractor={item => item.id.toString()}
                     renderItem={({item}) => (
                       <TouchableOpacity
@@ -486,31 +382,6 @@ const TilesFilter = () => {
                     )}
                   />
                 </RadioButton.Group>
-              )}
-
-              {selectedCategory === 'Surface' && (
-                <FlatList
-                  data={tileData.Surface}
-                  keyExtractor={item => item.id.toString()}
-                  renderItem={({item}) => (
-                    <TouchableOpacity
-                      onPress={() => toggleSurface(item.surfaceName)}
-                      style={{
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                      }}>
-                      <Checkbox
-                        status={
-                          selectedSurface.includes(item.surfaceName)
-                            ? 'checked'
-                            : 'unchecked'
-                        }
-                        onPress={() => toggleSurface(item.surfaceName)}
-                      />
-                      <Text>{item.surfaceName}</Text>
-                    </TouchableOpacity>
-                  )}
-                />
               )}
             </ScrollView>
             <View
@@ -539,4 +410,4 @@ const TilesFilter = () => {
   );
 };
 
-export default TilesFilter;
+export default KitchenSinkFilter;

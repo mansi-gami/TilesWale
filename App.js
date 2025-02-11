@@ -25,6 +25,7 @@ import BrandDetailScreen from './src/screens/BrandDetailScreen/BrandDetailScreen
 import TilesRequirementForm from './src/screens/TilesRequirementForm/TilesRequirementForm';
 import AddRequirement from './src/component/AddRequirement/AddRequirement';
 import FilterPage from './src/screens/FilterPage/FilterPage';
+import DirectoryScreen from './src/screens/Directory/DirectoryScreen';
 
 const stack = createNativeStackNavigator();
 const App = () => {
@@ -164,6 +165,11 @@ const App = () => {
           <stack.Screen
             name={'FilterPage'}
             component={FilterPage}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'DirectoryScreen'}
+            component={DirectoryScreen}
             // options={{headerShown: true}}
           />
         </stack.Navigator>

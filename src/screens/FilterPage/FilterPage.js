@@ -480,44 +480,63 @@ import React, {useState} from 'react';
 import Header from '../../component/Header/Header';
 import HorizontalScrollBar from '../../navigation/HorizontalScrollBar/HorizontalScrollBar';
 import TilesFilter from '../../component/TilesFilter/TilesFilter';
-import {tileData} from '../../Constant/Constant';
+import {
+  AdhesiveData,
+  BathwareData,
+  KitchenSinkData,
+  sanitaryData,
+  tileData,
+} from '../../Constant/Constant';
 import style from './style';
 import {useNavigation} from '@react-navigation/native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import SanitaryFilter from '../../component/SanitaryFilter/SanitaryFilter';
+import BathWareFilter from '../../component/BathWareFilter/BathWareFilter';
+import KitchenSinkFilter from '../../component/KitchenSinkFilter/KitchenSinkFilter';
+import AdhesiveFilter from '../../component/AdhesiveFilter/AdhesiveFilter';
 
+// const title = ['Tiles', 'Sanitary', 'Kitchen Sink', 'BathWare'];
 const FilterPage = () => {
   const navigation = useNavigation();
-  const [selectedBox, setSelectedBox] = useState('tiles');
+  const [selectedBox, setSelectedBox] = useState('Tiles');
   return (
     <>
       <View style={style.main}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <AntDesign name={'arrowleft'} size={30} />
         </TouchableOpacity>
-        <Text style={style.heading}>Tiles Filter</Text>
+        <Text style={style.heading}>{selectedBox} Filter</Text>
       </View>
       <View style={style.maincontainer}>
         <HorizontalScrollBar
           selectedBox={selectedBox}
           setSelectedBox={setSelectedBox}
         />
-        {selectedBox === 'tiles' ? (
-          <TilesFilter Data={tileData} category="tiles" />
+        {selectedBox === 'Tiles' ? (
+          <TilesFilter Data={tileData} category="Tiles" />
         ) : (
           ''
         )}
-        {/* {selectedBox === 'sanitaryware' ? (
-          <Card Data={Sanitary} category="sanitaryware" />
+        {selectedBox === 'SanitaryWare' ? (
+          <SanitaryFilter Data={sanitaryData} category="SanitaryWare" />
         ) : (
           ''
         )}
-        {selectedBox === 'kitchenSink' ? (
-          <Card Data={KitchenSink} category="kitchenSink" />
+        {selectedBox === 'KitchenSink' ? (
+          <KitchenSinkFilter Data={KitchenSinkData} category="KitchenSink" />
         ) : (
           ''
         )}
-        {selectedBox === 'BathWare' ? <Card Data={Bathware} /> : ''}
-        {selectedBox === 'Adhesive' ? <Card Data={Adhesive} /> : ''} */}
+        {selectedBox === 'BathWare' ? (
+          <BathWareFilter Data={BathwareData} category="BathWare" />
+        ) : (
+          ''
+        )}
+        {selectedBox === 'Adhesive' ? (
+          <AdhesiveFilter Data={AdhesiveData} />
+        ) : (
+          ''
+        )}
       </View>
     </>
   );

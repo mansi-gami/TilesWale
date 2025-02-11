@@ -13,7 +13,7 @@ import {
 } from '../../Constant/Constant';
 
 const MarketScreen = () => {
-  const [selectedBox, setSelectedBox] = useState('tiles');
+  const [selectedBox, setSelectedBox] = useState('Tiles');
   return (
     <>
       <View>
@@ -24,14 +24,14 @@ const MarketScreen = () => {
           selectedBox={selectedBox}
           setSelectedBox={setSelectedBox}
         />
-        {selectedBox === 'tiles' ? <Card Data={Tiles} category="tiles" /> : ''}
-        {selectedBox === 'sanitaryware' ? (
-          <Card Data={Sanitary} category="sanitaryware" />
+        {selectedBox === 'Tiles' ? <Card Data={Tiles} category="Tiles" /> : ''}
+        {selectedBox === 'SanitaryWare' ? (
+          <Card Data={Sanitary} category="SanitaryWare" />
         ) : (
           ''
         )}
-        {selectedBox === 'kitchenSink' ? (
-          <Card Data={KitchenSink} category="kitchenSink" />
+        {selectedBox === 'KitchenSink' ? (
+          <Card Data={KitchenSink} category="KitchenSink" />
         ) : (
           ''
         )}

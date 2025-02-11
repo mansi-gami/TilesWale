@@ -33,10 +33,10 @@ const HorizontalScrollBar = ({selectedBox, setSelectedBox}) => {
               styles.box,
               {
                 backgroundColor:
-                  selectedBox === 'tiles' ? '#f7ddd7' : '#FFFFFF',
+                  selectedBox === 'Tiles' ? '#f7ddd7' : '#FFFFFF',
               },
             ]}
-            onPress={() => handleBoxSelect('tiles')}>
+            onPress={() => handleBoxSelect('Tiles')}>
             <Image
               style={styles.image}
               source={require('../../assets/tiles.png')}
@@ -49,10 +49,10 @@ const HorizontalScrollBar = ({selectedBox, setSelectedBox}) => {
               styles.box1,
               {
                 backgroundColor:
-                  selectedBox === 'sanitaryware' ? '#f7ddd7' : '#FFFFFF',
+                  selectedBox === 'SanitaryWare' ? '#f7ddd7' : '#FFFFFF',
               },
             ]}
-            onPress={() => handleBoxSelect('sanitaryware')}>
+            onPress={() => handleBoxSelect('SanitaryWare')}>
             <Image
               style={styles.image}
               source={require('../../assets/sanitaryware.png')}
@@ -65,10 +65,10 @@ const HorizontalScrollBar = ({selectedBox, setSelectedBox}) => {
               styles.box2,
               {
                 backgroundColor:
-                  selectedBox === 'kitchenSink' ? '#f7ddd7' : '#FFFFFF',
+                  selectedBox === 'KitchenSink' ? '#f7ddd7' : '#FFFFFF',
               },
             ]}
-            onPress={() => handleBoxSelect('kitchenSink')}>
+            onPress={() => handleBoxSelect('KitchenSink')}>
             <Image
               style={styles.image}
               source={require('../../assets/kitchenSink.png')}

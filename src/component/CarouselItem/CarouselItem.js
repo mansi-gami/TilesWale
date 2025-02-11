@@ -9,8 +9,10 @@ import {
 } from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
 import styles from './style';
+import {useNavigation} from '@react-navigation/native';
 
 const Carousel = () => {
+  const navigation = useNavigation();
   const screenWidth = Dimensions.get('window').width;
   const [activeIndex, setActiveIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
@@ -184,7 +186,9 @@ const Carousel = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      onPress={() => navigation.navigate('DirectoryScreen')}
+      style={styles.container}>
       <FlatList
         data={carouselData}
         ref={flatlistRef}
@@ -196,7 +200,7 @@ const Carousel = () => {
         onScroll={handleScroll}
         showsHorizontalScrollIndicator={false}
       />
-    </View>
+    </TouchableOpacity>
   );
 };
 export default Carousel;
