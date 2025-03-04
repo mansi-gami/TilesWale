@@ -26,6 +26,8 @@ import TilesRequirementForm from './src/screens/TilesRequirementForm/TilesRequir
 import AddRequirement from './src/component/AddRequirement/AddRequirement';
 import FilterPage from './src/screens/FilterPage/FilterPage';
 import DirectoryScreen from './src/screens/Directory/DirectoryScreen';
+import MobileLogin from './src/screens/MobileLogin/MobileLogin';
+import OTPScreen from './src/screens/OTPScreen/OTPScreen';
 
 const stack = createNativeStackNavigator();
 const App = () => {
@@ -170,6 +172,16 @@ const App = () => {
           <stack.Screen
             name={'DirectoryScreen'}
             component={DirectoryScreen}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'MobileLogin'}
+            component={MobileLogin}
+            // options={{headerShown: true}}
+          />
+          <stack.Screen
+            name={'OTPScreen'}
+            component={OTPScreen}
             // options={{headerShown: true}}
           />
         </stack.Navigator>

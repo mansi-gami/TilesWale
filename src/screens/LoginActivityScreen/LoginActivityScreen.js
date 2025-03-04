@@ -43,7 +43,9 @@ const LoginActivityScreen = ({navigation}) => {
             <Text style={styles.txt}>Google</Text>
           </View>
           <View style={styles.subContent}>
-            <TouchableOpacity style={styles.round}>
+            <TouchableOpacity
+              style={styles.round}
+              onPress={() => navigation.navigate('MobileLogin')}>
               <Image
                 style={styles.gooleIcon}
                 source={require('../../assets/phoneIcon.jpg')}

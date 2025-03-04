@@ -15,11 +15,7 @@
       "oauth_client": [
         {
           "client_id": "684949494630-5uhjohop8d0c8pl9j1919llo4bh4aqgp.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.tileswale",
-            "cerificate_hash": ""
-          }
+          "client_type": 3
         }
       ],
       "api_key": [
@@ -29,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684949494630-5uhjohop8d0c8pl9j1919llo4bh4aqgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

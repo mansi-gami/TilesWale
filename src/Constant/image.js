@@ -84,6 +84,7 @@ import coinCatalogue1 from '../assets/coinn_catalogue1.webp';
 import coinCatalogue2 from '../assets/coinn_catalogue2.webp';
 import coinCatalogue3 from '../assets/coinn_catalogue3.webp';
 import coinCatalogue4 from '../assets/coinn_catalogue4.webp';
+import otpVerification from '../assets/otp-verification.webp';
 
 export {
   adhesive,
@@ -172,4 +173,5 @@ export {
   coinCatalogue2,
   coinCatalogue3,
   coinCatalogue4,
+  otpVerification,
 };
